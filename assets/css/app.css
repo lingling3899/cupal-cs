@@ -340,6 +340,18 @@ select:focus, input:focus, textarea:focus {
   border-radius: 999px;
   vertical-align: middle;
 }
+.badge-watsons {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #3b82f6;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
 .staff-codes {
   margin-top: 8px;
   padding: 8px 10px;

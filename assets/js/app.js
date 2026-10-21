@@ -278,9 +278,9 @@
       return;
     }
     box.className = "product-card";
-    var consignBadge = p.consignment
+    var consignBadge = isPureConsign(p)
       ? '<span class="badge-consign">寄賣／非上架</span>'
-      : "";
+      : (isWatsonsShelf(p) ? '<span class="badge-watsons">屈臣氏貨</span>' : "");
     var links = "";
     if (p.officialUrl) {
       links += '<a href="' + escapeHtml(p.officialUrl) + '" target="_blank" rel="noopener">公開產品／系列頁</a>';
