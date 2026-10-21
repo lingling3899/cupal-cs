@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
   <title>古寶 Cupal · 客服速查</title>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261022i" />
+  <link rel="stylesheet" href="assets/css/app.css?v=20261022j" />
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022i" width="200" height="120" alt="Cupal 古寶" />
+        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022j" width="200" height="120" alt="Cupal 古寶" />
         <div class="brand-text">
           <h1>古寶 · 客服速查</h1>
           <p>產品問答　｜　門店　｜　說明</p>
@@ -226,7 +226,13 @@
           <label class="field" for="loginUser">帳號</label>
           <input id="loginUser" name="username" type="text" autocomplete="username" required />
           <label class="field" for="loginPass">密碼</label>
-          <input id="loginPass" name="password" type="password" autocomplete="current-password" required />
+          <div class="password-field">
+            <input id="loginPass" name="password" type="password" autocomplete="current-password" required />
+            <button type="button" class="password-toggle" aria-label="顯示密碼" aria-pressed="false" title="顯示／隱藏密碼">
+              <span class="eye-show" aria-hidden="true">👁</span>
+              <span class="eye-hide hidden" aria-hidden="true">🙈</span>
+            </button>
+          </div>
           <p id="loginError" class="admin-error hidden" role="alert">帳號或密碼錯誤</p>
           <button type="submit" class="admin-btn" id="loginSubmit">登入</button>
         </form>
@@ -239,13 +245,31 @@
         <p class="admin-hint">更改登入帳號同密碼。請先輸入而家密碼先至改得。</p>
         <form id="accountForm" class="admin-form" autocomplete="off">
           <label class="field" for="acctCurrentPass">而家密碼</label>
-          <input id="acctCurrentPass" type="password" autocomplete="current-password" required />
+          <div class="password-field">
+            <input id="acctCurrentPass" type="password" autocomplete="current-password" required />
+            <button type="button" class="password-toggle" aria-label="顯示密碼" aria-pressed="false" title="顯示／隱藏密碼">
+              <span class="eye-show" aria-hidden="true">👁</span>
+              <span class="eye-hide hidden" aria-hidden="true">🙈</span>
+            </button>
+          </div>
           <label class="field" for="acctNewUser">新帳號</label>
           <input id="acctNewUser" type="text" autocomplete="username" required />
           <label class="field" for="acctNewPass">新密碼</label>
-          <input id="acctNewPass" type="password" autocomplete="new-password" required />
+          <div class="password-field">
+            <input id="acctNewPass" type="password" autocomplete="new-password" required />
+            <button type="button" class="password-toggle" aria-label="顯示密碼" aria-pressed="false" title="顯示／隱藏密碼">
+              <span class="eye-show" aria-hidden="true">👁</span>
+              <span class="eye-hide hidden" aria-hidden="true">🙈</span>
+            </button>
+          </div>
           <label class="field" for="acctNewPass2">確認新密碼</label>
-          <input id="acctNewPass2" type="password" autocomplete="new-password" required />
+          <div class="password-field">
+            <input id="acctNewPass2" type="password" autocomplete="new-password" required />
+            <button type="button" class="password-toggle" aria-label="顯示密碼" aria-pressed="false" title="顯示／隱藏密碼">
+              <span class="eye-show" aria-hidden="true">👁</span>
+              <span class="eye-hide hidden" aria-hidden="true">🙈</span>
+            </button>
+          </div>
           <p id="accountMsg" class="admin-msg hidden" role="status"></p>
           <button type="submit" class="admin-btn" id="accountSave">儲存</button>
         </form>
@@ -265,10 +289,10 @@
     </footer>
   </main>
 
-  <script src="data/products.js?v=20261022i"></script>
-  <script src="data/stores.js?v=20261022i"></script>
-  <script src="assets/js/admin-auth.js?v=20261022i"></script>
-  <script src="assets/js/cms.js?v=20261022i"></script>
-  <script src="assets/js/app.js?v=20261022i"></script>
+  <script src="data/products.js?v=20261022j"></script>
+  <script src="data/stores.js?v=20261022j"></script>
+  <script src="assets/js/admin-auth.js?v=20261022j"></script>
+  <script src="assets/js/cms.js?v=20261022j"></script>
+  <script src="assets/js/app.js?v=20261022j"></script>
 </body>
 </html>

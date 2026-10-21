@@ -1304,6 +1304,22 @@
           showAnswer(state.faqKey);
         }
       });
+
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".password-toggle");
+      if (!btn) return;
+      var wrap = btn.closest(".password-field");
+      var input = wrap && wrap.querySelector("input");
+      if (!input) return;
+      var show = input.type === "password";
+      input.type = show ? "text" : "password";
+      btn.setAttribute("aria-pressed", show ? "true" : "false");
+      btn.setAttribute("aria-label", show ? "隱藏密碼" : "顯示密碼");
+      var eyeShow = btn.querySelector(".eye-show");
+      var eyeHide = btn.querySelector(".eye-hide");
+      if (eyeShow) eyeShow.classList.toggle("hidden", show);
+      if (eyeHide) eyeHide.classList.toggle("hidden", !show);
+    });
   }
 
   function init() {
