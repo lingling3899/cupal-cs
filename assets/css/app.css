@@ -272,3 +272,57 @@ select:focus, input:focus, textarea:focus {
 }
 .footer a { color: var(--teal-dark); }
 .muted-tiny { font-size: 0.75rem; color: var(--muted); }
+
+
+/* 產品分類 chips + 寄賣 badge */
+.qa-intro-note {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+.filter-chips {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin: 0 0 12px;
+}
+.filter-chip {
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--teal-dark);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.8rem;
+  font-weight: 650;
+  cursor: pointer;
+  min-height: 36px;
+}
+.filter-chip.active, .filter-chip[aria-pressed="true"] {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+.badge-consign {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.staff-codes {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fff7ed;
+  border: 1px dashed #fdba74;
+  font-size: 0.82rem;
+  color: #9a3412;
+}
+.staff-codes code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+}

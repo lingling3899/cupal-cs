@@ -8,6 +8,7 @@
   var state = {
     view: "qa",
     productId: "",
+    productFilter: "",
     faqKey: "",
     faqShowHidden: false,
     storeRegion: "",
@@ -122,14 +123,75 @@
   }
 
   /* ---- product / FAQ ---- */
+  function productMatchesFilter(p, filter) {
+    if (!filter) return true;
+    if (filter === "寄賣貨") return !!p.consignment;
+    if (p.filterGroup === filter) return true;
+    if (filter === "外用" && (p.filterGroup === "外用" || /外用|貼布|軟膏|按摩/.test(p.category || ""))) return true;
+    if (filter === "關節肌肉" && (p.filterGroup === "關節肌肉" || /關節|肌肉|Fortigel|UC/.test((p.category || "") + (p.nameZh || "")))) return true;
+    return false;
+  }
+
+  function filteredProducts() {
+    var f = state.productFilter || "";
+    return products.filter(function (p) { return productMatchesFilter(p, f); });
+  }
+
   function fillProductSelects() {
+    var list = filteredProducts();
     var opts = '<option value="">— 請選擇產品 —</option>' +
-      products.map(function (p) {
-        return '<option value="' + escapeHtml(p.id) + '">' + escapeHtml(p.nameZh) + "</option>";
+      list.map(function (p) {
+        var tag = p.consignment ? " 〔寄賣〕" : "";
+        return '<option value="' + escapeHtml(p.id) + '">' + escapeHtml(p.nameZh) + tag + "</option>";
       }).join("");
-    ["#productSelect", "#storeProductSelect"].forEach(function (sel) {
-      var el = $(sel);
-      if (el) el.innerHTML = opts;
+    var sel = $("#productSelect");
+    if (sel) {
+      var prev = state.productId || sel.value;
+      sel.innerHTML = opts;
+      if (prev && list.some(function (p) { return p.id === prev; })) {
+        sel.value = prev;
+      } else {
+        sel.value = "";
+        state.productId = "";
+        state.faqKey = "";
+      }
+    }
+    var storeOpts = '<option value="">— 請選擇產品 —</option>' +
+      products.map(function (p) {
+        var tag = p.consignment ? " 〔寄賣〕" : "";
+        return '<option value="' + escapeHtml(p.id) + '">' + escapeHtml(p.nameZh) + tag + "</option>";
+      }).join("");
+    var storeSel = $("#storeProductSelect");
+    if (storeSel) {
+      var sp = storeSel.value;
+      storeSel.innerHTML = storeOpts;
+      if (sp) storeSel.value = sp;
+    }
+  }
+
+
+  function bindProductFilters() {
+    var wrap = $("#productFilterChips");
+    if (!wrap || wrap._bound) return;
+    wrap._bound = true;
+    wrap.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-filter]");
+      if (!btn) return;
+      state.productFilter = btn.getAttribute("data-filter") || "";
+      $$("#productFilterChips .filter-chip").forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      fillProductSelects();
+      renderProductMeta();
+      renderFaqGrid();
+      var ap = $("#answerPanel");
+      if (ap) {
+        ap.className = "answer empty";
+        ap.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
+      }
+      state.faqKey = "";
     });
   }
 
@@ -145,23 +207,48 @@
       return;
     }
     box.className = "product-card";
+    var consignBadge = p.consignment
+      ? '<span class="badge-consign">寄賣／非上架</span>'
+      : "";
+    var links = "";
+    if (p.officialUrl) {
+      links += '<a href="' + escapeHtml(p.officialUrl) + '" target="_blank" rel="noopener">公開產品／系列頁</a>';
+    }
+    if (p.hktvSearchUrl) {
+      links += (links ? "　｜　" : "") +
+        '<a href="' + escapeHtml(p.hktvSearchUrl) + '" target="_blank" rel="noopener">HKTVmall 搜尋</a>';
+    }
     box.innerHTML =
       '<div class="pc-emoji" aria-hidden="true">' + escapeHtml(p.emoji || "📦") + "</div>" +
-      '<p class="pc-title">' + escapeHtml(p.nameZh) + "</p>" +
+      '<p class="pc-title">' + escapeHtml(p.nameZh) + consignBadge + "</p>" +
       '<p class="pc-meta">' + escapeHtml(p.category || "") + "　｜　" + escapeHtml(p.form || "") + "</p>" +
       (p.keyIngredients && p.keyIngredients.length
         ? '<p class="pc-meta">成份重點：' + escapeHtml(p.keyIngredients.join("、")) + "</p>"
         : "") +
       (p.disclaimer
         ? '<p class="pc-meta" style="margin-top:6px">' + escapeHtml(p.disclaimer) + "</p>"
-        : "");
+        : "") +
+      (links ? '<p class="pc-meta" style="margin-top:6px">' + links + "</p>" : "");
 
     if (staff) {
-      if (isStaff() && p.staffNotes) {
+      var staffBits = [];
+      if (p.skuCode || p.consignCode || p.standardPrice != null) {
+        staffBits.push(
+          '<div class="staff-codes">' +
+          (p.skuCode ? "SKU <code>" + escapeHtml(p.skuCode) + "</code>　" : "") +
+          (p.consignCode ? "寄賣碼 <code>" + escapeHtml(String(p.consignCode)) + "</code>　" : "") +
+          (p.standardPrice != null ? "參考標準價 <strong>$" + escapeHtml(String(p.standardPrice)) + "</strong>（以落貨／門市為準，唔對外當現售網價）" : "") +
+          "</div>"
+        );
+      }
+      if (p.staffNotes) {
+        staffBits.push('<div class="staff-answer-body">' + nl2br(p.staffNotes) + "</div>");
+      }
+      if (isStaff() && staffBits.length) {
         staff.classList.remove("hidden");
         staff.innerHTML =
           '<h3>職員備註 <span class="badge">只職員見</span></h3>' +
-          '<div class="staff-answer-body">' + nl2br(p.staffNotes) + "</div>";
+          staffBits.join("");
       } else {
         staff.classList.add("hidden");
         staff.innerHTML = "";

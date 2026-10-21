@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
   <title>古寶 Cupal · 客服速查</title>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261021b" />
+  <link rel="stylesheet" href="assets/css/app.css?v=20261021c" />
 </head>
 <body>
   <header class="topbar">
@@ -47,6 +47,18 @@
     <section id="view-qa">
       <section class="panel">
         <h3>① 揀產品 <span class="badge">必選</span></h3>
+        <p class="qa-intro-note">寄賣貨成份／詳細說明以古寶官網、HKTVmall、The Club 或實物標籤為準；本站唔臆測標籤。</p>
+        <div class="filter-chips" id="productFilterChips" role="group" aria-label="產品分類">
+          <button type="button" class="filter-chip active" data-filter="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter="關節肌肉" aria-pressed="false">關節肌肉</button>
+          <button type="button" class="filter-chip" data-filter="寄賣貨" aria-pressed="false">寄賣貨</button>
+          <button type="button" class="filter-chip" data-filter="寄賣保健" aria-pressed="false">寄賣保健</button>
+          <button type="button" class="filter-chip" data-filter="調理系列" aria-pressed="false">調理系列</button>
+          <button type="button" class="filter-chip" data-filter="兒童" aria-pressed="false">兒童</button>
+          <button type="button" class="filter-chip" data-filter="美容" aria-pressed="false">美容</button>
+          <button type="button" class="filter-chip" data-filter="真威龍" aria-pressed="false">真威龍</button>
+          <button type="button" class="filter-chip" data-filter="外用" aria-pressed="false">外用</button>
+        </div>
         <label class="field" for="productSelect">產品</label>
         <select id="productSelect" aria-label="選擇產品"></select>
         <div id="productMeta" class="product-card empty" aria-live="polite">請先揀一款產品，再撳下面問題掣。</div>
@@ -154,13 +166,18 @@
           <li>液體鈣含<strong>甲殼類</strong>——敏感者先問醫生。</li>
           <li>門店電話簿<strong>唔代表</strong>該產品一定有貨——請致電確認。</li>
           <li>價格如有列出，只屬參考；以門市／網店當日價簽為準。UC II 等〔待核價〕唔報假價。</li>
+          <li>寄賣／非上架貨：成份以<strong>官網／HKTVmall／授權零售公開頁／實物標籤</strong>為準；本站唔臆測。</li>
+          <li>「調理個」系列公開品牌為 <strong>REBOOT YOUR</strong>，唔硬標古寶。</li>
+          <li>真威龍藥油多含<strong>樟腦</strong>——蠶豆症（G6PD）不宜（跟標籤）。</li>
         </ul>
       </section>
       <section class="panel">
         <h3>資料來源</h3>
         <p style="margin:0;color:var(--muted);font-size:0.9rem;">
-          前線物料包、SKU 計劃、安宮前線卡；公開官網
-          <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">cupal.com.hk</a>。
+          前線物料包、SKU 計劃、寄賣落貨表、安宮前線卡；公開官網
+          <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">cupal.com.hk</a>、
+          <a href="https://www.hktvmall.com/" target="_blank" rel="noopener">HKTVmall</a>、
+          The Club、威發、REBOOT YOUR 公開頁。
           最終以當日實物標籤／說明書為準。
         </p>
       </section>
@@ -213,10 +230,10 @@
     </footer>
   </main>
 
-  <script src="data/products.js?v=20261021b"></script>
-  <script src="data/stores.js?v=20261021b"></script>
-  <script src="assets/js/admin-auth.js?v=20261021b"></script>
-  <script src="assets/js/cms.js?v=20261021b"></script>
-  <script src="assets/js/app.js?v=20261021b"></script>
+  <script src="data/products.js?v=20261021c"></script>
+  <script src="data/stores.js?v=20261021c"></script>
+  <script src="assets/js/admin-auth.js?v=20261021c"></script>
+  <script src="assets/js/cms.js?v=20261021c"></script>
+  <script src="assets/js/app.js?v=20261021c"></script>
 </body>
 </html>
