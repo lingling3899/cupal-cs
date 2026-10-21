@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
+  <title>古寶 Cupal · 客服速查</title>
+  <link rel="stylesheet" href="assets/css/app.css?v=20261021b" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">古</div>
+        <div class="brand-text">
+          <h1>古寶 · 客服速查</h1>
+          <p>產品問答　｜　門店　｜　說明</p>
+        </div>
+      </div>
+      <nav class="nav-tabs" aria-label="主要分頁">
+        <button type="button" class="active" data-view="qa">產品問答</button>
+        <button type="button" data-view="stores">門店</button>
+        <button type="button" data-view="about">說明</button>
+        <button type="button" data-view="account" class="admin-only hidden">帳戶設定</button>
+      </nav>
+      <div class="header-login-wrap">
+        <button type="button" id="headerLoginBtn" class="header-login-btn" aria-label="職員登入" aria-haspopup="true" aria-expanded="false">
+          <svg class="hdr-icon hdr-icon-out" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 19.5c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="hdr-icon hdr-icon-in hidden" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="3.5" fill="currentColor"/>
+            <path d="M5 19.5c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5" fill="currentColor"/>
+          </svg>
+          <span class="hdr-login-dot hidden" aria-hidden="true"></span>
+        </button>
+        <div id="loginDropdown" class="login-dropdown hidden" role="menu" aria-label="職員選單">
+          <button type="button" role="menuitem" data-dd-action="account">⚙️ 帳戶設定</button>
+          <button type="button" role="menuitem" data-dd-action="logout" class="dd-logout">🚪 登出</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="view-qa">
+      <section class="panel">
+        <h3>① 揀產品 <span class="badge">必選</span></h3>
+        <label class="field" for="productSelect">產品</label>
+        <select id="productSelect" aria-label="選擇產品"></select>
+        <div id="productMeta" class="product-card empty" aria-live="polite">請先揀一款產品，再撳下面問題掣。</div>
+        <div id="staffNotesPanel" class="staff-notes-panel admin-only hidden" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <h3>② 常見問題</h3>
+        <div id="faqGrid" class="faq-grid" role="group" aria-label="常見問題"></div>
+        <div id="faqAdminBar" class="faq-admin-bar admin-only hidden">
+          <button type="button" class="admin-mini-btn" id="faqAddBtn">＋ 新增問題</button>
+          <button type="button" class="admin-mini-btn ghost" id="faqToggleHiddenBtn">顯示已隱藏</button>
+        </div>
+        <form id="faqAddForm" class="cms-form admin-only hidden" autocomplete="off">
+          <label class="field" for="faqNewLabel">題目</label>
+          <input id="faqNewLabel" type="text" maxlength="40" placeholder="例如：可同其他產品一齊食嗎？" required />
+          <label class="field" for="faqNewIcon">圖示（emoji）</label>
+          <input id="faqNewIcon" type="text" maxlength="4" placeholder="❓" value="❓" />
+          <label class="field" for="faqNewAnswer">答案</label>
+          <textarea id="faqNewAnswer" rows="4" maxlength="2000" placeholder="訪客會見到嘅答案文字" required></textarea>
+          <div class="cms-form-actions">
+            <button type="submit" class="admin-btn compact">儲存問題</button>
+            <button type="button" class="admin-mini-btn ghost" id="faqAddCancel">取消</button>
+          </div>
+          <p id="faqAddMsg" class="admin-msg hidden" role="status"></p>
+        </form>
+        <div id="answerPanel" class="answer empty" aria-live="polite">
+          揀咗產品後，撳上面問題掣即睇答案。
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>③ 想查門店電話？</h3>
+        <p style="margin:0 0 10px;color:var(--muted);font-size:0.9rem;">
+          可去「門店」睇屈臣氏分店電話同地址（電話簿 ≠ 庫存）。
+        </p>
+        <button type="button" class="chip" id="goStoresBtn">去門店 →</button>
+      </section>
+    </section>
+
+    <section id="view-stores" class="hidden">
+      <section class="panel admin-only hidden staff-notes-panel" id="storesStaffNotes">
+        <h3>職員備註 <span class="badge">只職員見</span></h3>
+        <p class="admin-hint">今日查貨提示等短備註；訪客唔會見到。</p>
+        <ul id="storesNotesList" class="staff-notes-list"></ul>
+        <form id="storesNoteForm" class="cms-form inline" autocomplete="off">
+          <label class="field" for="storesNoteInput">新增備註</label>
+          <input id="storesNoteInput" type="text" maxlength="200" placeholder="例如：沙田店今日查過有液體鈣" required />
+          <button type="submit" class="admin-mini-btn">＋ 新增</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h3>銷售點（非庫存）</h3>
+        <ul id="salesPointsList" class="sales-points"></ul>
+        <p class="count" style="margin-top:10px;">Mannings 暫緩（檔案未確認）。請致電門市確認有冇貨。</p>
+      </section>
+
+      <section class="panel">
+        <h3>門店電話簿 · 屈臣氏</h3>
+        <label class="field" for="storeProductSelect">要查邊款？（方便對照邊度買）</label>
+        <select id="storeProductSelect" aria-label="門店頁選擇產品"></select>
+        <div id="storeProductMeta" class="product-card compact" aria-live="polite"></div>
+
+        <div id="directoryNote" class="directory-note"></div>
+
+        <div class="region-block" role="group" aria-label="分區">
+          <p class="field region-label">分區（香港／九龍／新界）</p>
+          <div class="region-chips" id="regionChips">
+            <button type="button" class="region-chip active" data-region="" aria-pressed="true">全部</button>
+            <button type="button" class="region-chip" data-region="hk" aria-pressed="false">香港</button>
+            <button type="button" class="region-chip" data-region="kln" aria-pressed="false">九龍</button>
+            <button type="button" class="region-chip" data-region="nt" aria-pressed="false">新界</button>
+          </div>
+        </div>
+        <div class="filters">
+          <div>
+            <label class="field" for="districtSelect">分區內地區</label>
+            <select id="districtSelect"></select>
+          </div>
+          <div>
+            <label class="field" for="storeSearch">搜尋店名／地址</label>
+            <input id="storeSearch" type="search" placeholder="例如：沙田、旺角、德福…" autocomplete="off" />
+          </div>
+        </div>
+        <p id="storeCount" class="count"></p>
+        <div id="storeList" class="store-list"></div>
+        <p class="count" style="margin-top:12px;">
+          名單唔齊？
+          <a href="https://www.watsons.com.hk/zh-hk/store-finder" target="_blank" rel="noopener">屈臣氏官方搵店</a>
+          ｜
+          <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">古寶官網</a>
+        </p>
+      </section>
+    </section>
+
+    <section id="view-about" class="hidden">
+      <section class="panel">
+        <h3>使用說明</h3>
+        <ul class="about-list">
+          <li>本頁係<strong>客服／前線速查</strong>：產品目錄、成份／用法／注意、邊度買、門店電話簿。</li>
+          <li>保健食品 <strong>≠</strong> 註冊藥物（安宮除外——安宮係註冊中成藥 HKC-18196）。</li>
+          <li><strong>唔講</strong>醫好／撃退／治療／預防疾病；聲稱跟標籤／官網。</li>
+          <li>肌肉按摩膏含<strong>樟腦</strong>——蠶豆症（G6PD）不宜；6 歲或以下不宜。</li>
+          <li>液體鈣含<strong>甲殼類</strong>——敏感者先問醫生。</li>
+          <li>門店電話簿<strong>唔代表</strong>該產品一定有貨——請致電確認。</li>
+          <li>價格如有列出，只屬參考；以門市／網店當日價簽為準。UC II 等〔待核價〕唔報假價。</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h3>資料來源</h3>
+        <p style="margin:0;color:var(--muted);font-size:0.9rem;">
+          前線物料包、SKU 計劃、安宮前線卡；公開官網
+          <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">cupal.com.hk</a>。
+          最終以當日實物標籤／說明書為準。
+        </p>
+      </section>
+    </section>
+
+    <section id="view-login" class="hidden">
+      <section class="panel admin-panel">
+        <h3>職員登入 <span class="badge">後台</span></h3>
+        <p class="admin-hint">登入後可隱藏／新增 FAQ、睇職員備註、改帳號密碼。</p>
+        <form id="loginForm" class="admin-form" autocomplete="on">
+          <label class="field" for="loginUser">帳號</label>
+          <input id="loginUser" name="username" type="text" autocomplete="username" required />
+          <label class="field" for="loginPass">密碼</label>
+          <input id="loginPass" name="password" type="password" autocomplete="current-password" required />
+          <p id="loginError" class="admin-error hidden" role="alert">帳號或密碼錯誤</p>
+          <button type="submit" class="admin-btn" id="loginSubmit">登入</button>
+        </form>
+      </section>
+    </section>
+
+    <section id="view-account" class="hidden">
+      <section class="panel admin-panel">
+        <h3>帳戶設定 <span class="badge">職員</span></h3>
+        <p class="admin-hint">更改登入帳號同密碼。請先輸入而家密碼先至改得。</p>
+        <form id="accountForm" class="admin-form" autocomplete="off">
+          <label class="field" for="acctCurrentPass">而家密碼</label>
+          <input id="acctCurrentPass" type="password" autocomplete="current-password" required />
+          <label class="field" for="acctNewUser">新帳號</label>
+          <input id="acctNewUser" type="text" autocomplete="username" required />
+          <label class="field" for="acctNewPass">新密碼</label>
+          <input id="acctNewPass" type="password" autocomplete="new-password" required />
+          <label class="field" for="acctNewPass2">確認新密碼</label>
+          <input id="acctNewPass2" type="password" autocomplete="new-password" required />
+          <p id="accountMsg" class="admin-msg hidden" role="status"></p>
+          <button type="submit" class="admin-btn" id="accountSave">儲存</button>
+        </form>
+      </section>
+      <section class="panel admin-panel">
+        <h3>內容還原 <span class="badge">CMS</span></h3>
+        <p class="admin-hint">清走本機新增／隱藏嘅問題同職員備註。唔會改登入帳密。</p>
+        <button type="button" class="admin-btn danger-btn" id="cmsResetBtn">還原預設內容</button>
+        <p id="cmsResetMsg" class="admin-msg hidden" role="status"></p>
+      </section>
+    </section>
+
+    <footer class="footer">
+      參考用途，非醫療建議；庫存請致電確認。官網：
+      <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">cupal.com.hk</a>
+      <p class="footer-staff muted-tiny" id="footerStaffHint">職員：撳右上角圖示登入</p>
+    </footer>
+  </main>
+
+  <script src="data/products.js?v=20261021b"></script>
+  <script src="data/stores.js?v=20261021b"></script>
+  <script src="assets/js/admin-auth.js?v=20261021b"></script>
+  <script src="assets/js/cms.js?v=20261021b"></script>
+  <script src="assets/js/app.js?v=20261021b"></script>
+</body>
+</html>
