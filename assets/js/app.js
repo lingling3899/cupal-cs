@@ -8,7 +8,8 @@
   var state = {
     view: "qa",
     productId: "",
-    productFilter: "",
+    productChannel: "",
+    productSubFilter: "",
     faqKey: "",
     faqShowHidden: false,
     storeRegion: "",
@@ -135,25 +136,73 @@
   }
 
   /* ---- product / FAQ ---- */
-  function productMatchesFilter(p, filter) {
-    if (!filter) return true;
-    if (filter === "寄賣貨") return !!p.consignment;
-    if (p.filterGroup === filter) return true;
-    if (filter === "外用" && (p.filterGroup === "外用" || /外用|貼布|軟膏|按摩/.test(p.category || ""))) return true;
-    if (filter === "關節肌肉" && (p.filterGroup === "關節肌肉" || /關節|肌肉|Fortigel|UC/.test((p.category || "") + (p.nameZh || "")))) return true;
-    return false;
+  function isWatsonsShelf(p) {
+    return !!(p && p.watsonsShelf);
+  }
+
+  function isPureConsign(p) {
+    return !!(p && p.consignment && !p.watsonsShelf);
+  }
+
+  function productChannelTag(p) {
+    if (isWatsonsShelf(p)) return " 〔屈臣氏〕";
+    if (isPureConsign(p)) return " 〔寄賣〕";
+    if (p && p.consignment) return " 〔寄賣〕";
+    return "";
+  }
+
+  function productMatchesFilter(p) {
+    var ch = state.productChannel || "";
+    var sub = state.productSubFilter || "";
+    if (!ch) return true;
+    if (ch === "watsons") return isWatsonsShelf(p);
+    if (ch === "consign") {
+      if (!isPureConsign(p)) return false;
+      if (!sub) return true;
+      return p.filterGroup === sub;
+    }
+    return true;
   }
 
   function filteredProducts() {
-    var f = state.productFilter || "";
-    return products.filter(function (p) { return productMatchesFilter(p, f); });
+    return products.filter(function (p) { return productMatchesFilter(p); });
+  }
+
+  function syncConsignSubChips() {
+    var subWrap = $("#productConsignSubChips");
+    if (!subWrap) return;
+    var show = state.productChannel === "consign";
+    subWrap.classList.toggle("hidden", !show);
+    if (show) subWrap.removeAttribute("hidden");
+    else subWrap.setAttribute("hidden", "");
+    if (!show) {
+      state.productSubFilter = "";
+      $$("#productConsignSubChips .filter-chip").forEach(function (b) {
+        var on = (b.getAttribute("data-sub") || "") === "";
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+  }
+
+  function afterProductFilterChange() {
+    syncConsignSubChips();
+    fillProductSelects();
+    renderProductMeta();
+    renderFaqGrid();
+    var ap = $("#answerPanel");
+    if (ap) {
+      ap.className = "answer empty";
+      ap.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
+    }
+    state.faqKey = "";
   }
 
   function fillProductSelects() {
     var list = filteredProducts();
     var opts = '<option value="">— 請選擇產品 —</option>' +
       list.map(function (p) {
-        var tag = p.consignment ? " 〔寄賣〕" : "";
+        var tag = productChannelTag(p);
         return '<option value="' + escapeHtml(p.id) + '">' + escapeHtml(p.nameZh) + tag + "</option>";
       }).join("");
     var sel = $("#productSelect");
@@ -169,42 +218,52 @@
       }
     }
     var storeOpts = '<option value="">— 請選擇產品 —</option>' +
-      products.map(function (p) {
-        var tag = p.consignment ? " 〔寄賣〕" : "";
+      list.map(function (p) {
+        var tag = productChannelTag(p);
         return '<option value="' + escapeHtml(p.id) + '">' + escapeHtml(p.nameZh) + tag + "</option>";
       }).join("");
     var storeSel = $("#storeProductSelect");
     if (storeSel) {
-      var sp = storeSel.value;
+      var sp = state.productId || storeSel.value;
       storeSel.innerHTML = storeOpts;
-      if (sp) storeSel.value = sp;
+      if (sp && list.some(function (p) { return p.id === sp; })) storeSel.value = sp;
+      else storeSel.value = "";
     }
   }
 
-
   function bindProductFilters() {
-    var wrap = $("#productFilterChips");
-    if (!wrap || wrap._bound) return;
-    wrap._bound = true;
-    wrap.addEventListener("click", function (e) {
-      var btn = e.target.closest("button[data-filter]");
-      if (!btn) return;
-      state.productFilter = btn.getAttribute("data-filter") || "";
-      $$("#productFilterChips .filter-chip").forEach(function (b) {
-        var on = b === btn;
-        b.classList.toggle("active", on);
-        b.setAttribute("aria-pressed", on ? "true" : "false");
+    var chWrap = $("#productChannelChips");
+    if (chWrap && !chWrap._bound) {
+      chWrap._bound = true;
+      chWrap.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-channel]");
+        if (!btn) return;
+        state.productChannel = btn.getAttribute("data-channel") || "";
+        state.productSubFilter = "";
+        $$("#productChannelChips .filter-chip").forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        afterProductFilterChange();
       });
-      fillProductSelects();
-      renderProductMeta();
-      renderFaqGrid();
-      var ap = $("#answerPanel");
-      if (ap) {
-        ap.className = "answer empty";
-        ap.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
-      }
-      state.faqKey = "";
-    });
+    }
+    var subWrap = $("#productConsignSubChips");
+    if (subWrap && !subWrap._bound) {
+      subWrap._bound = true;
+      subWrap.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-sub]");
+        if (!btn) return;
+        if (state.productChannel !== "consign") return;
+        state.productSubFilter = btn.getAttribute("data-sub") || "";
+        $$("#productConsignSubChips .filter-chip").forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        afterProductFilterChange();
+      });
+    }
   }
 
   function renderProductMeta() {
@@ -1000,6 +1059,8 @@
   }
 
   function init() {
+    bindProductFilters();
+    syncConsignSubChips();
     fillProductSelects();
     renderSalesPoints();
     renderProductMeta();

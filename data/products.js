@@ -1,9 +1,3 @@
-/** 古寶 Cupal 客服 — 產品資料
- *  公開答案：claim-safe；寄賣貨成份以官網／HKTVmall／The Club／威發／REBOOT 公開頁或實物標籤為準。
- *  staffNotes／skuCode／consignCode／standardPrice：職員登入可見。
- *  標準價只供職員參考，公開唔當現售網價。
- *  寄賣規則：逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。
- */
 window.CUPAL_PRODUCTS = [
   {
     "id": "prostic-l",
@@ -66,7 +60,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CMPL",
     "consignCode": "205287",
     "standardPrice": 67,
-    "filterGroup": "外用"
+    "filterGroup": "外用",
+    "watsonsShelf": true
   },
   {
     "id": "prostic-s",
@@ -127,7 +122,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CMPS",
     "consignCode": "205288",
     "standardPrice": 44,
-    "filterGroup": "外用"
+    "filterGroup": "外用",
+    "watsonsShelf": true
   },
   {
     "id": "joint-ointment",
@@ -188,7 +184,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CU51",
     "consignCode": "203957",
     "standardPrice": 78,
-    "filterGroup": "外用"
+    "filterGroup": "外用",
+    "watsonsShelf": true
   },
   {
     "id": "massage-balm",
@@ -249,7 +246,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA177 New",
     "consignCode": "暫用203957",
     "standardPrice": 84,
-    "filterGroup": "外用"
+    "filterGroup": "外用",
+    "watsonsShelf": true
   },
   {
     "id": "ucii",
@@ -306,7 +304,8 @@ window.CUPAL_PRODUCTS = [
       }
     ],
     "consignment": false,
-    "filterGroup": "關節肌肉"
+    "filterGroup": "關節肌肉",
+    "watsonsShelf": true
   },
   {
     "id": "pro-calcium",
@@ -367,7 +366,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "VTM04",
     "consignCode": "206785",
     "standardPrice": 205,
-    "filterGroup": "寄賣保健"
+    "filterGroup": "寄賣保健",
+    "watsonsShelf": true
   },
   {
     "id": "fortigel",
@@ -426,7 +426,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA172",
     "consignCode": "",
     "standardPrice": 423,
-    "filterGroup": "關節肌肉"
+    "filterGroup": "關節肌肉",
+    "watsonsShelf": true
   },
   {
     "id": "joint-msm",
@@ -487,7 +488,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CPW020A",
     "consignCode": "206783",
     "standardPrice": 260,
-    "filterGroup": "關節肌肉"
+    "filterGroup": "關節肌肉",
+    "watsonsShelf": true
   },
   {
     "id": "strength-muscle",
@@ -547,7 +549,8 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA119",
     "consignCode": "",
     "standardPrice": 299,
-    "filterGroup": "關節肌肉"
+    "filterGroup": "關節肌肉",
+    "watsonsShelf": true
   },
   {
     "id": "allergy-probiotic",
@@ -603,7 +606,8 @@ window.CUPAL_PRODUCTS = [
       }
     ],
     "consignment": false,
-    "filterGroup": "全部"
+    "filterGroup": "全部",
+    "watsonsShelf": true
   },
   {
     "id": "angong",
@@ -660,7 +664,8 @@ window.CUPAL_PRODUCTS = [
       }
     ],
     "consignment": false,
-    "filterGroup": "全部"
+    "filterGroup": "全部",
+    "watsonsShelf": true
   },
   {
     "id": "nmn",
@@ -717,7 +722,8 @@ window.CUPAL_PRODUCTS = [
       }
     ],
     "consignment": false,
-    "filterGroup": "美容"
+    "filterGroup": "美容",
+    "watsonsShelf": true
   },
   {
     "id": "cordyceps-king",
@@ -779,7 +785,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "ganoderma-king",
@@ -840,7 +847,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "red-yeast",
@@ -900,7 +908,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "propolis",
@@ -961,7 +970,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "liver-care",
@@ -1021,7 +1031,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "bilberry",
@@ -1084,7 +1095,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "brain-tonic",
@@ -1146,7 +1158,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "child-brain",
@@ -1207,7 +1220,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "fat-burn",
@@ -1265,7 +1279,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "igg-tabs",
@@ -1325,7 +1340,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "krill-oil",
@@ -1385,7 +1401,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "colostrum",
@@ -1443,7 +1460,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "kai-nai-cha",
@@ -1501,7 +1519,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "seven-star-tea",
@@ -1559,7 +1578,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "lecithin",
@@ -1619,7 +1639,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "fish-oil",
@@ -1677,7 +1698,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "vigor",
@@ -1735,7 +1757,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "reboot-lung-sleep",
@@ -1796,7 +1819,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "reboot-stomach",
@@ -1855,7 +1879,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "reboot-heart",
@@ -1914,7 +1939,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "reboot-kidney",
@@ -1973,7 +1999,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "reboot-brain",
@@ -2032,7 +2059,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "reboot-liver",
@@ -2091,7 +2119,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "acne-drink",
@@ -2149,7 +2178,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "swiss-collagen",
@@ -2207,7 +2237,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "resveratrol",
@@ -2267,7 +2298,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "whitening-ex",
@@ -2325,7 +2357,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "child-fish-oil",
@@ -2384,7 +2417,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "weifat-qianli",
@@ -2447,7 +2481,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "weifat-ezhu",
@@ -2512,7 +2547,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "weifat-potong",
@@ -2577,7 +2613,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "weifat-safflower",
@@ -2640,7 +2677,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "weifat-qufeng",
@@ -2704,7 +2742,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   },
   {
     "id": "weifat-huoluo",
@@ -2770,6 +2809,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
-    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。"
+    "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
+    "watsonsShelf": false
   }
 ];

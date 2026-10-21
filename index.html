@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
   <title>古寶 Cupal · 客服速查</title>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261022a" />
+  <link rel="stylesheet" href="assets/css/app.css?v=20261022b" />
 </head>
 <body>
   <header class="topbar">
@@ -48,16 +48,19 @@
       <section class="panel">
         <h3>① 揀產品 <span class="badge">必選</span></h3>
         <p class="qa-intro-note">寄賣貨成份／詳細說明以古寶官網、HKTVmall、The Club 或實物標籤為準；本站唔臆測標籤。</p>
-        <div class="filter-chips" id="productFilterChips" role="group" aria-label="產品分類">
-          <button type="button" class="filter-chip active" data-filter="" aria-pressed="true">全部</button>
-          <button type="button" class="filter-chip" data-filter="關節肌肉" aria-pressed="false">關節肌肉</button>
-          <button type="button" class="filter-chip" data-filter="寄賣貨" aria-pressed="false">寄賣貨</button>
-          <button type="button" class="filter-chip" data-filter="寄賣保健" aria-pressed="false">寄賣保健</button>
-          <button type="button" class="filter-chip" data-filter="調理系列" aria-pressed="false">調理系列</button>
-          <button type="button" class="filter-chip" data-filter="兒童" aria-pressed="false">兒童</button>
-          <button type="button" class="filter-chip" data-filter="美容" aria-pressed="false">美容</button>
-          <button type="button" class="filter-chip" data-filter="真威龍" aria-pressed="false">真威龍</button>
-          <button type="button" class="filter-chip" data-filter="外用" aria-pressed="false">外用</button>
+        <div class="filter-chips product-channel-chips" id="productChannelChips" role="group" aria-label="產品渠道">
+          <button type="button" class="filter-chip active" data-channel="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-channel="watsons" aria-pressed="false">屈臣氏貨</button>
+          <button type="button" class="filter-chip" data-channel="consign" aria-pressed="false">寄賣貨</button>
+        </div>
+        <div class="filter-chips product-consign-subchips hidden" id="productConsignSubChips" role="group" aria-label="寄賣細分" hidden>
+          <button type="button" class="filter-chip sub-chip active" data-sub="" aria-pressed="true">寄賣全部</button>
+          <button type="button" class="filter-chip sub-chip" data-sub="寄賣保健" aria-pressed="false">寄賣保健</button>
+          <button type="button" class="filter-chip sub-chip" data-sub="調理系列" aria-pressed="false">調理系列</button>
+          <button type="button" class="filter-chip sub-chip" data-sub="兒童" aria-pressed="false">兒童</button>
+          <button type="button" class="filter-chip sub-chip" data-sub="美容" aria-pressed="false">美容</button>
+          <button type="button" class="filter-chip sub-chip" data-sub="真威龍" aria-pressed="false">真威龍</button>
+          <button type="button" class="filter-chip sub-chip" data-sub="外用" aria-pressed="false">外用</button>
         </div>
         <label class="field" for="productSelect">產品</label>
         <select id="productSelect" aria-label="選擇產品"></select>
@@ -238,10 +241,10 @@
     </footer>
   </main>
 
-  <script src="data/products.js?v=20261022a"></script>
-  <script src="data/stores.js?v=20261022a"></script>
-  <script src="assets/js/admin-auth.js?v=20261022a"></script>
-  <script src="assets/js/cms.js?v=20261022a"></script>
-  <script src="assets/js/app.js?v=20261022a"></script>
+  <script src="data/products.js?v=20261022b"></script>
+  <script src="data/stores.js?v=20261022b"></script>
+  <script src="assets/js/admin-auth.js?v=20261022b"></script>
+  <script src="assets/js/cms.js?v=20261022b"></script>
+  <script src="assets/js/app.js?v=20261022b"></script>
 </body>
 </html>

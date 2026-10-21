@@ -301,6 +301,33 @@ select:focus, input:focus, textarea:focus {
   border-color: var(--teal);
   color: #fff;
 }
+
+.product-channel-chips {
+  margin-bottom: 8px;
+}
+.product-consign-subchips {
+  margin-top: -4px;
+  margin-bottom: 12px;
+  padding-top: 2px;
+}
+.product-consign-subchips .filter-chip.sub-chip,
+.filter-chip.sub-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  min-height: 32px;
+  color: #0f5c66;
+  background: #f0fafb;
+  border-color: #b7dce2;
+}
+.product-consign-subchips .filter-chip.sub-chip.active,
+.product-consign-subchips .filter-chip.sub-chip[aria-pressed="true"],
+.filter-chip.sub-chip.active,
+.filter-chip.sub-chip[aria-pressed="true"] {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
 .badge-consign {
   display: inline-block;
   margin-left: 6px;

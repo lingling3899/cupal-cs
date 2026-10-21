@@ -38,7 +38,10 @@ python3 -m http.server 8765
 
 ## 寄賣貨
 
-- 分類 chips：全部｜寄賣貨｜關節肌肉｜寄賣保健｜調理系列｜兒童｜美容｜真威龍｜外用
+- 分類 chips（兩層）：
+  - 第一層：全部｜屈臣氏貨｜寄賣貨
+  - 第二層（只喺「寄賣貨」出現）：寄賣全部｜寄賣保健｜調理系列｜兒童｜美容｜真威龍｜外用
+  - 屈臣氏貨 = `watsonsShelf`（12 款英雄／上架線）；寄賣貨 = `consignment && !watsonsShelf`（純寄賣／非上架）
 - 寄賣產品有「寄賣／非上架」徽章
 - 公開邊度買：非上架／職員落貨／專賣／HKTVmall／官網（以實際為準）
 - **參考標準價只職員可見**，公開唔當現售網價
@@ -66,7 +69,7 @@ python3 -m http.server 8765
 Repo：`lingling3899/cupal-cs`  
 預期網址：`https://lingling3899.github.io/cupal-cs/`
 
-部署：`main` 分支根目錄作 Pages source。Cache bust：`?v=20261021c`
+部署：`main` 分支根目錄作 Pages source。Cache bust：`?v=20261022b`
 
 ## 已知缺口
 
