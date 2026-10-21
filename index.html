@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
   <title>古寶 Cupal · 客服速查</title>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261022h" />
+  <link rel="stylesheet" href="assets/css/app.css?v=20261022i" />
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022h" width="200" height="120" alt="Cupal 古寶" />
+        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022i" width="200" height="120" alt="Cupal 古寶" />
         <div class="brand-text">
           <h1>古寶 · 客服速查</h1>
           <p>產品問答　｜　門店　｜　說明</p>
@@ -66,6 +66,30 @@
         <select id="productSelect" aria-label="選擇產品"></select>
         <div id="productMeta" class="product-card empty" aria-live="polite">請先揀一款產品，再撳下面問題掣。</div>
         <div id="staffNotesPanel" class="staff-notes-panel admin-only hidden" aria-live="polite"></div>
+        <div id="staffIngredientPanel" class="staff-ingredient-panel admin-only hidden" aria-live="polite"></div>
+        <form id="ingNoteForm" class="cms-form staff-ing-form admin-only hidden" autocomplete="off">
+          <h4 class="sip-form-title">成份拆解註解 <span class="badge">只職員見</span></h4>
+          <p class="admin-hint">CS 話術拆解 · 訪客睇唔到 · 請以包裝標籤為準，唔好發明療效保證</p>
+          <label class="field" for="ingName">成份名（必填）</label>
+          <input id="ingName" type="text" maxlength="80" placeholder="例如：葡萄糖胺" required />
+          <label class="field" for="ingRole">角色</label>
+          <input id="ingRole" type="text" maxlength="40" placeholder="例如：主成份／輔助／注意" />
+          <label class="field" for="ingDetail">說明</label>
+          <textarea id="ingDetail" rows="2" maxlength="500" placeholder="簡述成份作用／來源"></textarea>
+          <label class="field" for="ingBenefit">好處</label>
+          <input id="ingBenefit" type="text" maxlength="200" placeholder="對顧客可講嘅好處" />
+          <label class="field" for="ingNote">注意</label>
+          <input id="ingNote" type="text" maxlength="200" placeholder="禁忌／敏感提示" />
+          <div class="cms-form-actions">
+            <button type="submit" class="admin-btn compact">加入成份拆解</button>
+          </div>
+          <p id="ingNoteMsg" class="admin-msg hidden" role="status"></p>
+          <label class="field" for="ingBenefitsText">優點條列（一行一項）</label>
+          <textarea id="ingBenefitsText" rows="3" maxlength="1500" placeholder="例如：&#10;關節舒適&#10;日常保養"></textarea>
+          <div class="cms-form-actions">
+            <button type="button" class="admin-mini-btn" id="ingBenefitsSave">儲存優點條列</button>
+          </div>
+        </form>
       </section>
 
       <section class="panel">
@@ -197,7 +221,7 @@
     <section id="view-login" class="hidden">
       <section class="panel admin-panel">
         <h3>職員登入 <span class="badge">後台</span></h3>
-        <p class="admin-hint">登入後可隱藏／新增 FAQ、睇職員備註、改帳號密碼。</p>
+        <p class="admin-hint">登入後可隱藏／新增 FAQ、編輯成份拆解註解、睇職員備註、改帳號密碼。預設帳密：<code>cupal</code>／<code>office2026</code>。</p>
         <form id="loginForm" class="admin-form" autocomplete="on">
           <label class="field" for="loginUser">帳號</label>
           <input id="loginUser" name="username" type="text" autocomplete="username" required />
@@ -241,10 +265,10 @@
     </footer>
   </main>
 
-  <script src="data/products.js?v=20261022h"></script>
-  <script src="data/stores.js?v=20261022h"></script>
-  <script src="assets/js/admin-auth.js?v=20261022h"></script>
-  <script src="assets/js/cms.js?v=20261022h"></script>
-  <script src="assets/js/app.js?v=20261022h"></script>
+  <script src="data/products.js?v=20261022i"></script>
+  <script src="data/stores.js?v=20261022i"></script>
+  <script src="assets/js/admin-auth.js?v=20261022i"></script>
+  <script src="assets/js/cms.js?v=20261022i"></script>
+  <script src="assets/js/app.js?v=20261022i"></script>
 </body>
 </html>

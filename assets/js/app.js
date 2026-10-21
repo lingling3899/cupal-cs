@@ -45,6 +45,131 @@
     return escapeHtml(s).replace(/\n/g, "<br>");
   }
 
+  function resolveIngredientBundle(p) {
+    if (!p) return { ingredients: [], benefits: [] };
+    var cmsNotes = cms() ? cms().getIngredientNotes(p.id) : null;
+    var cmsIngs = cmsNotes && Array.isArray(cmsNotes.ingredients) ? cmsNotes.ingredients : [];
+    var cmsBens = cmsNotes && Array.isArray(cmsNotes.benefits) ? cmsNotes.benefits : [];
+    if (cmsIngs.length || cmsBens.length) {
+      return { ingredients: cmsIngs, benefits: cmsBens };
+    }
+    return {
+      ingredients: Array.isArray(p.ingredientDetails) ? p.ingredientDetails : [],
+      benefits: Array.isArray(p.benefits) ? p.benefits : []
+    };
+  }
+
+  function staffIngredientCardsHtml(p, opts) {
+    opts = opts || {};
+    var bundle = resolveIngredientBundle(p);
+    var ings = bundle.ingredients;
+    if (!ings.length) return "";
+    var editable = !!opts.editable;
+    return (
+      '<div class="sip-ing-grid">' +
+      ings
+        .map(function (ing) {
+          var role = String(ing.role || "");
+          var warn = /⚠|注意|樟腦|排除|毒性|G6PD|蠶豆/.test(
+            role + (ing.note || "") + (ing.detail || "")
+          );
+          var roleCls = warn ? "sip-role warn" : "sip-role";
+          var html =
+            '<article class="sip-ing-card">' +
+            '<div class="sip-ing-top">' +
+            '<span class="sip-ing-name">' +
+            escapeHtml(ing.name) +
+            "</span>" +
+            (role ? '<span class="' + roleCls + '">' + escapeHtml(role) + "</span>" : "") +
+            "</div>" +
+            (ing.detail
+              ? '<p class="sip-ing-detail">' + escapeHtml(ing.detail) + "</p>"
+              : "");
+          if (ing.benefit) {
+            html += '<p class="sip-ing-benefit">好處：' + escapeHtml(ing.benefit) + "</p>";
+          }
+          if (ing.note) {
+            html += '<p class="sip-ing-note">注意：' + escapeHtml(ing.note) + "</p>";
+          }
+          if (editable && ing.id) {
+            html +=
+              '<button type="button" class="sip-ing-del" data-ing-del="' +
+              escapeHtml(ing.id) +
+              '">刪除</button>';
+          }
+          html += "</article>";
+          return html;
+        })
+        .join("") +
+      "</div>"
+    );
+  }
+
+  function staffBenefitsListHtml(p) {
+    var bundle = resolveIngredientBundle(p);
+    var bens = bundle.benefits;
+    if (!bens.length) return "";
+    return (
+      '<ul class="sip-benefits">' +
+      bens.map(function (b) { return "<li>" + escapeHtml(b) + "</li>"; }).join("") +
+      "</ul>"
+    );
+  }
+
+  function renderStaffIngredientPanel(p) {
+    var el = $("#staffIngredientPanel");
+    var form = $("#ingNoteForm");
+    var logged = isStaff();
+    if (el) {
+      el.classList.toggle("hidden", !logged);
+      el.classList.add("admin-only");
+      if (!logged) {
+        el.innerHTML = "";
+      } else if (!p) {
+        el.innerHTML = '<p class="sip-empty">請先揀產品，再編輯成份拆解。</p>';
+      } else {
+        var cards = staffIngredientCardsHtml(p, { editable: true });
+        var bens = staffBenefitsListHtml(p);
+        var body =
+          '<div class="sip-head"><span class="staff-badge">職員</span> 成份拆解註解</div>' +
+          '<p class="sip-sub">CS 話術拆解 · 訪客睇唔到 · 請以包裝標籤為準</p>';
+        if (!cards && !bens) {
+          body += '<p class="sip-empty">呢款暫時未有拆解資料——用下面表單加入。</p>';
+        } else {
+          if (cards) body += '<div class="sip-section-title">成份</div>' + cards;
+          if (bens) body += '<div class="sip-section-title">優點</div>' + bens;
+        }
+        el.innerHTML = body;
+      }
+    }
+    if (form) {
+      form.classList.toggle("hidden", !(logged && p));
+      form.classList.add("admin-only");
+      if (logged && p) {
+        var notes = cms() ? cms().getIngredientNotes(p.id) : { benefits: [] };
+        var ta = $("#ingBenefitsText");
+        if (ta && document.activeElement !== ta) {
+          ta.value = (notes.benefits || []).join("\n");
+        }
+      }
+    }
+  }
+
+  function staffIngredientAnswerHtml(p) {
+    if (!isStaff() || !p) return "";
+    var cards = staffIngredientCardsHtml(p, { editable: false });
+    var bens = staffBenefitsListHtml(p);
+    if (!cards && !bens) return "";
+    return (
+      '<div class="staff-ing-answer" role="note">' +
+      '<strong><span class="staff-badge">職員</span> 成份／優點拆解</strong>' +
+      (cards ? '<div class="sip-section-title">成份</div>' + cards : "") +
+      (bens ? '<div class="sip-section-title">優點</div>' + bens : "") +
+      "</div>"
+    );
+  }
+
+
   function getProduct(id) {
     var pid = id || state.productId || ($("#productSelect") && $("#productSelect").value);
     return products.find(function (p) { return p.id === pid; }) || null;
@@ -275,6 +400,7 @@
       box.className = "product-card empty";
       box.innerHTML = "請先揀一款產品，再撳下面問題掣。";
       if (staff) { staff.classList.add("hidden"); staff.innerHTML = ""; }
+      renderStaffIngredientPanel(null);
       return;
     }
     box.className = "product-card";
@@ -338,6 +464,8 @@
           '<p class="pc-meta">' + escapeHtml(p.whereToBuy || "") + "</p>";
       }
     }
+
+    renderStaffIngredientPanel(p);
   }
 
   function faqKeyFor(p, faqId) {
@@ -520,6 +648,10 @@
         '<div class="staff-answer-body">' +
         nl2br(p.staffNotes) +
         "</div></div>";
+    }
+
+    if (faqId === "ingredients") {
+      html += staffIngredientAnswerHtml(p);
     }
 
     html += '<div class="meta">請以包裝標籤／說明書為準；參考用途，非醫療建議。</div>';
@@ -1089,7 +1221,7 @@
     $("#cmsResetBtn") &&
       $("#cmsResetBtn").addEventListener("click", function () {
         if (!isStaff() || !cms()) return;
-        if (!confirm("確定還原預設內容？（清走本機新增／隱藏問題同職員備註；唔改帳密）")) return;
+        if (!confirm("確定還原預設內容？（清走本機新增／隱藏問題同職員備註／成份拆解；唔改帳密）")) return;
         cms().resetCms();
         var msg = $("#cmsResetMsg");
         if (msg) {
@@ -1098,6 +1230,79 @@
         }
         renderFaqGrid();
         renderStoreNotes();
+        renderProductMeta();
+        if (state.faqKey) showAnswer(state.faqKey);
+      });
+
+    $("#ingNoteForm") &&
+      $("#ingNoteForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!isStaff() || !cms()) return;
+        var p = getProduct();
+        if (!p) return;
+        var res = cms().addIngredient(p.id, {
+          name: $("#ingName").value,
+          role: $("#ingRole").value,
+          detail: $("#ingDetail").value,
+          benefit: $("#ingBenefit").value,
+          note: $("#ingNote").value
+        });
+        var msg = $("#ingNoteMsg");
+        if (!res.ok) {
+          if (msg) {
+            msg.textContent = res.error || "失敗";
+            msg.style.color = "var(--danger)";
+            msg.classList.remove("hidden");
+          }
+          return;
+        }
+        $("#ingName").value = "";
+        $("#ingRole").value = "";
+        $("#ingDetail").value = "";
+        $("#ingBenefit").value = "";
+        $("#ingNote").value = "";
+        if (msg) {
+          msg.textContent = "已加入。";
+          msg.style.color = "var(--green)";
+          msg.classList.remove("hidden");
+        }
+        renderStaffIngredientPanel(p);
+        if (state.faqKey && String(state.faqKey).indexOf("::ingredients") !== -1) {
+          showAnswer(state.faqKey);
+        }
+      });
+
+    $("#ingBenefitsSave") &&
+      $("#ingBenefitsSave").addEventListener("click", function () {
+        if (!isStaff() || !cms()) return;
+        var p = getProduct();
+        if (!p) return;
+        var raw = ($("#ingBenefitsText") && $("#ingBenefitsText").value) || "";
+        var lines = raw.split(/\n/).map(function (s) { return s.trim(); }).filter(Boolean);
+        cms().setBenefits(p.id, lines);
+        var msg = $("#ingNoteMsg");
+        if (msg) {
+          msg.textContent = "優點已儲存。";
+          msg.style.color = "var(--green)";
+          msg.classList.remove("hidden");
+        }
+        renderStaffIngredientPanel(p);
+        if (state.faqKey && String(state.faqKey).indexOf("::ingredients") !== -1) {
+          showAnswer(state.faqKey);
+        }
+      });
+
+    $("#staffIngredientPanel") &&
+      $("#staffIngredientPanel").addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-ing-del]");
+        if (!btn || !isStaff() || !cms()) return;
+        var p = getProduct();
+        if (!p) return;
+        cms().removeIngredient(p.id, btn.getAttribute("data-ing-del"));
+        renderStaffIngredientPanel(p);
+        if (state.faqKey && String(state.faqKey).indexOf("::ingredients") !== -1) {
+          showAnswer(state.faqKey);
+        }
       });
   }
 

@@ -1,12 +1,12 @@
 (function () {
   "use strict";
 
-  var CREDS_KEY = "cupal_admin_creds";
+  var CREDS_KEY = "cupal_admin_creds_v2";
   var SESSION_KEY = "cupal_admin_session";
-  var DEFAULT_USER = "CUPAL";
-  // SHA-256 hex of "cupal2026"
+  var DEFAULT_USER = "cupal";
+  // SHA-256 hex of "office2026"
   var DEFAULT_PASS_HASH =
-    "955b1c704fc60cd92241bfda08d1b593cc900db5a540d9e04b3ef168a9e8190c";
+    "5278374f8a2f6c0bcbb4da91e38acadef155ac20964dad6f4d3f6edede34e74e";
 
   function toHex(buffer) {
     var bytes = new Uint8Array(buffer);

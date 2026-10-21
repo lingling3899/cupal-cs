@@ -429,3 +429,137 @@ select:focus, input:focus, textarea:focus {
 }
 
 #promoterChips.locked-consign .region-chip[data-promoter=""] { display: none !important; }
+
+/* ---- Staff ingredient / benefits breakdown ---- */
+.staff-ingredient-panel {
+  margin-top: 14px;
+  padding: 14px 14px 12px;
+  border-radius: 14px;
+  border: 1.5px solid var(--border);
+  background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 55%);
+  box-shadow: inset 0 0 0 1px rgba(15, 79, 138, 0.06);
+}
+.staff-ingredient-panel .sip-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: var(--teal-dark);
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+.staff-ingredient-panel .sip-sub {
+  margin: -4px 0 12px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.staff-ingredient-panel .sip-section-title,
+.sip-form-title {
+  margin: 12px 0 8px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--teal-dark);
+}
+.staff-ingredient-panel .sip-section-title:first-of-type {
+  margin-top: 0;
+}
+.sip-form-title { margin-top: 0; }
+.sip-ing-grid {
+  display: grid;
+  gap: 8px;
+}
+.sip-ing-card {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.sip-ing-card .sip-ing-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-bottom: 6px;
+}
+.sip-ing-card .sip-ing-name {
+  font-weight: 800;
+  color: var(--teal-dark);
+  font-size: 0.92rem;
+}
+.sip-role {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--teal-dark);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+.sip-role.warn {
+  background: var(--warn);
+}
+.sip-ing-detail {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #334155;
+}
+.sip-ing-benefit {
+  margin: 6px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--green);
+  font-weight: 600;
+}
+.sip-ing-note {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #9a3412;
+  font-weight: 600;
+}
+.sip-ing-del {
+  margin-top: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 650;
+  padding: 0;
+}
+.sip-benefits {
+  margin: 0;
+  padding: 0 0 0 1.15rem;
+  display: grid;
+  gap: 4px;
+}
+.sip-benefits li {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--teal-dark);
+}
+.sip-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.staff-ing-form {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1.5px dashed var(--border);
+  background: #f8fbfe;
+}
+.staff-ing-answer {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  white-space: normal;
+}
+.staff-ing-answer .sip-ing-grid {
+  margin-top: 8px;
+}
