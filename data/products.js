@@ -123,7 +123,7 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "205288",
     "standardPrice": 44,
     "filterGroup": "外用",
-    "watsonsShelf": true
+    "watsonsShelf": false
   },
   {
     "id": "joint-ointment",
@@ -185,7 +185,7 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "203957",
     "standardPrice": 78,
     "filterGroup": "外用",
-    "watsonsShelf": true
+    "watsonsShelf": false
   },
   {
     "id": "massage-balm",
@@ -247,7 +247,7 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "暫用203957",
     "standardPrice": 84,
     "filterGroup": "外用",
-    "watsonsShelf": true
+    "watsonsShelf": false
   },
   {
     "id": "ucii",
