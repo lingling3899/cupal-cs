@@ -61,7 +61,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "205287",
     "standardPrice": 67,
     "filterGroup": "外用",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/prostic-l.jpg"
   },
   {
     "id": "prostic-s",
@@ -427,7 +428,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "",
     "standardPrice": 423,
     "filterGroup": "關節肌肉",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/fortigel.jpg"
   },
   {
     "id": "joint-msm",
@@ -489,7 +491,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "206783",
     "standardPrice": 260,
     "filterGroup": "關節肌肉",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/joint-msm.jpg"
   },
   {
     "id": "strength-muscle",
@@ -550,7 +553,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "",
     "standardPrice": 299,
     "filterGroup": "關節肌肉",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/strength-muscle.jpg"
   },
   {
     "id": "allergy-probiotic",
@@ -665,7 +669,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": false,
     "filterGroup": "全部",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/angong.jpg"
   },
   {
     "id": "nmn",
@@ -786,7 +791,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/cordyceps-king.jpg"
   },
   {
     "id": "ganoderma-king",
@@ -848,7 +854,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/ganoderma-king.jpg"
   },
   {
     "id": "red-yeast",
@@ -971,7 +978,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/propolis.jpg"
   },
   {
     "id": "liver-care",
@@ -1096,7 +1104,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/bilberry.jpg"
   },
   {
     "id": "brain-tonic",
@@ -1221,7 +1230,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/child-brain.jpg"
   },
   {
     "id": "fat-burn",
@@ -1341,7 +1351,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/igg-tabs.jpg"
   },
   {
     "id": "krill-oil",
@@ -1402,7 +1413,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/krill-oil.jpg"
   },
   {
     "id": "colostrum",
@@ -1640,7 +1652,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/lecithin.jpg"
   },
   {
     "id": "fish-oil",
@@ -1820,7 +1833,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/reboot-lung-sleep.jpg"
   },
   {
     "id": "reboot-stomach",
@@ -1839,7 +1853,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝／REBOOT YOUR 官網為準。",
     "cautions": "唔講治療對應器官疾病。跟標籤。",
-    "officialUrl": "https://www.rebootyour.com.hk/collection",
+    "officialUrl": "https://www.rebootyour.com.hk/product/stomach",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%83%83",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
@@ -1880,7 +1894,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/reboot-stomach.jpg"
   },
   {
     "id": "reboot-heart",
@@ -1899,7 +1914,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝／REBOOT YOUR 官網為準。",
     "cautions": "唔講治療對應器官疾病。跟標籤。",
-    "officialUrl": "https://www.rebootyour.com.hk/collection",
+    "officialUrl": "https://www.rebootyour.com.hk/product/heart",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E5%BF%83",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
@@ -1940,7 +1955,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/reboot-heart.jpg"
   },
   {
     "id": "reboot-kidney",
@@ -1959,7 +1975,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝／REBOOT YOUR 官網為準。",
     "cautions": "唔講治療對應器官疾病。跟標籤。",
-    "officialUrl": "https://www.rebootyour.com.hk/collection",
+    "officialUrl": "https://www.rebootyour.com.hk/product/kidney",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%85%8E",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
@@ -2000,7 +2016,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/reboot-kidney.jpg"
   },
   {
     "id": "reboot-brain",
@@ -2019,7 +2036,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝／REBOOT YOUR 官網為準。",
     "cautions": "唔講治療對應器官疾病。跟標籤。",
-    "officialUrl": "https://www.rebootyour.com.hk/collection",
+    "officialUrl": "https://www.rebootyour.com.hk/product/brain",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%85%A6",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
@@ -2060,7 +2077,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/reboot-brain.jpg"
   },
   {
     "id": "reboot-liver",
@@ -2079,7 +2097,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝／REBOOT YOUR 官網為準。",
     "cautions": "唔講治療對應器官疾病。跟標籤。",
-    "officialUrl": "https://www.rebootyour.com.hk/collection",
+    "officialUrl": "https://www.rebootyour.com.hk/product/liver",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%82%9D",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
@@ -2120,7 +2138,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/reboot-liver.jpg"
   },
   {
     "id": "acne-drink",
@@ -2482,7 +2501,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/weifat-qianli.jpg"
   },
   {
     "id": "weifat-ezhu",

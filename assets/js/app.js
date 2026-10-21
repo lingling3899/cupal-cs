@@ -45,6 +45,31 @@
     return escapeHtml(s).replace(/\n/g, "<br>");
   }
 
+  function resolveProductImage(p) {
+    if (!p) return "";
+    var c = cms();
+    if (c && typeof c.getProductImage === "function") {
+      var override = c.getProductImage(p.id);
+      if (override) return override;
+    }
+    return p.image || "";
+  }
+
+  function channelBadgeHtml(p, compact) {
+    if (isPureConsign(p)) {
+      return compact
+        ? '<span class="pcat-badge consign">寄賣</span>'
+        : '<span class="badge-consign">寄賣／非上架</span>';
+    }
+    if (isWatsonsShelf(p)) {
+      return compact
+        ? '<span class="pcat-badge watsons">屈臣氏</span>'
+        : '<span class="badge-watsons">屈臣氏貨</span>';
+    }
+    return compact ? '<span class="pcat-badge">其他</span>' : "";
+  }
+
+
   function resolveIngredientBundle(p) {
     if (!p) return { ingredients: [], benefits: [] };
     var cmsNotes = cms() ? cms().getIngredientNotes(p.id) : null;
@@ -354,6 +379,7 @@
       if (sp && list.some(function (p) { return p.id === sp; })) storeSel.value = sp;
       else storeSel.value = "";
     }
+    renderProductCatalog();
   }
 
   function bindProductFilters() {
@@ -401,12 +427,11 @@
       box.innerHTML = "請先揀一款產品，再撳下面問題掣。";
       if (staff) { staff.classList.add("hidden"); staff.innerHTML = ""; }
       renderStaffIngredientPanel(null);
+      renderProductCatalog();
       return;
     }
     box.className = "product-card";
-    var consignBadge = isPureConsign(p)
-      ? '<span class="badge-consign">寄賣／非上架</span>'
-      : (isWatsonsShelf(p) ? '<span class="badge-watsons">屈臣氏貨</span>' : "");
+    var consignBadge = channelBadgeHtml(p, false);
     var links = "";
     if (p.officialUrl) {
       links += '<a href="' + escapeHtml(p.officialUrl) + '" target="_blank" rel="noopener">公開產品／系列頁</a>';
@@ -415,8 +440,14 @@
       links += (links ? "　｜　" : "") +
         '<a href="' + escapeHtml(p.hktvSearchUrl) + '" target="_blank" rel="noopener">HKTVmall 搜尋</a>';
     }
+    var imgUrl = resolveProductImage(p);
+    var thumb = imgUrl
+      ? '<img class="product-thumb" src="' + escapeHtml(imgUrl) + '" alt="' + escapeHtml(p.nameZh) + '" width="96" height="96" loading="lazy" />'
+      : '<div class="pc-emoji inline" aria-hidden="true">' + escapeHtml(p.emoji || "📦") + "</div>";
     box.innerHTML =
-      '<div class="pc-emoji" aria-hidden="true">' + escapeHtml(p.emoji || "📦") + "</div>" +
+      '<div class="product-card-row">' +
+      thumb +
+      '<div class="product-card-body">' +
       '<p class="pc-title">' + escapeHtml(p.nameZh) + consignBadge + "</p>" +
       '<p class="pc-meta">' + escapeHtml(p.category || "") + "　｜　" + escapeHtml(p.form || "") + "</p>" +
       (p.keyIngredients && p.keyIngredients.length
@@ -425,7 +456,8 @@
       (p.disclaimer
         ? '<p class="pc-meta" style="margin-top:6px">' + escapeHtml(p.disclaimer) + "</p>"
         : "") +
-      (links ? '<p class="pc-meta" style="margin-top:6px">' + links + "</p>" : "");
+      (links ? '<p class="pc-meta" style="margin-top:6px">' + links + "</p>" : "") +
+      "</div></div>";
 
     if (staff) {
       var staffBits = [];
@@ -441,11 +473,27 @@
       if (p.staffNotes) {
         staffBits.push('<div class="staff-answer-body">' + nl2br(p.staffNotes) + "</div>");
       }
+      if (isStaff()) {
+        var curImg = resolveProductImage(p);
+        staffBits.push(
+          '<form class="staff-image-form" id="staffImageForm" autocomplete="off">' +
+          "<h4 class=\"sip-form-title\">設定公開圖網址 <span class=\"badge\">只職員見 · 本機</span></h4>" +
+          '<p class="admin-hint">覆蓋顯示圖（localStorage）；正式站請放 assets/img/products/</p>' +
+          '<label class="field" for="staffImageUrl">圖片網址</label>' +
+          '<input id="staffImageUrl" type="url" maxlength="500" placeholder="https://… 或 assets/img/products/xxx.jpg" value="' +
+          escapeHtml(curImg) + '" />' +
+          '<div class="cms-form-actions">' +
+          '<button type="submit" class="admin-btn compact">儲存圖</button>' +
+          '<button type="button" class="admin-btn compact ghost" id="staffImageClear">清除覆蓋</button>' +
+          "</div></form>"
+        );
+      }
       if (isStaff() && staffBits.length) {
         staff.classList.remove("hidden");
         staff.innerHTML =
           '<h3>職員備註 <span class="badge">只職員見</span></h3>' +
           staffBits.join("");
+        bindStaffImageForm(p.id);
       } else {
         staff.classList.add("hidden");
         staff.innerHTML = "";
@@ -459,13 +507,90 @@
         sp.innerHTML = "";
       } else {
         sp.className = "product-card compact";
+        var simg = resolveProductImage(p);
+        var sthumb = simg
+          ? '<img class="product-thumb" src="' + escapeHtml(simg) + '" alt="' + escapeHtml(p.nameZh) + '" width="72" height="72" loading="lazy" />'
+          : '<div class="pc-emoji inline" aria-hidden="true">' + escapeHtml(p.emoji || "📦") + "</div>";
         sp.innerHTML =
-          '<p class="pc-title">' + escapeHtml(p.emoji || "") + " " + escapeHtml(p.nameZh) + "</p>" +
-          '<p class="pc-meta">' + escapeHtml(p.whereToBuy || "") + "</p>";
+          '<div class="product-card-row">' +
+          sthumb +
+          '<div class="product-card-body">' +
+          '<p class="pc-title">' + escapeHtml(p.nameZh) + "</p>" +
+          '<p class="pc-meta">' + escapeHtml(p.whereToBuy || "") + "</p>" +
+          "</div></div>";
       }
     }
 
     renderStaffIngredientPanel(p);
+    renderProductCatalog();
+  }
+
+  function bindStaffImageForm(productId) {
+    var form = $("#staffImageForm");
+    if (!form || form._bound) return;
+    form._bound = true;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!cms() || !isStaff()) return;
+      var url = ($("#staffImageUrl") && $("#staffImageUrl").value) || "";
+      cms().setProductImage(productId, url);
+      renderProductMeta();
+      renderProductCatalog();
+    });
+    var clr = $("#staffImageClear");
+    if (clr) {
+      clr.addEventListener("click", function () {
+        if (!cms() || !isStaff()) return;
+        cms().setProductImage(productId, "");
+        renderProductMeta();
+        renderProductCatalog();
+      });
+    }
+  }
+
+  function renderProductCatalog() {
+    var el = $("#productCatalog");
+    if (!el) return;
+    var list = filteredProducts();
+    var selected = state.productId || "";
+    if (!list.length) {
+      el.innerHTML = '<p class="count" style="grid-column:1/-1">呢個篩選暫時冇產品。</p>';
+      return;
+    }
+    el.innerHTML = list.map(function (p) {
+      var img = resolveProductImage(p);
+      var thumb = img
+        ? '<img class="pcat-thumb" src="' + escapeHtml(img) + '" alt="" loading="lazy" width="72" height="72" />'
+        : '<div class="pcat-emoji" aria-hidden="true">' + escapeHtml(p.emoji || "📦") + "</div>";
+      var sel = p.id === selected ? " selected" : "";
+      return (
+        '<button type="button" class="product-catalog-card' + sel + '" data-product-id="' +
+        escapeHtml(p.id) + '" aria-pressed="' + (p.id === selected ? "true" : "false") + '">' +
+        thumb +
+        '<span class="pcat-name">' + escapeHtml(p.nameZh) + "</span>" +
+        channelBadgeHtml(p, true) +
+        "</button>"
+      );
+    }).join("");
+  }
+
+  function selectProductById(id) {
+    state.productId = id || "";
+    state.faqKey = "";
+    var ps = $("#productSelect");
+    if (ps) ps.value = state.productId;
+    var sps = $("#storeProductSelect");
+    if (sps) sps.value = state.productId;
+    var box = $("#answerPanel");
+    if (box) {
+      box.className = "answer empty";
+      box.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
+    }
+    renderProductMeta();
+    renderFaqGrid();
+    if (typeof maybeHintPromoterForProduct === "function") {
+      try { maybeHintPromoterForProduct(); } catch (e) { /* ignore */ }
+    }
   }
 
   function faqKeyFor(p, faqId) {
@@ -977,6 +1102,16 @@
         setView(b.getAttribute("data-view"));
       });
     });
+
+    var cat = $("#productCatalog");
+    if (cat && !cat._bound) {
+      cat._bound = true;
+      cat.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-product-id]");
+        if (!btn) return;
+        selectProductById(btn.getAttribute("data-product-id") || "");
+      });
+    }
 
     var ps = $("#productSelect");
     if (ps) {

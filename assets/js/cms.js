@@ -6,7 +6,8 @@
     faqCustom: PREFIX + "faq_custom",
     faqHidden: PREFIX + "faq_hidden",
     notesStores: PREFIX + "notes_stores",
-    ingNotes: PREFIX + "ing_notes"
+    ingNotes: PREFIX + "ing_notes",
+    productImages: PREFIX + "product_images"
   };
 
   function readJson(key, fallback) {
@@ -246,6 +247,28 @@
     });
   }
 
+
+  function getProductImages() {
+    var map = readJson(KEYS.productImages, {});
+    return map && typeof map === "object" ? map : {};
+  }
+
+  function getProductImage(productId) {
+    var map = getProductImages();
+    var v = map[String(productId || "")];
+    return typeof v === "string" && v.trim() ? v.trim() : "";
+  }
+
+  function setProductImage(productId, url) {
+    var map = getProductImages();
+    var id = String(productId || "");
+    if (!id) return false;
+    var u = String(url || "").trim();
+    if (!u) delete map[id];
+    else map[id] = u;
+    return writeJson(KEYS.productImages, map);
+  }
+
   window.CupalCms = {
     getFaqCustom: getFaqCustom,
     getFaqHidden: getFaqHidden,
@@ -266,6 +289,9 @@
     setBenefits: setBenefits,
     addBenefit: addBenefit,
     removeBenefit: removeBenefit,
+    getProductImage: getProductImage,
+    setProductImage: setProductImage,
+    getProductImages: getProductImages,
     resetCms: resetCms
   };
 })();
