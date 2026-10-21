@@ -13,7 +13,8 @@
     faqShowHidden: false,
     storeRegion: "",
     storeDistrict: "",
-    storeQuery: ""
+    storeQuery: "",
+    storePromoterOnly: false
   };
 
   var REGION_LABEL = { "": "全部", hk: "香港", kln: "九龍", nt: "新界" };
@@ -68,9 +69,20 @@
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
   }
 
+  function primaryTelDigits(tel) {
+    var s = String(tel || "");
+    var m = s.match(/\d[\d\s-]{6,}\d/);
+    if (m) return m[0].replace(/\D/g, "");
+    return s.replace(/\D/g, "").slice(0, 8);
+  }
+
   function telHref(tel) {
-    var t = String(tel || "").replace(/\D/g, "");
-    return t ? "tel:+852" + t : "";
+    var dig = primaryTelDigits(tel);
+    return dig ? "tel:+852" + dig : "";
+  }
+
+  function formatTelDisplay(tel) {
+    return String(tel || "").trim();
   }
 
   /* ---- views ---- */
@@ -469,12 +481,51 @@
   }
 
   /* ---- stores ---- */
+
+  function setPromoterFilter(on, opts) {
+    opts = opts || {};
+    state.storePromoterOnly = !!on;
+    $$("#promoterChips .region-chip").forEach(function (x) {
+      var isOn;
+      if (x.getAttribute("data-promoter") === "1") isOn = state.storePromoterOnly;
+      else isOn = !state.storePromoterOnly;
+      x.classList.toggle("active", isOn);
+      x.setAttribute("aria-pressed", isOn ? "true" : "false");
+    });
+    if (!opts.skipRender) renderStores();
+  }
+
+  function maybeHintPromoterForProduct() {
+    var p = getProduct();
+    var hint = $("#promoterSoftHint");
+    if (!hint) return;
+    if (p && p.consignment) {
+      hint.classList.remove("hidden");
+      hint.innerHTML =
+        "而家揀嘅係<strong>寄賣貨</strong>——可撳「有寄賣推廣員」睇有推廣員嘅屈臣氏（唔等於該店一定有貨）。" +
+        (state.storePromoterOnly
+          ? ""
+          : ' <button type="button" class="chip-inline" id="promoterHintBtn">篩推廣員店</button>');
+      var btn = $("#promoterHintBtn");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          setPromoterFilter(true);
+          maybeHintPromoterForProduct();
+        });
+      }
+    } else {
+      hint.classList.add("hidden");
+      hint.innerHTML = "";
+    }
+  }
+
   function syncStoreProductSelect() {
     var sp = $("#storeProductSelect");
     var qa = $("#productSelect");
     if (sp && qa && qa.value && !sp.value) sp.value = qa.value;
     if (sp && sp.value) state.productId = sp.value;
     renderProductMeta();
+    maybeHintPromoterForProduct();
   }
 
   function uniqueDistricts(list) {
@@ -489,7 +540,8 @@
   }
 
   function filteredStores() {
-    return watsons.filter(function (s) {
+    var list = watsons.filter(function (s) {
+      if (state.storePromoterOnly && !s.consignPromoter) return false;
       if (state.storeRegion && regionOfStore(s) !== state.storeRegion) return false;
       if (state.storeDistrict && String(s.district || "") !== state.storeDistrict) return false;
       if (state.storeQuery) {
@@ -501,28 +553,65 @@
           " " +
           (s.district || "") +
           " " +
-          (s.tel || "")
+          (s.tel || "") +
+          " " +
+          (s.watsonsCode || "") +
+          " " +
+          (s.watsonsStoreNo || "")
         ).toLowerCase();
         if (blob.indexOf(q) === -1) return false;
       }
       return true;
     });
+    /* 推廣員篩選時，電話簿重複紀錄按店碼去重，顯示 9 間 */
+    if (state.storePromoterOnly) {
+      var seen = {};
+      list = list.filter(function (s) {
+        var k = s.watsonsCode || s.id;
+        if (seen[k]) return false;
+        seen[k] = true;
+        return true;
+      });
+      list.sort(function (a, b) {
+        return String(a.watsonsCode || "").localeCompare(String(b.watsonsCode || ""));
+      });
+    }
+    return list;
   }
 
   function renderStores() {
     var note = $("#directoryNote");
     if (note) {
-      note.textContent =
+      var meta = storeData.consignPromoters || {};
+      var promoterN = watsons.filter(function (s) { return s.consignPromoter; }).length;
+      var uniqCodes = {};
+      watsons.forEach(function (s) {
+        if (s.consignPromoter && s.watsonsCode) uniqCodes[s.watsonsCode] = true;
+      });
+      var uniqN = Object.keys(uniqCodes).length;
+      var base =
         (storeData.salesPointsNote ||
           "電話簿非該產品一定有貨——請致電確認。") +
         " 共 " +
         watsons.length +
         " 間屈臣氏電話紀錄。";
+      if (uniqN) {
+        base +=
+          " 其中 " +
+          uniqN +
+          " 間標明有寄賣產品推廣員" +
+          (meta.asOf ? "（名單截至 " + meta.asOf + "）" : "") +
+          "——排更／在場請致電確認。";
+      }
+      note.textContent = base;
     }
 
-    var regionList = state.storeRegion
-      ? watsons.filter(function (s) { return regionOfStore(s) === state.storeRegion; })
+    var regionSource = state.storePromoterOnly
+      ? watsons.filter(function (s) { return s.consignPromoter; })
       : watsons;
+    var regionList = state.storeRegion
+      ? regionSource.filter(function (s) { return regionOfStore(s) === state.storeRegion; })
+      : regionSource;
     var districts = uniqueDistricts(regionList);
     var distSel = $("#districtSelect");
     if (distSel) {
@@ -555,6 +644,7 @@
         "顯示 " +
         list.length +
         " 間" +
+        (state.storePromoterOnly ? "（有寄賣推廣員）" : "") +
         (state.storeRegion ? "（" + (REGION_LABEL[state.storeRegion] || "") + "）" : "") +
         "｜電話簿 ≠ 庫存";
     }
@@ -562,16 +652,29 @@
     var box = $("#storeList");
     if (!box) return;
     if (!list.length) {
-      box.innerHTML = '<p class="count">呢個篩選暫時冇分店。可試「全部」或清搜尋。</p>';
+      box.innerHTML = '<p class="count">呢個篩選暫時冇分店。可試「全部屈臣氏」或清搜尋。</p>';
       return;
     }
     box.innerHTML = list
       .map(function (s) {
         var tel = telHref(s.tel);
+        var badge = s.consignPromoter
+          ? '<span class="badge-promoter">寄賣推廣員</span>'
+          : "";
+        var metaBits = [];
+        if (s.hours) metaBits.push("營業 " + s.hours);
+        if (s.watsonsCode) metaBits.push("店碼 " + s.watsonsCode);
+        if (s.watsonsStoreNo) metaBits.push("No. " + s.watsonsStoreNo);
+        var metaLine = metaBits.length
+          ? "<p class=\"store-meta\">" + escapeHtml(metaBits.join("　｜　")) + "</p>"
+          : "";
         return (
-          '<article class="store-card">' +
+          '<article class="store-card' +
+          (s.consignPromoter ? " has-promoter" : "") +
+          '">' +
           "<h4>" +
           escapeHtml(s.name) +
+          badge +
           "</h4>" +
           "<p>" +
           escapeHtml(s.district || "") +
@@ -581,9 +684,10 @@
           "<p>" +
           escapeHtml(s.address || "") +
           "</p>" +
+          metaLine +
           '<div class="store-actions">' +
           (tel
-            ? '<a href="' + tel + '">📞 ' + escapeHtml(s.tel) + "</a>"
+            ? '<a href="' + tel + '">📞 ' + escapeHtml(formatTelDisplay(s.tel)) + "</a>"
             : "") +
           '<a href="' +
           escapeHtml(mapsUrl(s)) +
@@ -664,6 +768,7 @@
         var qa = $("#productSelect");
         if (qa) qa.value = sps.value;
         renderProductMeta();
+        maybeHintPromoterForProduct();
       });
     }
 
@@ -743,11 +848,18 @@
         setView("stores");
       });
 
-    $$(".region-chip").forEach(function (b) {
+    $$("#promoterChips .region-chip").forEach(function (b) {
+      b.addEventListener("click", function () {
+        setPromoterFilter(b.getAttribute("data-promoter") === "1");
+        maybeHintPromoterForProduct();
+      });
+    });
+
+    $$("#regionChips .region-chip").forEach(function (b) {
       b.addEventListener("click", function () {
         state.storeRegion = b.getAttribute("data-region") || "";
         state.storeDistrict = "";
-        $$(".region-chip").forEach(function (x) {
+        $$("#regionChips .region-chip").forEach(function (x) {
           var on = x === b;
           x.classList.toggle("active", on);
           x.setAttribute("aria-pressed", on ? "true" : "false");

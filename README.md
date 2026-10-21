@@ -29,7 +29,8 @@ python3 -m http.server 8765
 | 路徑 | 內容 |
 |------|------|
 | `data/products.js` | 產品＋FAQ（含寄賣貨；claim-safe） |
-| `data/stores.js` | 屈臣氏電話簿（非庫存） |
+| `data/stores.js` | 屈臣氏電話簿（非庫存；含寄賣推廣員店標誌） |
+| `docs/consign-promoter-stores.jpg` | 用戶提供：有寄賣推廣員嘅屈臣氏名單 |
 | `docs/consignment-notes.md` | 寄賣落貨規則摘要 |
 | `assets/js/admin-auth.js` | 登入 |
 | `assets/js/cms.js` | FAQ／備註本機 CMS |
@@ -45,6 +46,11 @@ python3 -m http.server 8765
 - 成份：只跟官網／HKTVmall／The Club／威發／REBOOT YOUR 公開頁或實物標籤；找不到就寫轉介句
 - 「調理個」系列公開品牌為 **REBOOT YOUR**，唔硬標古寶
 
+## 寄賣推廣員店
+
+門店頁可篩「有寄賣推廣員」（9 間：CNT／TPH／SPT／LFS／KPO3／MPL／NYL／DPL／DH2）。
+卡片顯示營業時間、店碼／店號同「寄賣推廣員」徽章。揀寄賣貨時會提示可篩呢啲店。
+
 ## 合規重點
 
 - 保健品 ≠ 註冊藥物；安宮（HKC-18196）係註冊中成藥，話術極克制
@@ -53,6 +59,7 @@ python3 -m http.server 8765
 - Fortigel 等：法定未註冊卸責方向
 - 價格：參考或職員標準價；以門市／落貨價簽為準
 - 電話簿 ≠ 該產品有貨
+- 「有寄賣推廣員」店：用戶名單（截至 2026-10-22）；唔等於即時有貨或推廣員一定在場
 
 ## GitHub Pages
 

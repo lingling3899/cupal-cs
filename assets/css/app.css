@@ -326,3 +326,55 @@ select:focus, input:focus, textarea:focus {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.8rem;
 }
+
+.stores-intro-note {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+.promoter-soft-hint {
+  background: #ecfdf5;
+  border: 1px solid #6ee7b7;
+  color: #065f46;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  margin-bottom: 12px;
+}
+.promoter-soft-hint .chip-inline {
+  margin-left: 6px;
+  border: 1.5px solid var(--green);
+  background: #fff;
+  color: var(--green);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-weight: 650;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.region-chip.promoter-chip.active {
+  background: #0f766e;
+  border-color: #0f766e;
+}
+.store-card.has-promoter {
+  border-color: #6ee7b7;
+  background: linear-gradient(180deg, #f0fdf8 0%, #fff 40%);
+}
+.badge-promoter {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #34d399;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.store-card .store-meta {
+  color: var(--green);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
