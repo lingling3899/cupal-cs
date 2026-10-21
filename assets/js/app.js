@@ -554,24 +554,52 @@
     if (!opts.skipRender) renderStores();
   }
 
+  function selectedStoreProduct() {
+    var sp = $("#storeProductSelect");
+    var id = (sp && sp.value) || state.productId || "";
+    if (!id) return null;
+    for (var i = 0; i < products.length; i++) {
+      if (products[i].id === id) return products[i];
+    }
+    return null;
+  }
+
+  function isConsignStoreProduct(p) {
+    return !!(p && p.consignment && !p.watsonsShelf);
+  }
+
+  function applyConsignStoreLock() {
+    var p = selectedStoreProduct();
+    var lock = isConsignStoreProduct(p);
+    var chips = $("#promoterChips");
+    if (chips) chips.classList.toggle("locked-consign", lock);
+    $$("#promoterChips .region-chip").forEach(function (x) {
+      var isAll = x.getAttribute("data-promoter") !== "1";
+      if (lock && isAll) {
+        x.classList.add("hidden");
+        x.setAttribute("aria-hidden", "true");
+      } else {
+        x.classList.remove("hidden");
+        x.removeAttribute("aria-hidden");
+      }
+      x.disabled = !!(lock && isAll);
+    });
+    if (lock) setPromoterFilter(true, { skipRender: true });
+    return lock;
+  }
+
   function maybeHintPromoterForProduct() {
-    var p = getProduct();
+    var p = selectedStoreProduct() || getProduct();
     var hint = $("#promoterSoftHint");
     if (!hint) return;
-    if (p && p.consignment) {
+    if (isConsignStoreProduct(p)) {
       hint.classList.remove("hidden");
       hint.innerHTML =
-        "而家揀嘅係<strong>寄賣貨</strong>——可撳「有寄賣推廣員」睇有推廣員嘅屈臣氏（唔等於該店一定有貨）。" +
-        (state.storePromoterOnly
-          ? ""
-          : ' <button type="button" class="chip-inline" id="promoterHintBtn">篩推廣員店</button>');
-      var btn = $("#promoterHintBtn");
-      if (btn) {
-        btn.addEventListener("click", function () {
-          setPromoterFilter(true);
-          maybeHintPromoterForProduct();
-        });
-      }
+        "寄賣貨實體店：只顯示<strong>9 間有推廣員嘅屈臣氏</strong>（唔等於即時有貨或推廣員一定在場——請致電確認）。";
+    } else if (p && p.consignment) {
+      hint.classList.remove("hidden");
+      hint.innerHTML =
+        "呢款亦有寄賣落貨碼；門店電話簿預設全部屈臣氏，可撳「有寄賣推廣員」睇推廣員店。";
     } else {
       hint.classList.add("hidden");
       hint.innerHTML = "";
@@ -583,6 +611,7 @@
     var qa = $("#productSelect");
     if (sp && qa && qa.value && !sp.value) sp.value = qa.value;
     if (sp && sp.value) state.productId = sp.value;
+    applyConsignStoreLock();
     renderProductMeta();
     maybeHintPromoterForProduct();
   }
@@ -599,8 +628,10 @@
   }
 
   function filteredStores() {
+    var consignLock = isConsignStoreProduct(selectedStoreProduct());
+    var promoterOnly = state.storePromoterOnly || consignLock;
     var list = watsons.filter(function (s) {
-      if (state.storePromoterOnly && !s.consignPromoter) return false;
+      if (promoterOnly && !s.consignPromoter) return false;
       if (state.storeRegion && regionOfStore(s) !== state.storeRegion) return false;
       if (state.storeDistrict && String(s.district || "") !== state.storeDistrict) return false;
       if (state.storeQuery) {
@@ -622,8 +653,8 @@
       }
       return true;
     });
-    /* 推廣員篩選時，電話簿重複紀錄按店碼去重，顯示 9 間 */
-    if (state.storePromoterOnly) {
+    /* 推廣員篩選／寄賣貨鎖定時，電話簿重複紀錄按店碼去重，顯示 9 間 */
+    if (promoterOnly) {
       var seen = {};
       list = list.filter(function (s) {
         var k = s.watsonsCode || s.id;
@@ -639,6 +670,7 @@
   }
 
   function renderStores() {
+    applyConsignStoreLock();
     var note = $("#directoryNote");
     if (note) {
       var meta = storeData.consignPromoters || {};
@@ -654,18 +686,29 @@
         " 共 " +
         watsons.length +
         " 間屈臣氏電話紀錄。";
-      if (uniqN) {
-        base +=
-          " 其中 " +
+      if (isConsignStoreProduct(selectedStoreProduct())) {
+        note.textContent =
+          "寄賣貨實體店只顯示有推廣員嘅屈臣氏（共 " +
           uniqN +
-          " 間標明有寄賣產品推廣員" +
-          (meta.asOf ? "（名單截至 " + meta.asOf + "）" : "") +
-          "——排更／在場請致電確認。";
+          " 間）" +
+          (meta.asOf ? "；名單截至 " + meta.asOf : "") +
+          "。唔等於即時有貨或推廣員一定在場——請致電確認。";
+      } else {
+        if (uniqN) {
+          base +=
+            " 其中 " +
+            uniqN +
+            " 間標明有寄賣產品推廣員" +
+            (meta.asOf ? "（名單截至 " + meta.asOf + "）" : "") +
+            "——排更／在場請致電確認。";
+        }
+        note.textContent = base;
       }
-      note.textContent = base;
     }
 
-    var regionSource = state.storePromoterOnly
+    var consignLock = isConsignStoreProduct(selectedStoreProduct());
+    var promoterOnly = state.storePromoterOnly || consignLock;
+    var regionSource = promoterOnly
       ? watsons.filter(function (s) { return s.consignPromoter; })
       : watsons;
     var regionList = state.storeRegion

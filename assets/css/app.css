@@ -427,3 +427,5 @@ select:focus, input:focus, textarea:focus {
   font-size: 0.82rem;
   font-weight: 600;
 }
+
+#promoterChips.locked-consign .region-chip[data-promoter=""] { display: none !important; }
