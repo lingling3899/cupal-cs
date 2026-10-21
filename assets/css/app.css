@@ -42,13 +42,20 @@ a { color: var(--teal-dark); }
   flex-wrap: wrap;
 }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.brand-mark {
-  width: 44px; height: 44px; border-radius: 12px;
-  background: #fff; color: var(--teal-dark);
-  display: grid; place-items: center;
-  font-weight: 800; font-size: 1.05rem;
-  border: 1px solid rgba(255,255,255,0.5);
+.brand-logo {
+  height: 40px;
+  width: auto;
+  max-width: min(160px, 42vw);
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255,255,255,0.55);
   flex-shrink: 0;
+  display: block;
+}
+@media (min-width: 480px) {
+  .brand-logo { height: 44px; }
 }
 .brand-text h1 { margin: 0; font-size: 1.05rem; color: #fff; }
 .brand-text p { margin: 0; font-size: 0.75rem; color: rgba(255,255,255,0.85); }
