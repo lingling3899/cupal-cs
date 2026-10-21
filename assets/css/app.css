@@ -20,7 +20,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: linear-gradient(180deg, #0f4f8a 0%, #1a6fbf 26%, var(--bg) 26%, #f7fbfe 100%);
+  background: var(--bg);
   color: var(--ink);
   line-height: 1.55;
   min-height: 100vh;
@@ -31,10 +31,11 @@ a { color: var(--teal-dark); }
 
 .topbar {
   position: sticky; top: 0; z-index: 20;
-  background: linear-gradient(90deg, #0c457a, #1a6fbf 55%, #2b86d4);
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding: 12px 14px;
-  color: #fff;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  color: var(--ink);
+  box-shadow: 0 2px 10px rgba(15, 79, 138, 0.06);
 }
 .topbar-inner {
   max-width: 720px; margin: 0 auto;
@@ -43,38 +44,40 @@ a { color: var(--teal-dark); }
 }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .brand-logo {
-  height: 42px;
+  height: 40px;
   width: auto;
-  max-width: min(160px, 42vw);
+  max-width: min(168px, 46vw);
   object-fit: contain;
-  background: #fff;
-  border-radius: 10px;
-  padding: 5px 8px;
-  border: 1px solid rgba(255,255,255,0.55);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
   flex-shrink: 0;
   display: block;
 }
 @media (min-width: 480px) {
-  .brand-logo { height: 48px; }
+  .brand-logo { height: 46px; }
 }
-.brand-text h1 { margin: 0; font-size: 1.05rem; color: #fff; }
-.brand-text p { margin: 0; font-size: 0.75rem; color: rgba(255,255,255,0.85); }
+.brand-text h1 { margin: 0; font-size: 1.02rem; color: var(--ink); }
+.brand-text p { margin: 0; font-size: 0.75rem; color: var(--muted); }
 
 .nav-tabs { display: flex; gap: 5px; flex-wrap: wrap; }
 .nav-tabs button {
-  border: 1px solid rgba(255,255,255,0.45); background: transparent; color: #fff;
+  border: 1.5px solid var(--border); background: #fff; color: var(--teal-dark);
   border-radius: 999px; padding: 8px 14px; font-size: 0.85rem; font-weight: 600;
   cursor: pointer; min-height: 40px;
 }
-.nav-tabs button.active { background: #fff; color: var(--teal-dark); border-color: #fff; }
+.nav-tabs button.active {
+  background: var(--teal); color: #fff; border-color: var(--teal);
+}
 
 .header-login-wrap { position: relative; margin-left: auto; }
 .header-login-btn {
   width: 42px; height: 42px; border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.5); background: rgba(255,255,255,0.12);
-  color: #fff; cursor: pointer; display: grid; place-items: center; position: relative;
+  border: 1.5px solid var(--border); background: #fff;
+  color: var(--teal-dark); cursor: pointer; display: grid; place-items: center; position: relative;
 }
-.header-login-btn.is-in { background: #fff; color: var(--teal-dark); }
+.header-login-btn.is-in { background: var(--teal-soft); color: var(--teal-dark); border-color: var(--teal); }
 .hdr-login-dot {
   position: absolute; top: 6px; right: 6px; width: 8px; height: 8px;
   background: #22c55e; border-radius: 50%; border: 1px solid #fff;
