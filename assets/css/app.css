@@ -704,3 +704,40 @@ select:focus, input:focus, textarea:focus {
 }
 .staff-image-form .field { margin-top: 6px; }
 .staff-image-form .cms-form-actions { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+
+/* Product fact sheet (shown on select) */
+.answer.has-fact-sheet { padding: 12px 14px 14px; }
+.fact-sheet { display: flex; flex-direction: column; gap: 10px; }
+.fact-sheet-title {
+  margin: 0 0 2px;
+  font-weight: 750;
+  color: var(--teal-dark);
+  font-size: 1rem;
+}
+.fact-block {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+.fact-block h4 {
+  margin: 0 0 6px;
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: var(--teal-dark);
+}
+.fact-body {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text, #1a2b3c);
+}
+.fact-list {
+  margin: 0;
+  padding-left: 1.15em;
+}
+.fact-list li { margin: 0 0 4px; }
+.fact-sheet-foot { margin: 2px 0 0 !important; }
+.fact-back-row { margin-top: 8px; }

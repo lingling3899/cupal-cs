@@ -340,12 +340,16 @@
     fillProductSelects();
     renderProductMeta();
     renderFaqGrid();
-    var ap = $("#answerPanel");
-    if (ap) {
-      ap.className = "answer empty";
-      ap.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
-    }
     state.faqKey = "";
+    if (state.productId && getProduct()) {
+      showProductOverview();
+    } else {
+      var ap = $("#answerPanel");
+      if (ap) {
+        ap.className = "answer empty";
+        ap.innerHTML = "請先揀一款產品，即睇成份、功效、服法同注意事項；亦可撳上面問題掣再問。";
+      }
+    }
   }
 
   function fillProductSelects() {
@@ -424,7 +428,7 @@
     if (!box) return;
     if (!p) {
       box.className = "product-card empty";
-      box.innerHTML = "請先揀一款產品，再撳下面問題掣。";
+      box.innerHTML = "請先揀一款產品，即睇產品說明（成份、功效、服法、注意事項）。";
       if (staff) { staff.classList.add("hidden"); staff.innerHTML = ""; }
       renderStaffIngredientPanel(null);
       renderProductCatalog();
@@ -574,6 +578,178 @@
     }).join("");
   }
 
+  function faqById(p, id) {
+    if (!p || !id) return null;
+    var list = p.faqs || [];
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] && list[i].id === id) return list[i];
+    }
+    return null;
+  }
+
+  function faqAnswerText(p, id) {
+    var f = faqById(p, id);
+    return f && f.answer ? String(f.answer).trim() : "";
+  }
+
+  function uniqNonEmpty(parts) {
+    var seen = {};
+    var out = [];
+    (parts || []).forEach(function (s) {
+      var t = String(s || "").trim();
+      if (!t) return;
+      var key = t.replace(/\s+/g, " ");
+      if (seen[key]) return;
+      seen[key] = true;
+      out.push(t);
+    });
+    return out;
+  }
+
+  function extractOrigin(p) {
+    if (!p) return "";
+    if (p.origin) return String(p.origin).trim();
+    if (p.madeIn) return String(p.madeIn).trim();
+    var blobs = [];
+    if (Array.isArray(p.claims)) blobs = blobs.concat(p.claims);
+    if (p.form) blobs.push(p.form);
+    blobs.push(faqAnswerText(p, "about"));
+    var text = blobs.join("\n");
+    var m =
+      text.match(/產地[：:\s]*([^\n。；;，,]{1,40})/) ||
+      text.match(/Made\s+in\s+([A-Za-z\u4e00-\u9fff][A-Za-z\u4e00-\u9fff\s\-]{0,40})/i) ||
+      text.match(/((?:美國|加拿大|德國|澳洲|日本|台灣|香港|瑞士|英國|法國|紐西蘭)(?:製|產|製造|製造、cGMP)?)/);
+    if (m) return String(m[1] || m[0]).trim().replace(/[。．\.]+$/, "");
+    return "";
+  }
+
+  function extractStorage(p) {
+    if (!p) return "";
+    if (p.storage) return String(p.storage).trim();
+    var blobs = [];
+    (p.faqs || []).forEach(function (f) {
+      if (f && f.answer) blobs.push(f.answer);
+      if (f && f.staffAnswer) blobs.push(f.staffAnswer);
+    });
+    if (p.staffNotes) blobs.push(p.staffNotes);
+    if (p.usage) blobs.push(p.usage);
+    if (p.cautions) blobs.push(p.cautions);
+    var text = blobs.join("\n");
+    var lines = text.split(/\n+/);
+    var hits = [];
+    lines.forEach(function (line) {
+      if (/儲存|存放|陰涼|避免陽光|室溫|冷藏|密封/.test(line)) {
+        hits.push(line.trim());
+      }
+    });
+    if (hits.length) return uniqNonEmpty(hits).slice(0, 3).join("\n");
+    var m = text.match(/[^\n。]*(?:儲存|存放|陰涼)[^\n。]{0,80}/);
+    return m ? m[0].trim() : "";
+  }
+
+  function factBlock(title, bodyHtml) {
+    return (
+      '<section class="fact-block">' +
+      "<h4>" +
+      escapeHtml(title) +
+      "</h4>" +
+      '<div class="fact-body">' +
+      bodyHtml +
+      "</div></section>"
+    );
+  }
+
+  function renderProductFactSheet(p) {
+    if (!p) return "";
+
+    var ingredientsParts = [];
+    if (p.keyIngredients && p.keyIngredients.length) {
+      ingredientsParts.push(p.keyIngredients.join("、"));
+    }
+    var ingFaq = faqAnswerText(p, "ingredients");
+    if (ingFaq) ingredientsParts.push(ingFaq);
+    var ingredientsHtml = ingredientsParts.length
+      ? nl2br(uniqNonEmpty(ingredientsParts).join("\n\n"))
+      : "請以包裝標籤／說明書為準。";
+
+    var claims = Array.isArray(p.claims) ? p.claims.filter(Boolean) : [];
+    var efficacyHtml = "";
+    if (claims.length) {
+      efficacyHtml =
+        "<ul class=\"fact-list\">" +
+        claims
+          .map(function (c) {
+            return "<li>" + escapeHtml(c) + "</li>";
+          })
+          .join("") +
+        "</ul>";
+    } else {
+      var about = faqAnswerText(p, "about");
+      efficacyHtml = about
+        ? nl2br(about)
+        : "請以包裝標籤／說明書為準。";
+    }
+
+    var usageText = String(p.usage || "").trim() || faqAnswerText(p, "usage");
+    var usageHtml = usageText
+      ? nl2br(usageText)
+      : "請以包裝標籤／說明書為準。";
+
+    var storageText = extractStorage(p);
+    var storageHtml = storageText
+      ? nl2br(storageText)
+      : "請以包裝標籤／說明書為準。";
+
+    var originText = extractOrigin(p);
+    var originHtml = originText
+      ? escapeHtml(originText)
+      : "請以包裝標籤為準。";
+
+    var cautionParts = [];
+    if (p.cautions) cautionParts.push(String(p.cautions).trim());
+    var cautionFaq = faqAnswerText(p, "caution");
+    if (cautionFaq) cautionParts.push(cautionFaq);
+    if (p.disclaimer) cautionParts.push(String(p.disclaimer).trim());
+    var cautionHtml = cautionParts.length
+      ? nl2br(uniqNonEmpty(cautionParts).join("\n\n"))
+      : "請以包裝標籤／說明書為準；孕婦、兒童、長期用藥或敏感人士使用前宜諮詢醫生／藥劑師。";
+
+    return (
+      '<div class="fact-sheet">' +
+      '<p class="fact-sheet-title">【' +
+      escapeHtml(p.nameZh) +
+      "】產品說明</p>" +
+      factBlock("成份", ingredientsHtml) +
+      factBlock("功效", efficacyHtml) +
+      factBlock("服用方法", usageHtml) +
+      factBlock("儲存", storageHtml) +
+      factBlock("產地", originHtml) +
+      factBlock("注意事項", cautionHtml) +
+      '<p class="fact-sheet-foot meta">請以包裝標籤／說明書為準；參考用途，非醫療建議。上面問題掣可再睇單題詳答（例如邊度買）。</p>' +
+      "</div>"
+    );
+  }
+
+  function showProductOverview() {
+    var box = $("#answerPanel");
+    if (!box) return;
+    var p = getProduct();
+    state.faqKey = "";
+    if (!p) {
+      box.className = "answer empty";
+      box.innerHTML = "請先揀一款產品，即睇成份、功效、服法同注意事項；亦可撳上面問題掣再問。";
+      return;
+    }
+    box.className = "answer has-fact-sheet";
+    box.innerHTML = renderProductFactSheet(p);
+    try {
+      box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } catch (e) {
+      try { box.scrollIntoView(true); } catch (e2) { /* ignore */ }
+    }
+    renderFaqGrid();
+  }
+
   function selectProductById(id) {
     state.productId = id || "";
     state.faqKey = "";
@@ -581,13 +757,9 @@
     if (ps) ps.value = state.productId;
     var sps = $("#storeProductSelect");
     if (sps) sps.value = state.productId;
-    var box = $("#answerPanel");
-    if (box) {
-      box.className = "answer empty";
-      box.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
-    }
     renderProductMeta();
     renderFaqGrid();
+    showProductOverview();
     if (typeof maybeHintPromoterForProduct === "function") {
       try { maybeHintPromoterForProduct(); } catch (e) { /* ignore */ }
     }
@@ -706,9 +878,16 @@
         escapeHtml(item.label) +
         "<br><br>" +
         nl2br(item.answer) +
-        (isStaff() ? '<div class="meta">職員新增答案（本機儲存）</div>' : "");
+        (isStaff() ? '<div class="meta">職員新增答案（本機儲存）</div>' : "") +
+        '<div class="meta fact-back-row"><button type="button" class="chip" id="answerBackOverview">返回產品說明</button></div>';
       box.className = "answer";
       box.innerHTML = html;
+      var backC = $("#answerBackOverview");
+      if (backC) {
+        backC.addEventListener("click", function () {
+          showProductOverview();
+        });
+      }
       renderFaqGrid();
       return;
     }
@@ -780,6 +959,10 @@
     }
 
     html += '<div class="meta">請以包裝標籤／說明書為準；參考用途，非醫療建議。</div>';
+    html +=
+      '<div class="meta fact-back-row">' +
+      '<button type="button" class="chip" id="answerBackOverview">返回產品說明</button>' +
+      "</div>";
 
     box.className = "answer";
     box.innerHTML = html;
@@ -792,6 +975,17 @@
         syncStoreProductSelect();
         renderStores();
       });
+    }
+    var back = $("#answerBackOverview");
+    if (back) {
+      back.addEventListener("click", function () {
+        showProductOverview();
+      });
+    }
+    try {
+      box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } catch (e) {
+      try { box.scrollIntoView(true); } catch (e2) { /* ignore */ }
     }
     renderFaqGrid();
   }
@@ -1116,17 +1310,7 @@
     var ps = $("#productSelect");
     if (ps) {
       ps.addEventListener("change", function () {
-        state.productId = ps.value;
-        state.faqKey = "";
-        var box = $("#answerPanel");
-        if (box) {
-          box.className = "answer empty";
-          box.innerHTML = "揀咗產品後，撳上面問題掣即睇答案。";
-        }
-        renderProductMeta();
-        renderFaqGrid();
-        var sp = $("#storeProductSelect");
-        if (sp) sp.value = ps.value;
+        selectProductById(ps.value || "");
       });
     }
 
@@ -1160,8 +1344,11 @@
           cms().removeFaqCustom(delBtn.getAttribute("data-faq-del"));
           if (state.faqKey === "custom:" + delBtn.getAttribute("data-faq-del")) {
             state.faqKey = "";
-            $("#answerPanel").className = "answer empty";
-            $("#answerPanel").innerHTML = "問題已刪除。";
+            if (getProduct()) showProductOverview();
+            else {
+              $("#answerPanel").className = "answer empty";
+              $("#answerPanel").innerHTML = "問題已刪除。";
+            }
           }
           renderFaqGrid();
           return;
