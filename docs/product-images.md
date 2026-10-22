@@ -4,7 +4,7 @@ Public product photos downloaded from product-specific URLs (cupal.com.hk/cupalh
 
 Brand-only / homepage-only links (`https://www.cupal.com.hk/`, The Club `/brand/cupal`, reboot `/collection`) were **not** scraped for random gallery assignment. HKTVmall search result galleries were not crawled; only product DETAIL pages when a matching SKU page was found.
 
-## Have image (43)
+## Have image (46)
 
 | id | source |
 |----|--------|
@@ -51,15 +51,16 @@ Brand-only / homepage-only links (`https://www.cupal.com.hk/`, The Club `/brand/
 | whitening-ex | The Club product (cupal-beauty-purelock-…-za118a) |
 | child-fish-oil | The Club product (cupal-child-fish-oil-za166) |
 | weifat-ezhu | shinghingfood product page 真威龍莪朮油 50ml |
+| kai-nai-cha | sales-kit crop (monitor photo) |
+| seven-star-tea | sales-kit crop (monitor photo) |
+| ucii | sales-kit crop (monitor photo) |
 
-## Still need user-provided files (3)
+## Still need user-provided files (0)
 
-ucii, kai-nai-cha, seven-star-tea
-
-Reasons: no product-specific public detail page with a clear matching pack photo found (官網／The Club／HKTVmall detail). Homepage / brand-collection / search-gallery only — not assigned. Do not confuse with 佳存 UC-II, 衍生開奶茶／七星茶, or 美康肝健.
+None — catalog complete **46/46**.
 
 Staff login can temporarily override with 「設定公開圖網址」 (localStorage only).
 
-Sales Kit monitor photos (2026-10-22): cropped clear single-product pack shots for joint-ointment, red-yeast, brain-tonic, fat-burn, colostrum, fish-oil, vigor, weifat-potong, weifat-safflower, weifat-qufeng, weifat-huoluo. Skipped ambiguous/mismatched packs (e.g. 美康肝健≠樂肝健, 花嘜驅風油≠真威龍 unless labeled 真威龍, Pro-stic large-only, Colo Shake/Candy).
+Sales Kit monitor photos (2026-10-22): cropped clear single-product pack shots for joint-ointment, red-yeast, brain-tonic, fat-burn, colostrum, fish-oil, vigor, weifat-potong, weifat-safflower, weifat-qufeng, weifat-huoluo, **kai-nai-cha, seven-star-tea, ucii**. Skipped ambiguous/mismatched packs (e.g. 美康肝健≠樂肝健, 花嘜驅風油≠真威龍 unless labeled 真威龍, Pro-stic large-only, Colo Shake/Candy). Do not confuse ucii with 佳存 UC-II, or the teas with 衍生開奶茶／七星茶.
 
 Public-page fill (2026-10-22): +12 from The Club / waifat / gba2go / shinghingfood product DETAIL pages only.

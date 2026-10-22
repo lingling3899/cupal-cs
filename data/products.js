@@ -309,7 +309,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": false,
     "filterGroup": "關節肌肉",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/ucii.jpg"
   },
   {
     "id": "pro-calcium",
@@ -1543,7 +1544,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/kai-nai-cha.jpg"
   },
   {
     "id": "seven-star-tea",
@@ -1602,7 +1604,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/seven-star-tea.jpg"
   },
   {
     "id": "lecithin",
