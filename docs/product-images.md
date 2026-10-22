@@ -1,10 +1,10 @@
 # Product images
 
-Public product photos downloaded from product-specific URLs already listed in `data/products.js` (cupal.com.hk/cupalhealth/*, shop.theclub.com.hk product pages, rebootyour.com.hk/product/*, pokoi qianli page). Stored under `assets/img/products/{id}.jpg`.
+Public product photos downloaded from product-specific URLs (cupal.com.hk/cupalhealth/*, shop.theclub.com.hk product pages, rebootyour.com.hk/product/*, pokoi / waifat / gba2go / shinghingfood product pages). Stored under `assets/img/products/{id}.jpg`.
 
-Brand-only / homepage-only links (`https://www.cupal.com.hk/`, The Club `/brand/cupal`, reboot `/collection`) were **not** scraped for random gallery assignment. HKTVmall search was not crawled.
+Brand-only / homepage-only links (`https://www.cupal.com.hk/`, The Club `/brand/cupal`, reboot `/collection`) were **not** scraped for random gallery assignment. HKTVmall search result galleries were not crawled; only product DETAIL pages when a matching SKU page was found.
 
-## Have image (31)
+## Have image (43)
 
 | id | source |
 |----|--------|
@@ -39,13 +39,27 @@ Brand-only / homepage-only links (`https://www.cupal.com.hk/`, The Club `/brand/
 | weifat-safflower | sales-kit crop (monitor photo) |
 | weifat-qufeng | sales-kit crop (monitor photo) |
 | weifat-huoluo | sales-kit crop (monitor photo) |
+| prostic-s | The Club product (cupal-pro-stic-…-cmps); officialUrl → cupalhealth/plaster_s |
+| massage-balm | gba2go product page 古寶肌肉按摩膏50G |
+| pro-calcium | The Club product (cupal-pro-calcium-…-vtm04) |
+| allergy-probiotic | The Club product (cupal-bifidus-baby-…-za094) |
+| nmn | The Club product (cupal-nmn-18000-…-za155); officialUrl → cupal.com.hk/nmn18000pqq1200ex |
+| liver-care | waifat.com.hk product_details 樂肝健 (CU75_LiverPRO.jpg) |
+| acne-drink | The Club product (cupal-beauty-acnecare-…-za081) |
+| swiss-collagen | The Club product (cupal-beauty-switzerland-collagen-…-swc05) |
+| resveratrol | The Club product (cupal-beauty-anti-aging-resveratrol-…-za075) |
+| whitening-ex | The Club product (cupal-beauty-purelock-…-za118a) |
+| child-fish-oil | The Club product (cupal-child-fish-oil-za166) |
+| weifat-ezhu | shinghingfood product page 真威龍莪朮油 50ml |
 
-## Still need user-provided files (15)
+## Still need user-provided files (3)
 
-prostic-s, massage-balm, ucii, pro-calcium, allergy-probiotic, nmn, liver-care, kai-nai-cha, seven-star-tea, acne-drink, swiss-collagen, resveratrol, whitening-ex, child-fish-oil, weifat-ezhu
+ucii, kai-nai-cha, seven-star-tea
 
-Reasons: homepage-only / brand-collection URL, waifat.com.hk product pages timed out or returned mismatched thumbs, tcmhongkong company/medicine pages had no reliable product photo (site OG banner only).
+Reasons: no product-specific public detail page with a clear matching pack photo found (官網／The Club／HKTVmall detail). Homepage / brand-collection / search-gallery only — not assigned. Do not confuse with 佳存 UC-II, 衍生開奶茶／七星茶, or 美康肝健.
 
 Staff login can temporarily override with 「設定公開圖網址」 (localStorage only).
 
 Sales Kit monitor photos (2026-10-22): cropped clear single-product pack shots for joint-ointment, red-yeast, brain-tonic, fat-burn, colostrum, fish-oil, vigor, weifat-potong, weifat-safflower, weifat-qufeng, weifat-huoluo. Skipped ambiguous/mismatched packs (e.g. 美康肝健≠樂肝健, 花嘜驅風油≠真威龍 unless labeled 真威龍, Pro-stic large-only, Colo Shake/Candy).
+
+Public-page fill (2026-10-22): +12 from The Club / waifat / gba2go / shinghingfood product DETAIL pages only.

@@ -84,7 +84,7 @@ window.CUPAL_PRODUCTS = [
     "cautions": "只供外用。皮膚敏感或不適請停用。孕婦、兒童：跟標籤或問醫生。",
     "whereToBuy": "銷售點（部分店有售）：屈臣氏、HKTVmall、The Club、古寶官網、各大藥房／專賣。請致電確認。",
     "priceNote": "參考：The Club 約 $44（2026-10 監察）；以當日價簽為準。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "officialUrl": "https://www.cupal.com.hk/cupalhealth/plaster_s",
     "disclaimer": "外用舒緩產品；唔係註冊藥物。",
     "staffNotes": "細裝親民；可與大貼成套。屈臣氏品牌頁未確認——唔報「全線有貨」。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：CMPS／205288；標準價 $44（6盒$220）。",
     "faqs": [
@@ -124,7 +124,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "205288",
     "standardPrice": 44,
     "filterGroup": "外用",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/prostic-s.jpg"
   },
   {
     "id": "joint-ointment",
@@ -209,7 +210,7 @@ window.CUPAL_PRODUCTS = [
     "cautions": "含樟腦——蠶豆症（G6PD）患者不宜使用樟腦產品。6 歲或以下不宜。勿入眼／傷口。皮膚敏感請停用。",
     "whereToBuy": "專賣／部分電商（如 gba2go 等）較見；主流藥妝未必齊。屈臣氏、HKTVmall、各大藥房請致電確認。",
     "priceNote": "參考：gba2go 約 $84（2026-10）；以當日價簽為準。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "officialUrl": "https://www.gba2go.com/products/cupal-%E5%8F%A4%E5%AF%B6%E8%82%8C%E8%82%89%E6%8C%89%E6%91%A9%E8%86%8F50g",
     "disclaimer": "外用；含樟腦。保健／外用 ≠ 註冊止痛藥。",
     "staffNotes": "G6PD／樟腦警示必須講。≤6 歲不宜。可與補適貼、強腱肌做「內外行動力」行銷故事——非醫囑。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：ZA177 New／暫用203957；標準價 $84。",
     "faqs": [
@@ -249,7 +250,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "暫用203957",
     "standardPrice": 84,
     "filterGroup": "外用",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/massage-balm.jpg"
   },
   {
     "id": "ucii",
@@ -329,7 +331,7 @@ window.CUPAL_PRODUCTS = [
     "cautions": "含甲殼類——對甲殼類（如蝦蟹）敏感者，服用前應諮詢醫生。懷孕或哺乳及長期服用藥物人士應諮詢醫生。保健食品不供診斷、治療或預防疾病。",
     "whereToBuy": "The Club 有售；屈臣氏品牌頁未必確認。HKTVmall、古寶官網、各大藥房請致電／上網確認。",
     "priceNote": "參考：The Club 定期約 HK$297／特價約 HK$267（公開頁）；門市以當日價簽為準。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-pro-calcium-100-softgels-vtm04",
     "disclaimer": "保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病。含甲殼類。",
     "staffNotes": "必須講甲殼類。唔好話醫骨質疏鬆／骨刺。可與關節線做「骨節故事」行銷搭配——非醫囑。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：VTM04／206785；標準價 $205（寄賣表）。公開 Club 價可能不同——以落貨／門市為準。",
     "faqs": [
@@ -369,7 +371,8 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "206785",
     "standardPrice": 205,
     "filterGroup": "寄賣保健",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/pro-calcium.jpg"
   },
   {
     "id": "fortigel",
@@ -575,7 +578,7 @@ window.CUPAL_PRODUCTS = [
     "cautions": "保健食品；唔講治療過敏／濕疹／哮喘等疾病。敏感、懷孕、長期用藥：諮詢醫生。",
     "whereToBuy": "屈臣氏常見；HKTVmall、各大藥房。請致電確認。",
     "priceNote": "參考：屈臣氏曾見約 $299 一帶（2026-10；曾有買1送1等檔期）；以當日價簽為準。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-bifidus-baby-28-sachets-za094",
     "disclaimer": "保健食品；不供診斷、治療或預防疾病。主視覺唔好令人以為古寶只賣益生菌。",
     "staffNotes": "Traffic driver；關節／安宮／外用要獨立溝通。唔好用疾病治癒式聲稱。",
     "faqs": [
@@ -612,7 +615,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": false,
     "filterGroup": "全部",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/allergy-probiotic.jpg"
   },
   {
     "id": "angong",
@@ -692,7 +696,7 @@ window.CUPAL_PRODUCTS = [
     "cautions": "保健食品；不供診斷、治療或預防疾病。懷孕／長期用藥／敏感：諮詢醫生。缺貨唔好承諾即日有。",
     "whereToBuy": "屈臣氏（曾見缺貨）、零售渠道。請先確認有貨再介紹。",
     "priceNote": "參考：屈臣氏曾見約 $888／RRP 約 $1,688（2026-10；當時缺貨）；以當日價簽／庫存為準。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "officialUrl": "https://www.cupal.com.hk/nmn18000pqq1200ex",
     "disclaimer": "保健食品；簡短介紹。有貨先於投放。",
     "staffNotes": "2026-10 截圖缺貨——先恢復庫存再談廣告。唔好發明臨床逆齡數字。",
     "faqs": [
@@ -729,7 +733,8 @@ window.CUPAL_PRODUCTS = [
     ],
     "consignment": false,
     "filterGroup": "美容",
-    "watsonsShelf": true
+    "watsonsShelf": true,
+    "image": "assets/img/products/nmn.jpg"
   },
   {
     "id": "cordyceps-king",
@@ -1002,7 +1007,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "每日 2 次，每次 1 粒（威發公開頁；以包裝為準）。",
     "cautions": "唔講治療肝炎／脂肪肝。懷孕／長期用藥／敏感：諮詢醫生。",
-    "officialUrl": "http://waifat.com.hk/product_details.php-32.html?category_id=34&item_id=43",
+    "officialUrl": "https://waifat.com.hk/product_details.php-32.html?category_id=34&item_id=43",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E6%A8%82%E8%82%9D%E5%81%A5",
     "ingredientSource": "waifat",
     "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW011／205743；$380。",
@@ -1042,7 +1047,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/liver-care.jpg"
   },
   {
     "id": "bilberry",
@@ -2165,7 +2171,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "唔講醫好暗瘡／皮膚病。敏感／懷孕：諮詢醫生。",
-    "officialUrl": "https://shop.theclub.com.hk/brand/cupal",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-acnecare-lactoferrin-drink-14-packs-za081",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=CUPAL%20%E5%85%A8%E6%95%88%E6%B7%A8%E7%97%98%E9%A3%B2",
     "ingredientSource": "partial",
     "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA081／275877；$248。",
@@ -2205,7 +2211,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/acne-drink.jpg"
   },
   {
     "id": "swiss-collagen",
@@ -2224,7 +2231,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "保健／美肌食品；唔講醫好皮膚病。",
-    "officialUrl": "https://shop.theclub.com.hk/brand/cupal",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-switzerland-collagen-orange-flavor-165g-swc05",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E7%91%9E%E5%A3%AB%E8%86%A0%E5%8E%9F%E8%9B%8B%E7%99%BD%E7%BE%8E%E8%82%8C%E7%B2%BE%E8%8F%AF",
     "ingredientSource": "partial",
     "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSWC05／245264；$298。",
@@ -2264,7 +2271,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/swiss-collagen.jpg"
   },
   {
     "id": "resveratrol",
@@ -2285,7 +2293,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "唔講逆齡保證／治療疾病。",
-    "officialUrl": "https://shop.theclub.com.hk/brand/cupal",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-anti-aging-resveratrol-75-s-za075",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E9%80%86%E8%82%8C%E9%BD%A1%E7%99%BD%E8%97%9C%E8%98%86%E9%86%87",
     "ingredientSource": "partial",
     "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA075／279457；$569。",
@@ -2325,7 +2333,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/resveratrol.jpg"
   },
   {
     "id": "whitening-ex",
@@ -2344,7 +2353,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "唔講醫好色斑／皮膚病。",
-    "officialUrl": "https://shop.theclub.com.hk/brand/cupal",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-purelock-skin-whitening-ex-60-s-za118a",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%A4%AA%E9%BB%91%E9%80%8F%E8%82%8C%E7%BE%8E%E7%99%BD%E4%B8%B8",
     "ingredientSource": "partial",
     "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA118A／294228；$488。",
@@ -2384,7 +2393,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/whitening-ex.jpg"
   },
   {
     "id": "child-fish-oil",
@@ -2403,7 +2413,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "魚過敏注意。幼童跟標籤年齡。",
-    "officialUrl": "https://shop.theclub.com.hk/brand/cupal",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-child-fish-oil-za166",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E5%85%92%E7%AB%A5%E9%AD%9A%E6%B2%B9",
     "ingredientSource": "partial",
     "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA166／暫時用205745；$179。職員註：近期買二送一（以當日為準）。",
@@ -2444,7 +2454,8 @@ window.CUPAL_PRODUCTS = [
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。",
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/child-fish-oil.jpg"
   },
   {
     "id": "weifat-qianli",
@@ -2535,7 +2546,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "外用：塗於患處輕力按摩；需要時每日數次（以包裝為準）。勿入口。",
     "cautions": "⚠️ 含樟腦——蠶豆症（G6PD）患者應避免使用含樟腦產品。6 歲或以下不宜（跟常見藥油標籤方向；以實物為準）。只供外用；勿入眼／黏膜。兒童、孕婦用前諮詢中醫師／醫生。",
-    "officialUrl": "https://www.tcmhongkong.com/medicines/company-765b6879.html",
+    "officialUrl": "https://www.shinghingfood.com/zh-tw/products/herbal-balm-ezhu-you-50ml",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E7%9C%9F%E5%A8%81%E9%BE%8D%E8%8E%AA%E6%9C%AE%E6%B2%B9%2050ml",
     "ingredientSource": "public-tcm",
     "disclaimer": "外用；多含樟腦。註冊中成藥請核對包裝註冊編號。跟標籤；非醫療建議。",
@@ -2575,7 +2586,8 @@ window.CUPAL_PRODUCTS = [
     "consignment": true,
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
-    "watsonsShelf": false
+    "watsonsShelf": false,
+    "image": "assets/img/products/weifat-ezhu.jpg"
   },
   {
     "id": "weifat-potong",
