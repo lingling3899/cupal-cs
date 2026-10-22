@@ -71,16 +71,18 @@
 
 
   function resolveIngredientBundle(p) {
-    if (!p) return { ingredients: [], benefits: [] };
+    if (!p) return { ingredients: [], benefits: [], pairings: [] };
     var cmsNotes = cms() ? cms().getIngredientNotes(p.id) : null;
     var cmsIngs = cmsNotes && Array.isArray(cmsNotes.ingredients) ? cmsNotes.ingredients : [];
     var cmsBens = cmsNotes && Array.isArray(cmsNotes.benefits) ? cmsNotes.benefits : [];
-    if (cmsIngs.length || cmsBens.length) {
-      return { ingredients: cmsIngs, benefits: cmsBens };
+    var cmsPairs = cmsNotes && Array.isArray(cmsNotes.pairings) ? cmsNotes.pairings : [];
+    if (cmsIngs.length || cmsBens.length || cmsPairs.length) {
+      return { ingredients: cmsIngs, benefits: cmsBens, pairings: cmsPairs };
     }
     return {
       ingredients: Array.isArray(p.ingredientDetails) ? p.ingredientDetails : [],
-      benefits: Array.isArray(p.benefits) ? p.benefits : []
+      benefits: Array.isArray(p.benefits) ? p.benefits : [],
+      pairings: Array.isArray(p.pairings) ? p.pairings : []
     };
   }
 
@@ -141,6 +143,17 @@
     );
   }
 
+  function staffPairingsListHtml(p) {
+    var bundle = resolveIngredientBundle(p);
+    var pairs = bundle.pairings;
+    if (!pairs.length) return "";
+    return (
+      '<ul class="sip-pairings">' +
+      pairs.map(function (b) { return "<li>" + escapeHtml(b) + "</li>"; }).join("") +
+      "</ul>"
+    );
+  }
+
   function renderStaffIngredientPanel(p) {
     var el = $("#staffIngredientPanel");
     var form = $("#ingNoteForm");
@@ -155,14 +168,16 @@
       } else {
         var cards = staffIngredientCardsHtml(p, { editable: true });
         var bens = staffBenefitsListHtml(p);
+        var pairs = staffPairingsListHtml(p);
         var body =
           '<div class="sip-head"><span class="staff-badge">職員</span> 成份拆解註解</div>' +
           '<p class="sip-sub">CS 話術拆解 · 訪客睇唔到 · 請以包裝標籤為準</p>';
-        if (!cards && !bens) {
+        if (!cards && !bens && !pairs) {
           body += '<p class="sip-empty">呢款暫時未有拆解資料——用下面表單加入。</p>';
         } else {
           if (cards) body += '<div class="sip-section-title">成份</div>' + cards;
           if (bens) body += '<div class="sip-section-title">優點</div>' + bens;
+          if (pairs) body += '<div class="sip-section-title">可配搭／吸收</div>' + pairs;
         }
         el.innerHTML = body;
       }
@@ -171,10 +186,14 @@
       form.classList.toggle("hidden", !(logged && p));
       form.classList.add("admin-only");
       if (logged && p) {
-        var notes = cms() ? cms().getIngredientNotes(p.id) : { benefits: [] };
+        var notes = cms() ? cms().getIngredientNotes(p.id) : { benefits: [], pairings: [] };
         var ta = $("#ingBenefitsText");
         if (ta && document.activeElement !== ta) {
           ta.value = (notes.benefits || []).join("\n");
+        }
+        var taP = $("#ingPairingsText");
+        if (taP && document.activeElement !== taP) {
+          taP.value = (notes.pairings || []).join("\n");
         }
       }
     }
@@ -184,12 +203,14 @@
     if (!isStaff() || !p) return "";
     var cards = staffIngredientCardsHtml(p, { editable: false });
     var bens = staffBenefitsListHtml(p);
-    if (!cards && !bens) return "";
+    var pairs = staffPairingsListHtml(p);
+    if (!cards && !bens && !pairs) return "";
     return (
       '<div class="staff-ing-answer" role="note">' +
-      '<strong><span class="staff-badge">職員</span> 成份／優點拆解</strong>' +
+      '<strong><span class="staff-badge">職員</span> 成份／優點／配搭拆解</strong>' +
       (cards ? '<div class="sip-section-title">成份</div>' + cards : "") +
       (bens ? '<div class="sip-section-title">優點</div>' + bens : "") +
+      (pairs ? '<div class="sip-section-title">可配搭／吸收</div>' + pairs : "") +
       "</div>"
     );
   }
@@ -1605,6 +1626,26 @@
         var msg = $("#ingNoteMsg");
         if (msg) {
           msg.textContent = "優點已儲存。";
+          msg.style.color = "var(--green)";
+          msg.classList.remove("hidden");
+        }
+        renderStaffIngredientPanel(p);
+        if (state.faqKey && String(state.faqKey).indexOf("::ingredients") !== -1) {
+          showAnswer(state.faqKey);
+        }
+      });
+
+    $("#ingPairingsSave") &&
+      $("#ingPairingsSave").addEventListener("click", function () {
+        if (!isStaff() || !cms()) return;
+        var p = getProduct();
+        if (!p) return;
+        var raw = ($("#ingPairingsText") && $("#ingPairingsText").value) || "";
+        var lines = raw.split(/\n/).map(function (s) { return s.trim(); }).filter(Boolean);
+        cms().setPairings(p.id, lines);
+        var msg = $("#ingNoteMsg");
+        if (msg) {
+          msg.textContent = "可配搭／吸收已儲存。";
           msg.style.color = "var(--green)";
           msg.classList.remove("hidden");
         }

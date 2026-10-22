@@ -123,7 +123,7 @@
 
   /* ---- Ingredient breakdown notes (staff) ---- */
   function emptyIngNotes() {
-    return { ingredients: [], benefits: [], updatedAt: null };
+    return { ingredients: [], benefits: [], pairings: [], updatedAt: null };
   }
 
   function getAllIngredientNotes() {
@@ -139,6 +139,7 @@
     return {
       ingredients: Array.isArray(row.ingredients) ? row.ingredients : [],
       benefits: Array.isArray(row.benefits) ? row.benefits : [],
+      pairings: Array.isArray(row.pairings) ? row.pairings : [],
       updatedAt: row.updatedAt || null
     };
   }
@@ -150,6 +151,7 @@
     var next = {
       ingredients: Array.isArray(data && data.ingredients) ? data.ingredients : [],
       benefits: Array.isArray(data && data.benefits) ? data.benefits : [],
+      pairings: Array.isArray(data && data.pairings) ? data.pairings : [],
       updatedAt: new Date().toISOString()
     };
     map[pid] = next;
@@ -220,6 +222,18 @@
     return { ok: true, benefits: notes.benefits };
   }
 
+  function setPairings(productId, stringArray) {
+    var pid = String(productId || "").trim();
+    if (!pid) return { ok: false, error: "請先揀產品" };
+    var notes = getIngredientNotes(pid);
+    var list = Array.isArray(stringArray) ? stringArray : [];
+    notes.pairings = list
+      .map(function (s) { return String(s || "").trim(); })
+      .filter(Boolean);
+    setIngredientNotes(pid, notes);
+    return { ok: true, pairings: notes.pairings };
+  }
+
   function addBenefit(productId, text) {
     var t = String(text || "").trim();
     if (!t) return { ok: false, error: "請填優點" };
@@ -287,6 +301,7 @@
     updateIngredient: updateIngredient,
     removeIngredient: removeIngredient,
     setBenefits: setBenefits,
+    setPairings: setPairings,
     addBenefit: addBenefit,
     removeBenefit: removeBenefit,
     getProductImage: getProductImage,

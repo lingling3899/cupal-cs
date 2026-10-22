@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
   <title>古寶 Cupal · 客服速查</title>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261022q" />
+  <link rel="stylesheet" href="assets/css/app.css?v=20261022r" />
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022q" width="200" height="120" alt="Cupal 古寶" />
+        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022r" width="200" height="120" alt="Cupal 古寶" />
         <div class="brand-text">
           <h1>古寶 · 客服速查</h1>
           <p>產品問答　｜　門店　｜　說明</p>
@@ -89,6 +89,12 @@
           <textarea id="ingBenefitsText" rows="3" maxlength="1500" placeholder="例如：&#10;關節舒適&#10;日常保養"></textarea>
           <div class="cms-form-actions">
             <button type="button" class="admin-mini-btn" id="ingBenefitsSave">儲存優點條列</button>
+          </div>
+          <label class="field" for="ingPairingsText">可配搭／吸收（一行一項）</label>
+          <textarea id="ingPairingsText" rows="3" maxlength="1500" placeholder="例如：&#10;可同維他命 D／液體鈣一齊，方便補鈣吸收（跟標籤，唔保證）&#10;外用藥油唔好同口服關節產品當同一療程硬綁"></textarea>
+          <p class="admin-hint">職員話術 · 訪客睇唔到 · 唔好發明療效保證／治療聲稱；只寫可講嘅配搭方向同吸收提示。</p>
+          <div class="cms-form-actions">
+            <button type="button" class="admin-mini-btn" id="ingPairingsSave">儲存可配搭／吸收</button>
           </div>
         </form>
       </section>
@@ -222,7 +228,7 @@
     <section id="view-login" class="hidden">
       <section class="panel admin-panel">
         <h3>職員登入 <span class="badge">後台</span></h3>
-        <p class="admin-hint">登入後可隱藏／新增 FAQ、編輯成份拆解註解、睇職員備註、改帳號密碼。預設帳密：<code>cupal</code>／<code>office2026</code>。</p>
+        <p class="admin-hint">登入後可隱藏／新增 FAQ、編輯成份／優點／可配搭吸收註解、睇職員備註、改帳號密碼。預設帳密：<code>cupal</code>／<code>office2026</code>。</p>
         <form id="loginForm" class="admin-form" autocomplete="on">
           <label class="field" for="loginUser">帳號</label>
           <input id="loginUser" name="username" type="text" autocomplete="username" required />
@@ -290,10 +296,10 @@
     </footer>
   </main>
 
-  <script src="data/products.js?v=20261022q"></script>
-  <script src="data/stores.js?v=20261022q"></script>
-  <script src="assets/js/admin-auth.js?v=20261022q"></script>
-  <script src="assets/js/cms.js?v=20261022q"></script>
-  <script src="assets/js/app.js?v=20261022q"></script>
+  <script src="data/products.js?v=20261022r"></script>
+  <script src="data/stores.js?v=20261022r"></script>
+  <script src="assets/js/admin-auth.js?v=20261022r"></script>
+  <script src="assets/js/cms.js?v=20261022r"></script>
+  <script src="assets/js/app.js?v=20261022r"></script>
 </body>
 </html>
