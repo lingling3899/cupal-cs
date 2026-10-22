@@ -1,3 +1,6 @@
 .DS_Store
 *.log
 .idea/
+
+# large monitor photos (crops committed under assets/)
+docs/sales-kit-src/
