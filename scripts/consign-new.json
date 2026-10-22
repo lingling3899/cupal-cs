@@ -15,7 +15,7 @@
       "天然蜂膠及蜂皇漿"
     ],
     "claims": [
-      "渠道方向：日常體力／免疫保養（跟授權零售頁；唔講治療疾病）",
+      "渠道方向：日常體力／免疫保養（跟公開產品頁；唔講治療疾病）",
       "美國產（The Club 公開頁）"
     ],
     "usage": "每日 2 次，每次 1–2 粒，溫水送服；空腹或飯前半小時較佳（以包裝為準）。",
@@ -35,7 +35,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "培植冬蟲夏草提取物 350 毫克、天然蜂膠及蜂皇漿（以 The Club／包裝為準）。詳情可睇授權零售頁或實物標籤。"
+        "answer": "培植冬蟲夏草提取物 350 毫克、天然蜂膠及蜂皇漿（以 The Club／包裝為準）。詳情可睇公開產品頁或實物標籤。"
       },
       {
         "id": "usage",
@@ -521,7 +521,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。\n搜尋：https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9F%E7%87%92%E8%84%82"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n搜尋：https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9F%E7%87%92%E8%84%82"
       },
       {
         "id": "usage",
@@ -575,7 +575,7 @@
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶免疫球蛋白片（寄賣表名），80 粒。授權零售常見相關款「丙種球蛋白片」：每片含 60 毫克丙種球蛋白 G (IgG)（The Club）。請以實物包裝名稱同標籤為準。"
+        "answer": "古寶免疫球蛋白片（寄賣表名），80 粒。零售常見相關款「丙種球蛋白片」：每片含 60 毫克丙種球蛋白 G (IgG)（The Club）。請以實物包裝名稱同標籤為準。"
       },
       {
         "id": "ingredients",
@@ -699,7 +699,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。\n官網系列頁：cupal.com.hk/cupalhealth"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n官網系列頁：cupal.com.hk/cupalhealth"
       },
       {
         "id": "usage",
@@ -757,7 +757,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -815,7 +815,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -933,7 +933,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -991,7 +991,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -1405,7 +1405,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。\n可喺 The Club 品牌頁或 HKTVmall 搜尋。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n可喺 The Club 品牌頁或 HKTVmall 搜尋。"
       },
       {
         "id": "usage",
@@ -1463,7 +1463,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -1523,7 +1523,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "主要成份方向：白藜蘆醇——完整標籤請睇包裝／授權零售頁。"
+        "answer": "主要成份方向：白藜蘆醇——完整標籤請睇包裝／公開產品頁。"
       },
       {
         "id": "usage",
@@ -1581,7 +1581,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -1640,7 +1640,7 @@
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",

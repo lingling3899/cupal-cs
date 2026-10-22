@@ -1087,7 +1087,7 @@
     if (!ul) return;
     var items = [
       "屈臣氏（電話簿見下方；非全線一定有古寶）",
-      "HKTVmall（搜「古寶」；授權賣家為準）",
+      "HKTVmall（搜「古寶」；賣家頁面為準）",
       "古寶官網 cupal.com.hk",
       "各大藥房／專賣",
       "The Club（部分 SKU，如液體鈣）"

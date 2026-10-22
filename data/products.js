@@ -268,7 +268,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以實物包裝／說明書為準。",
     "cautions": "保健食品，並不供作診斷、治療或預防任何疾病之用。懷孕、哺乳、長期服用藥物、敏感人士：服用前諮詢醫生。效果因人而異。",
-    "whereToBuy": "實物已確認存在；主流電商／屈臣氏品牌頁未必有穩定 PDP。請查授權零售、古寶官網或致電藥房確認。",
+    "whereToBuy": "實物已確認存在；主流電商／屈臣氏品牌頁未必有穩定 PDP。請查各大藥房／電商、古寶官網或致電藥房確認。",
     "priceNote": "公開渠道仍〔待核價〕——禁止自報 RRP／特價；請睇當日價簽／系統。",
     "officialUrl": "https://www.cupal.com.hk/",
     "disclaimer": "本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病。",
@@ -302,7 +302,7 @@ window.CUPAL_PRODUCTS = [
         "id": "where",
         "icon": "🛒",
         "label": "邊度買",
-        "answer": "銷售點：請查授權零售、各大藥房、古寶官網；屈臣氏／HKTVmall 未必有穩定上架。\n\n價錢：公開渠道仍〔待核價〕——請睇當日價簽，唔好信口報價。\n有貨請致電確認。"
+        "answer": "銷售點：請查各大藥房、電商、古寶官網；屈臣氏／HKTVmall 未必有穩定上架。\n\n價錢：公開渠道仍〔待核價〕——請睇當日價簽，唔好信口報價。\n有貨請致電確認。"
       }
     ],
     "consignment": false,
@@ -631,7 +631,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "口服。一次 1 丸，一日 1 次。小兒三歲以內一次 1/4 丸，四至六歲一次 1/2 丸，一日一次；或遵醫囑。（詳見說明書）",
     "cautions": "孕婦禁用。G6PD（蠶豆症）：含黃連 → 避免服用。含朱砂、雄黃：不宜過量、久用；肝腎功能不全者慎用。不宜長期服用。寒閉神昏者不宜。兒童／年老體弱／正在食其他藥 → 用前諮詢中醫師或醫生；兒童須成人監護。",
-    "whereToBuy": "屈臣氏、授權藥房／專賣、古寶官網。手信請核對 HKC-18196 同信譽零售，唔好買來歷不明貨。",
+    "whereToBuy": "屈臣氏、各大藥房／專賣、古寶官網。手信請核對 HKC-18196 同信譽零售，唔好買來歷不明貨。",
     "priceNote": "以當日價簽為準；〔建議〕唔好用「半價神藥」心智長推。",
     "officialUrl": "https://www.cupal.com.hk/cupalhealth/angong",
     "disclaimer": "註冊中成藥（HKC-18196），唔係普通保健食品。跟說明書同醫囑；前線唔自行開方。",
@@ -665,7 +665,7 @@ window.CUPAL_PRODUCTS = [
         "id": "where",
         "icon": "🛒",
         "label": "邊度買",
-        "answer": "銷售點：\n• 屈臣氏等授權藥妝\n• 各大藥房／專賣\n• 古寶官網\n\n請核對包裝註冊編號 HKC-18196。唔好買來歷不明／無註冊號貨。價以當日價簽為準。"
+        "answer": "銷售點：\n• 屈臣氏等藥妝\n• 各大藥房／專賣\n• 古寶官網\n\n請核對包裝註冊編號 HKC-18196。唔好買來歷不明／無註冊號貨。價以當日價簽為準。"
       }
     ],
     "consignment": false,
@@ -690,7 +690,7 @@ window.CUPAL_PRODUCTS = [
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "保健食品；不供診斷、治療或預防疾病。懷孕／長期用藥／敏感：諮詢醫生。缺貨唔好承諾即日有。",
-    "whereToBuy": "屈臣氏（曾見缺貨）、授權渠道。請先確認有貨再介紹。",
+    "whereToBuy": "屈臣氏（曾見缺貨）、零售渠道。請先確認有貨再介紹。",
     "priceNote": "參考：屈臣氏曾見約 $888／RRP 約 $1,688（2026-10；當時缺貨）；以當日價簽／庫存為準。",
     "officialUrl": "https://www.cupal.com.hk/",
     "disclaimer": "保健食品；簡短介紹。有貨先於投放。",
@@ -724,7 +724,7 @@ window.CUPAL_PRODUCTS = [
         "id": "where",
         "icon": "🛒",
         "label": "邊度買",
-        "answer": "銷售點：\n• 屈臣氏（請先確認有冇貨——曾有缺貨）\n• 授權藥房／電商\n• 古寶官網（如有）\n\n缺貨唔扮有貨；請致電或睇到貨通知。"
+        "answer": "銷售點：\n• 屈臣氏（請先確認有冇貨——曾有缺貨）\n• 各大藥房／電商\n• 古寶官網（如有）\n\n缺貨唔扮有貨；請致電或睇到貨通知。"
       }
     ],
     "consignment": false,
@@ -747,7 +747,7 @@ window.CUPAL_PRODUCTS = [
       "天然蜂膠及蜂皇漿"
     ],
     "claims": [
-      "渠道方向：日常體力／免疫保養（跟授權零售頁；唔講治療疾病）",
+      "渠道方向：日常體力／免疫保養（跟公開產品頁；唔講治療疾病）",
       "美國產（The Club 公開頁）"
     ],
     "usage": "每日 2 次，每次 1–2 粒，溫水送服；空腹或飯前半小時較佳（以包裝為準）。",
@@ -767,7 +767,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "培植冬蟲夏草提取物 350 毫克、天然蜂膠及蜂皇漿（以 The Club／包裝為準）。詳情可睇授權零售頁或實物標籤。"
+        "answer": "培植冬蟲夏草提取物 350 毫克、天然蜂膠及蜂皇漿（以 The Club／包裝為準）。詳情可睇公開產品頁或實物標籤。"
       },
       {
         "id": "usage",
@@ -1268,7 +1268,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。\n搜尋：https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9F%E7%87%92%E8%84%82"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n搜尋：https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9F%E7%87%92%E8%84%82"
       },
       {
         "id": "usage",
@@ -1324,7 +1324,7 @@ window.CUPAL_PRODUCTS = [
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶免疫球蛋白片（寄賣表名），80 粒。授權零售常見相關款「丙種球蛋白片」：每片含 60 毫克丙種球蛋白 G (IgG)（The Club）。請以實物包裝名稱同標籤為準。"
+        "answer": "古寶免疫球蛋白片（寄賣表名），80 粒。零售常見相關款「丙種球蛋白片」：每片含 60 毫克丙種球蛋白 G (IgG)（The Club）。請以實物包裝名稱同標籤為準。"
       },
       {
         "id": "ingredients",
@@ -1452,7 +1452,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。\n官網系列頁：cupal.com.hk/cupalhealth"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n官網系列頁：cupal.com.hk/cupalhealth"
       },
       {
         "id": "usage",
@@ -1512,7 +1512,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -1571,7 +1571,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -1692,7 +1692,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -1752,7 +1752,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -2180,7 +2180,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。\n可喺 The Club 品牌頁或 HKTVmall 搜尋。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n可喺 The Club 品牌頁或 HKTVmall 搜尋。"
       },
       {
         "id": "usage",
@@ -2239,7 +2239,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -2300,7 +2300,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "主要成份方向：白藜蘆醇——完整標籤請睇包裝／授權零售頁。"
+        "answer": "主要成份方向：白藜蘆醇——完整標籤請睇包裝／公開產品頁。"
       },
       {
         "id": "usage",
@@ -2359,7 +2359,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
@@ -2419,7 +2419,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或授權零售產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
       },
       {
         "id": "usage",
