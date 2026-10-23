@@ -170,10 +170,24 @@
         var bens = staffBenefitsListHtml(p);
         var pairs = staffPairingsListHtml(p);
         var body =
-          '<div class="sip-head"><span class="staff-badge">職員</span> 成份拆解註解</div>' +
-          '<p class="sip-sub">CS 話術拆解 · 訪客睇唔到 · 請以包裝標籤為準</p>';
+          '<div class="sip-head"><span class="staff-badge">職員</span> 成份拆解／優點／配搭（訪客睇唔到）</div>' +
+          '<p class="sip-sub">CS 話術拆解 · 訪客睇唔到 · 請以包裝標籤為準，唔好發明療效保證</p>';
         if (!cards && !bens && !pairs) {
-          body += '<p class="sip-empty">呢款暫時未有拆解資料——用下面表單加入。</p>';
+          body +=
+            '<div class="sip-empty-box">' +
+            '<p class="sip-empty">呢款尚未有成份拆解——請喺下方表單加入成份／優點／配搭。</p>';
+          if (p.keyIngredients && p.keyIngredients.length) {
+            body +=
+              '<div class="sip-section-title">成份重點（尚未逐項拆解）</div>' +
+              '<ul class="sip-key-ings">' +
+              p.keyIngredients
+                .map(function (k) {
+                  return "<li>" + escapeHtml(k) + "</li>";
+                })
+                .join("") +
+              "</ul>";
+          }
+          body += "</div>";
         } else {
           if (cards) body += '<div class="sip-section-title">成份</div>' + cards;
           if (bens) body += '<div class="sip-section-title">優點</div>' + bens;
@@ -295,6 +309,10 @@
     if (hint) hint.textContent = logged ? "職員已登入（本機 session）" : "職員：撳右上角圖示登入";
     renderFaqGrid();
     renderProductMeta();
+    // After blind admin-only toggle: form only when logged + product; keep faq add form closed unless opened
+    renderStaffIngredientPanel(getProduct());
+    var faqAdd = $("#faqAddForm");
+    if (faqAdd) faqAdd.classList.add("hidden");
     if (state.faqKey) showAnswer(state.faqKey);
     renderStoreNotes();
   }
@@ -762,11 +780,42 @@
       return;
     }
     box.className = "answer has-fact-sheet";
-    box.innerHTML = renderProductFactSheet(p);
+    var html = renderProductFactSheet(p);
+    if (isStaff()) {
+      var staffBlock = staffIngredientAnswerHtml(p);
+      if (staffBlock) {
+        html += staffBlock;
+      } else {
+        html +=
+          '<div class="staff-ing-answer staff-ing-empty-callout" role="note">' +
+          '<strong><span class="staff-badge">職員</span> 成份拆解</strong>' +
+          '<p class="sip-empty">呢款尚未有成份拆解——請喺上方表單加入成份／優點／配搭</p>' +
+          '<button type="button" class="admin-mini-btn" id="jumpIngForm">去成份拆解表單</button>' +
+          "</div>";
+      }
+    }
+    box.innerHTML = html;
+    var jump = $("#jumpIngForm");
+    if (jump) {
+      jump.addEventListener("click", function () {
+        var target = $("#ingNoteForm") || $("#staffIngredientPanel");
+        if (!target) return;
+        try {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        } catch (e) {
+          try { target.scrollIntoView(true); } catch (e2) { /* ignore */ }
+        }
+      });
+    }
+    // Staff: keep 成份拆解 panel in view; visitors scroll to fact sheet
+    var scrollTarget = box;
+    if (isStaff()) {
+      scrollTarget = $("#staffIngredientPanel") || $("#productMeta") || box;
+    }
     try {
-      box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      scrollTarget.scrollIntoView({ behavior: "smooth", block: "nearest" });
     } catch (e) {
-      try { box.scrollIntoView(true); } catch (e2) { /* ignore */ }
+      try { scrollTarget.scrollIntoView(true); } catch (e2) { /* ignore */ }
     }
     renderFaqGrid();
   }
