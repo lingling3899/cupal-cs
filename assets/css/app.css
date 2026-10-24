@@ -779,3 +779,29 @@ select:focus, input:focus, textarea:focus {
 .fact-list li { margin: 0 0 4px; }
 .fact-sheet-foot { margin: 2px 0 0 !important; }
 .fact-back-row { margin-top: 8px; }
+
+
+/* Public ingredient breakdown (guest-visible) */
+.public-ing-breakdown {
+  margin-top: 12px;
+  padding: 12px 12px 10px;
+  border-radius: 12px;
+  background: #f7faf7;
+  border: 1px solid #d7e6d7;
+}
+.public-ing-breakdown > strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+.public-ing-breakdown .sip-ing-grid,
+.fact-block .sip-ing-grid {
+  margin-top: 6px;
+}
+.fact-ing-summary {
+  margin: 0 0 8px;
+  white-space: pre-wrap;
+}
+.staff-pairings-block {
+  margin-top: 10px;
+}

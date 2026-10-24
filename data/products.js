@@ -161,7 +161,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "賣場／計劃方向提及 MSM、骨膠原、軟骨素等（外用）。實際成份表請睇包裝標籤——前線唔好發明百分比。"
+        "answer": "賣場／計劃方向提及 MSM、骨膠原、軟骨素等（外用）。\n完整標籤以包裝為準；前線唔好發明百分比。"
       },
       {
         "id": "usage",
@@ -761,7 +761,7 @@ window.CUPAL_PRODUCTS = [
     "officialUrl": "https://shop.theclub.com.hk/cupal-cordyceps-72-s-cpw014",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E8%9F%B2%E8%8D%89%E7%9A%87",
     "ingredientSource": "theclub",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSKU CPW014／寄賣碼 236433；參考標準價 $598。\n公開成份來源：The Club 產品頁。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSKU CPW014／寄賣碼 236433；參考標準價 $598。\n公開成份來源：The Club 產品頁。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
@@ -773,7 +773,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "培植冬蟲夏草提取物 350 毫克、天然蜂膠及蜂皇漿（以 The Club／包裝為準）。詳情可睇公開產品頁或實物標籤。"
+        "answer": "培植冬蟲夏草提取物 350 毫克、天然蜂膠及蜂皇漿（以 The Club／包裝為準）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
@@ -886,7 +886,7 @@ window.CUPAL_PRODUCTS = [
     "officialUrl": "http://waifat.com.hk/product_details.php-21.html?category_id=29&item_id=32",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9A%E8%84%88%E7%B4%85%E9%BA%B4",
     "ingredientSource": "waifat",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSKU CPW003／206782；$360。注意紅麴與他汀類藥物相互作用——前線只提醒問醫生，唔開方。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSKU CPW003／206782；$360。注意紅麴與他汀類藥物相互作用——前線只提醒問醫生，唔開方。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
@@ -898,7 +898,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "紅麴粉末（威發公開頁）。完整標籤以實物／HKTVmall／官網為準。"
+        "answer": "紅麴粉末（威發公開頁）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
@@ -1011,7 +1011,7 @@ window.CUPAL_PRODUCTS = [
     "officialUrl": "https://waifat.com.hk/product_details.php-32.html?category_id=34&item_id=43",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E6%A8%82%E8%82%9D%E5%81%A5",
     "ingredientSource": "waifat",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW011／205743；$380。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW011／205743；$380。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
@@ -1023,7 +1023,7 @@ window.CUPAL_PRODUCTS = [
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "乳薊果精華（威發公開頁）。詳細標籤請睇實物／HKTVmall。"
+        "answer": "乳薊果精華（含水飛薊素方向；威發公開頁）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
@@ -1254,34 +1254,40 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CPW017",
     "consignCode": "204133",
     "standardPrice": 235,
-    "keyIngredients": [],
-    "claims": [
-      "寄賣保健；成份以官網／HKTVmall／包裝為準"
+    "keyIngredients": [
+      "番瀉葉精華",
+      "藤黃果精華",
+      "甲殼素",
+      "膳食纖維"
     ],
-    "usage": "服法以包裝標籤為準。",
+    "claims": [
+      "公開頁方向：阻隔脂肪吸收、代謝保養、飽腹感（跟標籤）",
+      "日常體重管理方向；唔作減肥藥／治療疾病聲稱"
+    ],
+    "usage": "一般：每日 3 次，每次 2 粒；腸胃較易敏感：每日 2 次，每次 2 粒。用餐前 15–30 分鐘服用（威發公開頁；以包裝為準）。",
     "cautions": "唔講減肥保證／治療肥胖。懷孕／長期用藥：諮詢醫生。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "officialUrl": "http://waifat.com.hk/product_details.php-36.html?category_id=37&item_id=54",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9F%E7%87%92%E8%84%82",
     "ingredientSource": "missing",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW017／204133；$235。公開成份頁未核實——只轉介官網／HKTVmall／標籤。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW017／204133；$235。公開成份頁未核實——只轉介官網／HKTVmall／標籤。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶速燒脂，60 粒。寄賣保健款。詳細成份同聲稱請睇官網／HKTVmall／實物標籤——本站唔臆測。"
+        "answer": "古寶速燒脂，60 粒。公開成份方向：番瀉葉精華、藤黃果精華、甲殼素及膳食纖維。日常體重／代謝保養方向（跟標籤），唔作減肥藥或治療聲稱。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n搜尋：https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9F%E7%87%92%E8%84%82"
+        "answer": "主要成份（威發公開頁）：番瀉葉精華、藤黃果精華、甲殼素及膳食纖維。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "一般：每日 3 次，每次 2 粒；腸胃較易敏感：每日 2 次，每次 2 粒。用餐前 15–30 分鐘服用（威發公開頁；以包裝為準）。"
       },
       {
         "id": "caution",
@@ -1438,40 +1444,49 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CU30C",
     "consignCode": "206779",
     "standardPrice": 168,
-    "keyIngredients": [],
-    "claims": [
-      "官網健康系列有「古寶哥路牛初乳片」；詳細成份以官網／包裝為準"
+    "keyIngredients": [
+      "牛初乳粉",
+      "磷酸氫鈣（加鈣）",
+      "脫脂奶粉",
+      "甜菜粉",
+      "葡萄糖",
+      "草莓／香草精華"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "乳製品敏感者注意。保健食品不供診斷治療預防疾病。",
-    "officialUrl": "https://www.cupal.com.hk/cupalhealth",
+    "claims": [
+      "調節免疫系統、增強抵抗力方向（官網）",
+      "改善腸道機能、促進營養吸收方向",
+      "促進骨骼及牙齒生長方向（加鈣）"
+    ],
+    "usage": "咀嚼咬碎後服用；或壓碎後加入食物／牛奶。6 個月至 2 歲：每日 1 片；3–12 歲：每日 3 片；12 歲以上：每日 5 片（官網；以包裝為準）。",
+    "cautions": "對乳製品敏感、嬰兒及孕婦服用前宜諮詢醫生。天然成份或有顏色差別，唔影響質素（官網）。",
+    "officialUrl": "https://www.cupal.com.hk/cupalhealth/colocandy",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E5%93%A5%E8%B7%AF%E7%89%9B%E5%88%9D%E4%B9%B3",
     "ingredientSource": "partial",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCU30C／206779；$168。官網有產品圖／名；完整成份請跟標籤。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCU30C／206779；$168。官網有產品圖／名；完整成份請跟標籤。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶哥路牛初乳片（加鈣），120 粒。官網健康系列有列出。詳細成份同服法請睇官網／HKTVmall／實物標籤。"
+        "answer": "古寶哥路牛初乳片（加鈣），120 片。士多啤梨味咀嚼片；含牛初乳粉及鈣質方向，有助兒童健康成長保養（跟官網；唔作治療聲稱）。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n官網系列頁：cupal.com.hk/cupalhealth"
+        "answer": "成份（官網）：牛初乳粉、甜菜粉、脫脂奶粉、磷酸氫鈣、葡萄糖、香草精華、草莓精華、抗結劑（二氧化硅）、穩定劑（硬脂酸鎂）、抗氧化劑（維他命 C）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "咀嚼咬碎後服用；或壓碎後加入食物／牛奶。6 個月至 2 歲：每日 1 片；3–12 歲：每日 3 片；12 歲以上：每日 5 片（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "乳製品敏感、幼童、懷孕、長期用藥：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "對乳製品敏感、嬰兒及孕婦服用前宜諮詢醫生。天然成份或有顏色差別，唔影響質素（官網）。"
       },
       {
         "id": "where",
@@ -1485,7 +1500,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/colostrum.jpg"
+    "image": "assets/img/products/colostrum.jpg",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取。",
+    "origin": "澳洲 GMP 藥廠生產（官網說明）"
   },
   {
     "id": "kai-nai-cha",
@@ -1498,28 +1515,31 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CPW005",
     "consignCode": "253290",
     "standardPrice": 80,
-    "keyIngredients": [],
+    "keyIngredients": [
+      "傳統草本沖劑（開奶茶方向）"
+    ],
     "claims": [
-      "傳統沖劑方向；成份以包裝／合法公開頁為準"
+      "傳統開奶茶方向沖劑；完整藥材表以包裝為準",
+      "唔作治療疾病聲稱"
     ],
     "usage": "沖服法以包裝標籤為準。",
     "cautions": "嬰幼兒／哺乳相關產品——跟標籤；有需要先問醫生／藥劑師。唔自行當藥。",
     "officialUrl": "https://www.cupal.com.hk/",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%96%8B%E5%A5%B6%E8%8C%B6",
     "ingredientSource": "missing",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW005／253290；$80。成份頁未核——只轉介標籤／HKTVmall。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW005／253290；$80。成份頁未核——只轉介標籤／HKTVmall。\n【職員】公開 PDP 未見完整藥材表——請對照包裝／HKTVmall 產品詳情；唔好叫客人自己去外站睇而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶開奶茶，10 克×24。寄賣沖劑。詳細成份同適用對象請睇包裝／HKTVmall——本站唔臆測。"
+        "answer": "古寶開奶茶，10 克×24 包沖劑。傳統「開奶茶」方向草本沖劑；完整藥材表同適用對象以包裝標籤為準。嬰幼兒／孕婦使用前宜諮詢醫生或中醫師。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "傳統開奶茶方向草本沖劑。\n完整藥材表以包裝標籤為準（唔臆測個別藥材劑量）。"
       },
       {
         "id": "usage",
@@ -1558,28 +1578,31 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CPW006",
     "consignCode": "253291",
     "standardPrice": 80,
-    "keyIngredients": [],
+    "keyIngredients": [
+      "傳統草本沖劑（七星茶方向）"
+    ],
     "claims": [
-      "傳統沖劑方向；成份以包裝為準"
+      "傳統七星茶方向沖劑；完整藥材表以包裝為準",
+      "唔作治療疾病聲稱"
     ],
     "usage": "沖服法以包裝標籤為準。",
     "cautions": "嬰幼兒產品跟標籤；唔自行診斷。",
     "officialUrl": "https://www.cupal.com.hk/",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E4%B8%83%E6%98%9F%E8%8C%B6",
     "ingredientSource": "missing",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW006／253291；$80。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW006／253291；$80。\n【職員】公開 PDP 未見完整藥材表——請對照包裝／HKTVmall 產品詳情；唔好叫客人自己去外站睇而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶七星茶，10 克×24。寄賣沖劑。成份同用法請睇包裝／HKTVmall。"
+        "answer": "古寶七星茶，10 克×24 包沖劑。傳統「七星茶」方向草本沖劑；完整藥材表同用法以包裝標籤為準。嬰幼兒／孕婦使用前宜諮詢醫生或中醫師。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "傳統七星茶方向草本沖劑。\n完整藥材表以包裝標籤為準（唔臆測個別藥材劑量）。"
       },
       {
         "id": "usage",
@@ -1680,40 +1703,48 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CPW019",
     "consignCode": "205745",
     "standardPrice": 180,
-    "keyIngredients": [],
-    "claims": [
-      "寄賣保健；成份以官網／HKTVmall／包裝為準"
+    "keyIngredients": [
+      "魚油（Omega-3 300mg／粒：EPA 180mg、DHA 120mg）",
+      "明膠",
+      "甘油",
+      "純化水"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "魚／海鮮敏感注意。懷孕／用藥／手術前諮詢醫生。",
-    "officialUrl": "https://www.cupal.com.hk/",
+    "claims": [
+      "促進心血管健康方向（The Club）",
+      "舒緩關節不適方向",
+      "有助腦部活力／記憶力、專注力方向",
+      "視力保養方向"
+    ],
+    "usage": "每日 2 次，每次 1 至 2 粒（The Club；以包裝為準）。",
+    "cautions": "12 歲或以下、懷孕或哺乳、長期用藥：服用前宜諮詢醫生。含魚油；對魚類敏感者不宜。",
+    "officialUrl": "https://shop.theclub.com.hk/cupal-omega-3-100-s-cpw019.html",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E6%B7%B1%E6%B5%B7%E9%AD%9A%E6%B2%B9",
     "ingredientSource": "missing",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW019／205745；$180。公開成份頁未完整核實。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW019／205745；$180。公開成份頁未完整核實。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶深海魚油丸，100 粒。詳細成份同 Omega 含量請睇包裝／HKTVmall／官網。"
+        "answer": "古寶深海魚油丸，100 粒軟膠囊。每粒含奧米加 3 約 300 毫克（EPA 180／DHA 120，The Club）。日常心血管、關節、腦部及視力保養方向；唔作治療聲稱。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "成份（The Club）：魚油（含奧米加 3 300 毫克，包括 EPA 180 毫克及 DHA 120 毫克）、明膠、甘油（水分保持劑）、純化水。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 2 次，每次 1 至 2 粒（The Club；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "魚／海鮮敏感、懷孕、長期用藥：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "12 歲或以下、懷孕或哺乳、長期用藥：服用前宜諮詢醫生。含魚油；對魚類敏感者不宜。"
       },
       {
         "id": "where",
@@ -1727,7 +1758,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/fish-oil.jpg"
+    "image": "assets/img/products/fish-oil.jpg",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取。",
+    "origin": "加拿大"
   },
   {
     "id": "vigor",
@@ -1740,28 +1773,31 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "CPW004",
     "consignCode": "205420",
     "standardPrice": 320,
-    "keyIngredients": [],
+    "keyIngredients": [
+      "寄賣保健膠囊（威格爾）"
+    ],
     "claims": [
-      "寄賣保健；成份以合法公開頁／包裝為準"
+      "寄賣保健；完整成份以包裝標籤為準",
+      "唔作治療疾病聲稱"
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "唔講壯陽治療疾病。懷孕／用藥：諮詢醫生。",
     "officialUrl": "https://www.cupal.com.hk/",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E5%A8%81%E6%A0%BC%E7%88%BE",
     "ingredientSource": "missing",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW004／205420；$320。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW004／205420；$320。\n【職員】公開成份頁未完整核實——請對照包裝／HKTVmall；唔好叫客人自己去外站睇而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶威格爾，60 粒。寄賣保健。成份同適用說明請睇包裝／HKTVmall／官網——本站唔臆測。"
+        "answer": "古寶威格爾，60 粒。寄賣保健膠囊；完整成份同適用說明以包裝標籤為準。唔作治療疾病聲稱。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "寄賣保健膠囊「威格爾」。\n完整成份表以包裝標籤為準。"
       },
       {
         "id": "usage",
@@ -1800,44 +1836,56 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA154",
     "consignCode": "暫時用253290",
     "standardPrice": 129,
-    "keyIngredients": [],
-    "claims": [
-      "公開品牌為 REBOOT YOUR「調理個」系列——唔硬標古寶",
-      "寄賣表一併列出"
+    "keyIngredients": [
+      "北沙參",
+      "麥冬",
+      "玉竹",
+      "冬桑葉",
+      "百合",
+      "蓮子",
+      "扁豆",
+      "黃芪",
+      "太子參",
+      "甘草",
+      "御穀"
     ],
-    "usage": "服法以 REBOOT YOUR／包裝標籤為準。",
-    "cautions": "保健食品；唔講治療肺病。跟標籤禁忌。",
+    "claims": [
+      "清養肺胃、生津潤燥、補中益氣方向（REBOOT YOUR）",
+      "乾燥季節及病後調理方向；唔作治療聲稱"
+    ],
+    "usage": "每日 1–2 次，每次 1 包；加入溫水攪拌至溶解後服用（官網；以包裝為準）。",
+    "cautions": "含麩質穀類製品。懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。6 歲或以上較適合（官網 FAQ）。",
     "officialUrl": "https://www.rebootyour.com.hk/product/lung",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%82%BA",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA154／暫時用253290；$129。\n⚠️ 職員：如屈臣氏不幫落貨。\n包裝品牌為 REBOOT YOUR「調理個」——對客唔好硬講古寶。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA154／暫時用253290；$129。\n⚠️ 職員：如屈臣氏不幫落貨。\n包裝品牌為 REBOOT YOUR「調理個」——對客唔好硬講古寶。\n【職員】詳細可對照 REBOOT YOUR 官網產品頁核對；對外請用本站成份文案，唔好淨係叫客人去外站。",
     "disclaimer": "公開包裝品牌為 REBOOT YOUR（調理個系列），非古寶 CUPAL 品牌。保健食品；不供診斷、治療或預防疾病。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "「睡輕鬆／調理個肺」30 包。公開品牌係 REBOOT YOUR「調理個」系列（rebootyour.com.hk），唔係古寶 CUPAL——請跟包裝品牌介紹。",
+        "answer": "REBOOT YOUR「調理個肺」（睡輕鬆／調理個肺），30 包沖劑。集多種白色食材及冬桑葉等；養肺補氣、滋陰潤燥方向。品牌為 REBOOT YOUR，唔硬標古寶。",
         "staffAnswer": "屈臣氏不幫落貨——改推其他渠道。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺 REBOOT YOUR 官網、HKTVmall 或實物標籤睇成份；本站唔臆測。\nhttps://www.rebootyour.com.hk/product/lung"
+        "answer": "成份（REBOOT YOUR 官網）：異麥芽酮糖醇、麥芽糊精、北沙參、麥冬、玉竹、冬桑葉、百合、蓮子、扁豆、黃芪、太子參、甘草、御穀、二氧化硅。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 1–2 次，每次 1 包；加入溫水攪拌至溶解後服用（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講治療肺病／哮喘。懷孕、用藥、敏感：諮詢醫生。"
+        "answer": "含麩質穀類製品。懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。6 歲或以上較適合（官網 FAQ）。"
       },
       {
         "id": "where",
@@ -1850,7 +1898,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/reboot-lung-sleep.jpg"
+    "image": "assets/img/products/reboot-lung-sleep.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "香港"
   },
   {
     "id": "reboot-stomach",
@@ -1863,42 +1913,45 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA165",
     "consignCode": "814562",
     "standardPrice": 130,
-    "keyIngredients": [],
-    "claims": [
-      "公開品牌 REBOOT YOUR「調理個」——唔硬標古寶"
+    "keyIngredients": [
+      "鋅肌肽"
     ],
-    "usage": "服法以包裝／REBOOT YOUR 官網為準。",
-    "cautions": "唔講治療對應器官疾病。跟標籤。",
+    "claims": [
+      "修復胃部損傷、增強胃黏膜防禦方向（REBOOT YOUR）",
+      "改善消化不適、維持腸胃微生態平衡方向"
+    ],
+    "usage": "每日 2 片，空腹服用（官網；以包裝為準）。",
+    "cautions": "含麩質穀類製品。12 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。",
     "officialUrl": "https://www.rebootyour.com.hk/product/stomach",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%83%83",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
     "disclaimer": "公開包裝品牌為 REBOOT YOUR（調理個系列），非古寶 CUPAL。保健食品；不供診斷、治療或預防疾病。",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA165／814562；$130。品牌 REBOOT YOUR。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA165／814562；$130。品牌 REBOOT YOUR。\n【職員】詳細可對照 REBOOT YOUR 官網產品頁核對；對外請用本站成份文案，唔好淨係叫客人去外站。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "調理個胃 60片。公開品牌係 REBOOT YOUR「調理個」系列，唔硬標古寶。詳情睇 rebootyour.com.hk／包裝。"
+        "answer": "REBOOT YOUR「調理個胃」，60 片。主成份鋅肌肽；胃黏膜保養及消化不適方向。品牌為 REBOOT YOUR，唔硬標古寶。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺 REBOOT YOUR 官網、HKTVmall 或實物標籤睇成份；本站唔臆測。"
+        "answer": "成份（REBOOT YOUR 官網）：玉米澱粉、微晶纖維素、鋅肌肽、麥芽糊精、羧甲基澱粉鈉、硬脂酸鎂。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 2 片，空腹服用（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講治療疾病。懷孕、用藥、敏感：諮詢醫生。"
+        "answer": "含麩質穀類製品。12 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -1911,7 +1964,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/reboot-stomach.jpg"
+    "image": "assets/img/products/reboot-stomach.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "香港"
   },
   {
     "id": "reboot-heart",
@@ -1924,42 +1979,47 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA158a",
     "consignCode": "暫時用814223",
     "standardPrice": 188,
-    "keyIngredients": [],
-    "claims": [
-      "公開品牌 REBOOT YOUR「調理個」——唔硬標古寶"
+    "keyIngredients": [
+      "輔酶 Q10",
+      "肌酸",
+      "羥基酪醇（橄欖精華）"
     ],
-    "usage": "服法以包裝／REBOOT YOUR 官網為準。",
-    "cautions": "唔講治療對應器官疾病。跟標籤。",
+    "claims": [
+      "促進血液循環、心肌活力方向（REBOOT YOUR）",
+      "抗氧化、心血管保養方向；唔作治療聲稱"
+    ],
+    "usage": "每日 1 次，每次 2 粒（官網；以包裝為準）。",
+    "cautions": "12 歲以下、懷孕或哺乳、正在服用抗凝血藥物：服用前宜諮詢醫生。",
     "officialUrl": "https://www.rebootyour.com.hk/product/heart",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E5%BF%83",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
     "disclaimer": "公開包裝品牌為 REBOOT YOUR（調理個系列），非古寶 CUPAL。保健食品；不供診斷、治療或預防疾病。",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA158a／暫時用814223；$188。品牌 REBOOT YOUR。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA158a／暫時用814223；$188。品牌 REBOOT YOUR。\n【職員】詳細可對照 REBOOT YOUR 官網產品頁核對；對外請用本站成份文案，唔好淨係叫客人去外站。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "調理個心 60粒。公開品牌係 REBOOT YOUR「調理個」系列，唔硬標古寶。詳情睇 rebootyour.com.hk／包裝。"
+        "answer": "REBOOT YOUR「調理個心」，60 粒。輔酶 Q10、肌酸及羥基酪醇；心臟／心血管保養方向。品牌為 REBOOT YOUR，唔硬標古寶。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺 REBOOT YOUR 官網、HKTVmall 或實物標籤睇成份；本站唔臆測。"
+        "answer": "成份（REBOOT YOUR 官網）：肌酸、微晶纖維素、輔酶 Q10、羥基酪醇、硬脂酸鎂、二氧化硅。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 1 次，每次 2 粒（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講治療疾病。懷孕、用藥、敏感：諮詢醫生。"
+        "answer": "12 歲以下、懷孕或哺乳、正在服用抗凝血藥物：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -1972,7 +2032,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/reboot-heart.jpg"
+    "image": "assets/img/products/reboot-heart.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "香港"
   },
   {
     "id": "reboot-kidney",
@@ -1985,42 +2047,46 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA156A",
     "consignCode": "814223",
     "standardPrice": 189,
-    "keyIngredients": [],
-    "claims": [
-      "公開品牌 REBOOT YOUR「調理個」——唔硬標古寶"
+    "keyIngredients": [
+      "發酵蟲草菌粉（Cs-4 蝙蝠蛾擬青黴）330mg",
+      "御穀"
     ],
-    "usage": "服法以包裝／REBOOT YOUR 官網為準。",
-    "cautions": "唔講治療對應器官疾病。跟標籤。",
+    "claims": [
+      "溫腎補陽、強壯腰膝方向（REBOOT YOUR）",
+      "改善疲勞及睡眠質素、提升免疫力方向"
+    ],
+    "usage": "每日 3 次，每次 3–4 粒，以溫水送服（官網；以包裝為準）。",
+    "cautions": "孕婦及兒童忌服。感冒或發燒期間請暫停。正在服用藥物：服用前宜諮詢醫生。",
     "officialUrl": "https://www.rebootyour.com.hk/product/kidney",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%85%8E",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
     "disclaimer": "公開包裝品牌為 REBOOT YOUR（調理個系列），非古寶 CUPAL。保健食品；不供診斷、治療或預防疾病。",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA156A／814223；$189。品牌 REBOOT YOUR。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA156A／814223；$189。品牌 REBOOT YOUR。\n【職員】詳細可對照 REBOOT YOUR 官網產品頁核對；對外請用本站成份文案，唔好淨係叫客人去外站。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "調理個腎 90粒。公開品牌係 REBOOT YOUR「調理個」系列，唔硬標古寶。詳情睇 rebootyour.com.hk／包裝。"
+        "answer": "REBOOT YOUR「調理個腎」，90 粒。發酵蟲草菌粉（Cs-4）；溫腎補陽、精神及免疫保養方向。品牌為 REBOOT YOUR，唔硬標古寶。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺 REBOOT YOUR 官網、HKTVmall 或實物標籤睇成份；本站唔臆測。"
+        "answer": "成份（REBOOT YOUR 官網）：發酵蟲草菌粉（Cs-4 蝙蝠蛾擬青黴）330 毫克、御穀。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 3 次，每次 3–4 粒，以溫水送服（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講治療疾病。懷孕、用藥、敏感：諮詢醫生。"
+        "answer": "孕婦及兒童忌服。感冒或發燒期間請暫停。正在服用藥物：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2033,7 +2099,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/reboot-kidney.jpg"
+    "image": "assets/img/products/reboot-kidney.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "香港"
   },
   {
     "id": "reboot-brain",
@@ -2046,42 +2114,45 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA160",
     "consignCode": "暫時用205231",
     "standardPrice": 295,
-    "keyIngredients": [],
-    "claims": [
-      "公開品牌 REBOOT YOUR「調理個」——唔硬標古寶"
+    "keyIngredients": [
+      "磷脂醯絲氨酸（腦磷脂）200mg"
     ],
-    "usage": "服法以包裝／REBOOT YOUR 官網為準。",
-    "cautions": "唔講治療對應器官疾病。跟標籤。",
+    "claims": [
+      "提升記憶認知、強化思維反應方向（REBOOT YOUR）",
+      "延緩腦部衰退方向；唔作治療聲稱"
+    ],
+    "usage": "每日 1 次，每次 1 片（官網；以包裝為準）。",
+    "cautions": "含大豆及其製品。6 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。",
     "officialUrl": "https://www.rebootyour.com.hk/product/brain",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%85%A6",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
     "disclaimer": "公開包裝品牌為 REBOOT YOUR（調理個系列），非古寶 CUPAL。保健食品；不供診斷、治療或預防疾病。",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA160／暫時用205231；$295。品牌 REBOOT YOUR。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA160／暫時用205231；$295。品牌 REBOOT YOUR。\n【職員】詳細可對照 REBOOT YOUR 官網產品頁核對；對外請用本站成份文案，唔好淨係叫客人去外站。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "調理個腦 30片。公開品牌係 REBOOT YOUR「調理個」系列，唔硬標古寶。詳情睇 rebootyour.com.hk／包裝。"
+        "answer": "REBOOT YOUR「調理個腦」，30 片。主成份磷脂醯絲氨酸（腦磷脂）200 毫克；記憶、專注及認知保養方向。品牌為 REBOOT YOUR，唔硬標古寶。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺 REBOOT YOUR 官網、HKTVmall 或實物標籤睇成份；本站唔臆測。"
+        "answer": "成份（REBOOT YOUR 官網）：磷脂醯絲氨酸 200 毫克、玉米澱粉、蔗糖、抗結劑（硬脂酸鎂、微晶纖維素、二氧化硅）、色素（E171、E172）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 1 次，每次 1 片（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講治療疾病。懷孕、用藥、敏感：諮詢醫生。"
+        "answer": "含大豆及其製品。6 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2094,7 +2165,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/reboot-brain.jpg"
+    "image": "assets/img/products/reboot-brain.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "香港"
   },
   {
     "id": "reboot-liver",
@@ -2107,42 +2180,48 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA157A",
     "consignCode": "814563",
     "standardPrice": 250,
-    "keyIngredients": [],
-    "claims": [
-      "公開品牌 REBOOT YOUR「調理個」——唔硬標古寶"
+    "keyIngredients": [
+      "牛磺酸",
+      "鳥氨酸",
+      "精氨酸",
+      "甘氨酸鋅"
     ],
-    "usage": "服法以包裝／REBOOT YOUR 官網為準。",
-    "cautions": "唔講治療對應器官疾病。跟標籤。",
+    "claims": [
+      "保護肝細胞、提升解毒能力方向（REBOOT YOUR）",
+      "降低肝酵素水平方向；唔作治療聲稱"
+    ],
+    "usage": "每日 1 次，每次 2 片（官網；以包裝為準）。",
+    "cautions": "含麩質穀類製品。12 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。",
     "officialUrl": "https://www.rebootyour.com.hk/product/liver",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%AA%BF%E7%90%86%E5%80%8B%E8%82%9D",
     "ingredientSource": "reboot-official",
     "brandNote": "REBOOT YOUR",
     "disclaimer": "公開包裝品牌為 REBOOT YOUR（調理個系列），非古寶 CUPAL。保健食品；不供診斷、治療或預防疾病。",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA157A／814563；$250。品牌 REBOOT YOUR。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA157A／814563；$250。品牌 REBOOT YOUR。\n【職員】詳細可對照 REBOOT YOUR 官網產品頁核對；對外請用本站成份文案，唔好淨係叫客人去外站。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "調理個肝 60片。公開品牌係 REBOOT YOUR「調理個」系列，唔硬標古寶。詳情睇 rebootyour.com.hk／包裝。"
+        "answer": "REBOOT YOUR「調理個肝」，60 片。牛磺酸、精氨酸、鳥氨酸及鋅；護肝／代謝保養方向。品牌為 REBOOT YOUR，唔硬標古寶。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺 REBOOT YOUR 官網、HKTVmall 或實物標籤睇成份；本站唔臆測。"
+        "answer": "成份（REBOOT YOUR 官網）：牛磺酸、鳥氨酸、麥芽糊精、精氨酸、甘氨酸鋅、硬脂酸鎂、色素（E102、E133）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 1 次，每次 2 片（官網；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講治療疾病。懷孕、用藥、敏感：諮詢醫生。"
+        "answer": "含麩質穀類製品。12 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2155,7 +2234,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/reboot-liver.jpg"
+    "image": "assets/img/products/reboot-liver.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "香港"
   },
   {
     "id": "acne-drink",
@@ -2168,40 +2249,46 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA081",
     "consignCode": "275877",
     "standardPrice": 248,
-    "keyIngredients": [],
-    "claims": [
-      "CUPAL Beauty 線；The Club 有售——成份以產品頁／包裝為準"
+    "keyIngredients": [
+      "乳鐵蛋白 200mg",
+      "韓國柚子提取物粉末",
+      "葡萄糖",
+      "低聚糖"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "唔講醫好暗瘡／皮膚病。敏感／懷孕：諮詢醫生。",
+    "claims": [
+      "乳鐵蛋白有助調節油脂、肌膚保養方向（The Club）",
+      "韓國製造；唔作治療痘瘡疾病聲稱"
+    ],
+    "usage": "每天 1 包：可直接倒入口中以室溫水送服；或倒入杯中加約 150 毫升室溫水攪拌後飲用。請勿用熱水（The Club；以包裝為準）。",
+    "cautions": "請勿用熱水沖服。直接口服時小心哽塞。懷孕或哺乳、長期用藥：服用前宜諮詢醫生。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-acnecare-lactoferrin-drink-14-packs-za081",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=CUPAL%20%E5%85%A8%E6%95%88%E6%B7%A8%E7%97%98%E9%A3%B2",
     "ingredientSource": "partial",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA081／275877；$248。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA081／275877；$248。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "CUPAL Beauty 全效淨痘飲，14 包。The Club 有列出。詳細成份請睇產品頁／包裝——本站唔臆測完整配方。"
+        "answer": "CUPAL Beauty 全效淨痘飲，14 包。主成份乳鐵蛋白 200 毫克及韓國柚子提取物等；肌膚油脂平衡／淨痘保養方向（The Club）。唔作治療疾病聲稱。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。\n可喺 The Club 品牌頁或 HKTVmall 搜尋。"
+        "answer": "成份（The Club）：韓國柚子提取物粉末、葡萄糖、乳鐵蛋白 200 毫克、低聚糖。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每天 1 包：可直接倒入口中以室溫水送服；或倒入杯中加約 150 毫升室溫水攪拌後飲用。請勿用熱水（The Club；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講醫好暗瘡。敏感、懷孕、用藥：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "請勿用熱水沖服。直接口服時小心哽塞。懷孕或哺乳、長期用藥：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2215,7 +2302,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/acne-drink.jpg"
+    "image": "assets/img/products/acne-drink.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "韓國"
   },
   {
     "id": "swiss-collagen",
@@ -2228,40 +2317,47 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "SWC05",
     "consignCode": "245264",
     "standardPrice": 298,
-    "keyIngredients": [],
-    "claims": [
-      "CUPAL Beauty；The Club 有售"
+    "keyIngredients": [
+      "膠原蛋白（魚類）",
+      "透明質酸",
+      "輔酶 Q10（魚類）",
+      "橙味調味"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "保健／美肌食品；唔講醫好皮膚病。",
+    "claims": [
+      "強化膠原網絡、肌膚緊緻彈性方向（The Club）",
+      "提升保濕、改善乾紋方向",
+      "瑞士製造；清新香橙味"
+    ],
+    "usage": "將 1 匙（約 5.5 克）精華粉加進 100 毫升溫水攪拌，每日一次（The Club；以包裝為準）。",
+    "cautions": "含魚類製品，對魚敏感者不宜。含苯丙氨酸；苯酮尿症患者不宜。過量或可引起輕微腹瀉。懷孕或哺乳、服藥中：服用前宜諮詢醫生。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-switzerland-collagen-orange-flavor-165g-swc05",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E7%91%9E%E5%A3%AB%E8%86%A0%E5%8E%9F%E8%9B%8B%E7%99%BD%E7%BE%8E%E8%82%8C%E7%B2%BE%E8%8F%AF",
     "ingredientSource": "partial",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSWC05／245264；$298。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSWC05／245264；$298。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "CUPAL Beauty 瑞士膠原蛋白美肌精華，165g 橙味。The Club 有列出。詳細成份請睇產品頁／包裝。"
+        "answer": "CUPAL Beauty 瑞士膠原蛋白美肌精華，165g 橙味。膠原蛋白、透明質酸及輔酶 Q10；美肌保濕保養方向（The Club）。瑞士製造。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "成份（The Club）：膠原蛋白（魚類製品）、橙味調味劑、穩定劑（黃原膠）、甜味劑（天冬酰胺）、透明質酸、輔酶 Q10（魚類製品）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "將 1 匙（約 5.5 克）精華粉加進 100 毫升溫水攪拌，每日一次（The Club；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "敏感、懷孕、用藥：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "含魚類製品，對魚敏感者不宜。含苯丙氨酸；苯酮尿症患者不宜。過量或可引起輕微腹瀉。懷孕或哺乳、服藥中：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2275,7 +2371,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/swiss-collagen.jpg"
+    "image": "assets/img/products/swiss-collagen.jpg",
+    "storage": "置於陰涼乾燥處，避免陽光直射，勿讓兒童自取。開封後請拉緊封口，盡快用完。",
+    "origin": "瑞士"
   },
   {
     "id": "resveratrol",
@@ -2289,41 +2387,44 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "279457",
     "standardPrice": 569,
     "keyIngredients": [
-      "白藜蘆醇（以包裝為準）"
+      "白藜蘆醇",
+      "明膠（動物膠囊）",
+      "硬脂酸鎂"
     ],
     "claims": [
-      "CUPAL Beauty；The Club 有售"
+      "激活 SIRT1 逆肌齡基因方向（The Club）",
+      "抗氧化／細胞保養方向；唔作治療聲稱"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "唔講逆齡保證／治療疾病。",
+    "usage": "35 歲以下：每日一次，每次 1 粒；35 歲或以上：每日一次，每次 2 粒（The Club；以包裝為準）。",
+    "cautions": "懷孕或哺乳、長期用藥：服用前宜諮詢醫生。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-anti-aging-resveratrol-75-s-za075",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E9%80%86%E8%82%8C%E9%BD%A1%E7%99%BD%E8%97%9C%E8%98%86%E9%86%87",
     "ingredientSource": "partial",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA075／279457；$569。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA075／279457；$569。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "CUPAL Beauty 逆肌齡白藜蘆醇，75 粒。The Club 有列出。詳細成份同服法請睇產品頁／包裝。"
+        "answer": "CUPAL Beauty 逆肌齡白藜蘆醇，75 粒。主成份白藜蘆醇；抗氧化／肌膚抗老保養方向（The Club）。產地美國。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "主要成份方向：白藜蘆醇——完整標籤請睇包裝／公開產品頁。"
+        "answer": "成份（The Club）：白藜蘆醇、明膠（動物膠囊）、硬脂酸鎂（穩定劑）。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "35 歲以下：每日一次，每次 1 粒；35 歲或以上：每日一次，每次 2 粒（The Club；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講逆齡保證。懷孕、用藥、敏感：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "懷孕或哺乳、長期用藥：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2337,7 +2438,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/resveratrol.jpg"
+    "image": "assets/img/products/resveratrol.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "美國"
   },
   {
     "id": "whitening-ex",
@@ -2350,40 +2453,46 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA118A",
     "consignCode": "294228",
     "standardPrice": 488,
-    "keyIngredients": [],
-    "claims": [
-      "CUPAL Beauty；The Club 有售"
+    "keyIngredients": [
+      "維他命 C 300mg",
+      "穀胱甘肽 250mg",
+      "泛酸鈣 24mg",
+      "維他命 B6 5mg"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "唔講醫好色斑／皮膚病。",
+    "claims": [
+      "抗氧化、抑制黑色素生成方向（The Club）",
+      "提亮膚色、保水緊緻方向；唔作治療聲稱"
+    ],
+    "usage": "每日 1 次，每次 1 粒（The Club；以包裝為準）。",
+    "cautions": "12 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-beauty-purelock-skin-whitening-ex-60-s-za118a",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E8%A4%AA%E9%BB%91%E9%80%8F%E8%82%8C%E7%BE%8E%E7%99%BD%E4%B8%B8",
     "ingredientSource": "partial",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA118A／294228；$488。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA118A／294228；$488。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "CUPAL Beauty 褪黑透肌美白丸 EX。The Club 有列出。詳細成份請睇產品頁／包裝。"
+        "answer": "CUPAL Beauty 褪黑透肌美白丸 EX，60 粒。維他命 C、穀胱甘肽等；抗氧化及美白保養方向（The Club）。產地加拿大。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "成份（The Club）：維他命 C 300 毫克、穀胱甘肽 250 毫克、泛酸鈣 24 毫克、維他命 B6 5 毫克、二氧化硅（抗結劑）、明膠膠囊。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "每日 1 次，每次 1 粒（The Club；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "唔講醫好色斑。懷孕、用藥、敏感：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "12 歲或以下、懷孕或哺乳、正在服用藥物：服用前宜諮詢醫生。"
       },
       {
         "id": "where",
@@ -2397,7 +2506,9 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/whitening-ex.jpg"
+    "image": "assets/img/products/whitening-ex.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。",
+    "origin": "加拿大"
   },
   {
     "id": "child-fish-oil",
@@ -2410,41 +2521,46 @@ window.CUPAL_PRODUCTS = [
     "skuCode": "ZA166",
     "consignCode": "暫時用205745",
     "standardPrice": 179,
-    "keyIngredients": [],
-    "claims": [
-      "The Club 有「兒童魚油」；成份以產品頁／包裝為準"
+    "keyIngredients": [
+      "天然魚油 750mg（Omega-3 225mg：EPA 135mg、DHA 90mg）",
+      "香橙等天然調味"
     ],
-    "usage": "服法以包裝標籤為準。",
-    "cautions": "魚過敏注意。幼童跟標籤年齡。",
+    "claims": [
+      "提升學習能力及專注力方向（The Club）",
+      "促進腦部及視力發展方向",
+      "抗氧化、增強抵抗力方向"
+    ],
+    "usage": "可咀嚼、水送服、刺穿混入食物／飲品，或擰斷尾部直接飲用。1–5 歲：每日 1–2 粒；6–12 歲：每日 2–3 粒（The Club；以包裝為準）。",
+    "cautions": "1 歲以下嬰兒服用前宜諮詢醫生。含魚類及大豆製品；敏感者不宜。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-child-fish-oil-za166",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E5%85%92%E7%AB%A5%E9%AD%9A%E6%B2%B9",
     "ingredientSource": "partial",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA166／暫時用205745；$179。職員註：近期買二送一（以當日為準）。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nZA166／暫時用205745；$179。職員註：近期買二送一（以當日為準）。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶兒童魚油香橙味咀嚼軟膠囊，60S。The Club 有相關兒童魚油款。詳細成份請睇產品頁／包裝。",
+        "answer": "古寶兒童魚油香橙味咀嚼軟膠囊，60 粒。每粒天然魚油 750 毫克（含 EPA／DHA）；兒童腦部、視力及專注力保養方向（The Club）。",
         "staffAnswer": "促銷：近期買二送一——以當日為準。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "請喺古寶官網、HKTVmall 或公開產品頁睇成份同詳細說明；本站唔臆測標籤。"
+        "answer": "成份（The Club）：天然魚油 750 毫克（內含奧米加 3 海洋三酸甘油酯 225 毫克、EPA 135 毫克、DHA 90 毫克）、明膠、甘油、純化水、調味劑（天然甜橙油、檸檬油、冷壓酸橙油、香草醛）、甜味劑（三氯蔗糖）、抗氧化劑（維他命 E）、大豆油。\n完整標籤以包裝為準。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "可咀嚼、水送服、刺穿混入食物／飲品，或擰斷尾部直接飲用。1–5 歲：每日 1–2 粒；6–12 歲：每日 2–3 粒（The Club；以包裝為準）。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "魚過敏、標籤年齡以下、用藥：諮詢醫生。\n本產品屬保健食品；沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；不供診斷、治療或預防任何疾病之用。"
+        "answer": "1 歲以下嬰兒服用前宜諮詢醫生。含魚類及大豆製品；敏感者不宜。"
       },
       {
         "id": "where",
@@ -2458,7 +2574,8 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/child-fish-oil.jpg"
+    "image": "assets/img/products/child-fish-oil.jpg",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。"
   },
   {
     "id": "weifat-qianli",

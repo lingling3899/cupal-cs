@@ -76,13 +76,13 @@
     var cmsIngs = cmsNotes && Array.isArray(cmsNotes.ingredients) ? cmsNotes.ingredients : [];
     var cmsBens = cmsNotes && Array.isArray(cmsNotes.benefits) ? cmsNotes.benefits : [];
     var cmsPairs = cmsNotes && Array.isArray(cmsNotes.pairings) ? cmsNotes.pairings : [];
-    if (cmsIngs.length || cmsBens.length || cmsPairs.length) {
-      return { ingredients: cmsIngs, benefits: cmsBens, pairings: cmsPairs };
-    }
+    var baseIngs = Array.isArray(p.ingredientDetails) ? p.ingredientDetails : [];
+    var baseBens = Array.isArray(p.benefits) ? p.benefits : [];
+    var basePairs = Array.isArray(p.pairings) ? p.pairings : [];
     return {
-      ingredients: Array.isArray(p.ingredientDetails) ? p.ingredientDetails : [],
-      benefits: Array.isArray(p.benefits) ? p.benefits : [],
-      pairings: Array.isArray(p.pairings) ? p.pairings : []
+      ingredients: cmsIngs.length ? cmsIngs : baseIngs,
+      benefits: cmsBens.length ? cmsBens : baseBens,
+      pairings: cmsPairs.length ? cmsPairs : basePairs
     };
   }
 
@@ -170,8 +170,8 @@
         var bens = staffBenefitsListHtml(p);
         var pairs = staffPairingsListHtml(p);
         var body =
-          '<div class="sip-head"><span class="staff-badge">職員</span> 成份拆解／優點／配搭（訪客睇唔到）</div>' +
-          '<p class="sip-sub">CS 話術拆解 · 訪客睇唔到 · 請以包裝標籤為準，唔好發明療效保證</p>';
+          '<div class="sip-head"><span class="staff-badge">職員可編輯</span> 成份拆解／優點／配搭</div>' +
+          '<p class="sip-sub">成份拆解同優點會顯示畀訪客；可配搭／吸收只職員見 · 請以包裝標籤為準，唔好發明療效保證</p>';
         if (!cards && !bens && !pairs) {
           body +=
             '<div class="sip-empty-box">' +
@@ -213,20 +213,38 @@
     }
   }
 
-  function staffIngredientAnswerHtml(p) {
-    if (!isStaff() || !p) return "";
+  function publicIngredientBreakdownHtml(p) {
+    if (!p) return "";
     var cards = staffIngredientCardsHtml(p, { editable: false });
     var bens = staffBenefitsListHtml(p);
-    var pairs = staffPairingsListHtml(p);
-    if (!cards && !bens && !pairs) return "";
+    if (!cards && !bens) return "";
     return (
-      '<div class="staff-ing-answer" role="note">' +
-      '<strong><span class="staff-badge">職員</span> 成份／優點／配搭拆解</strong>' +
+      '<div class="public-ing-breakdown" role="region" aria-label="成份拆解">' +
+      "<strong>成份拆解</strong>" +
       (cards ? '<div class="sip-section-title">成份</div>' + cards : "") +
       (bens ? '<div class="sip-section-title">優點</div>' + bens : "") +
-      (pairs ? '<div class="sip-section-title">可配搭／吸收</div>' + pairs : "") +
       "</div>"
     );
+  }
+
+  function staffPairingsHtml(p) {
+    if (!isStaff() || !p) return "";
+    var pairs = staffPairingsListHtml(p);
+    if (!pairs) return "";
+    return (
+      '<div class="staff-ing-answer staff-pairings-block" role="note">' +
+      '<strong><span class="staff-badge">職員</span> 可配搭／吸收</strong>' +
+      '<div class="sip-section-title">可配搭／吸收</div>' +
+      pairs +
+      "</div>"
+    );
+  }
+
+  // Back-compat alias
+  function staffIngredientAnswerHtml(p) {
+    var pub = publicIngredientBreakdownHtml(p);
+    var pair = staffPairingsHtml(p);
+    return pub + pair;
   }
 
 
@@ -710,6 +728,19 @@
     var ingredientsHtml = ingredientsParts.length
       ? nl2br(uniqNonEmpty(ingredientsParts).join("\n\n"))
       : "請以包裝標籤／說明書為準。";
+    // Prefer structured breakdown cards when CMS / ingredientDetails exist
+    var breakdownCards = staffIngredientCardsHtml(p, { editable: false });
+    var breakdownBens = staffBenefitsListHtml(p);
+    if (breakdownCards || breakdownBens) {
+      ingredientsHtml =
+        (ingredientsParts.length
+          ? '<p class="fact-ing-summary">' + nl2br(uniqNonEmpty(ingredientsParts).join("\n\n")) + "</p>"
+          : "") +
+        (breakdownCards ? breakdownCards : "") +
+        (breakdownBens
+          ? '<div class="sip-section-title">優點</div>' + breakdownBens
+          : "");
+    }
 
     var claims = Array.isArray(p.claims) ? p.claims.filter(Boolean) : [];
     var efficacyHtml = "";
@@ -781,15 +812,23 @@
     }
     box.className = "answer has-fact-sheet";
     var html = renderProductFactSheet(p);
+    var pubBlock = publicIngredientBreakdownHtml(p);
+    if (pubBlock) html += pubBlock;
     if (isStaff()) {
-      var staffBlock = staffIngredientAnswerHtml(p);
-      if (staffBlock) {
-        html += staffBlock;
-      } else {
+      var pairBlock = staffPairingsHtml(p);
+      if (pairBlock) html += pairBlock;
+      if (!pubBlock) {
         html +=
           '<div class="staff-ing-answer staff-ing-empty-callout" role="note">' +
-          '<strong><span class="staff-badge">職員</span> 成份拆解</strong>' +
-          '<p class="sip-empty">呢款尚未有成份拆解——請喺上方表單加入成份／優點／配搭</p>' +
+          '<strong><span class="staff-badge">職員可編輯</span> 成份拆解</strong>' +
+          '<p class="sip-empty">呢款尚未有逐項拆解——請喺上方表單加入成份／優點／配搭（成份同優點會顯示畀訪客）</p>' +
+          '<button type="button" class="admin-mini-btn" id="jumpIngForm">去成份拆解表單</button>' +
+          "</div>";
+      } else if (!pairBlock) {
+        html +=
+          '<div class="staff-ing-answer staff-ing-empty-callout" role="note">' +
+          '<strong><span class="staff-badge">職員</span> 可配搭／吸收</strong>' +
+          '<p class="sip-empty">尚未填配搭提示——可喺上方表單加入（只職員見）</p>' +
           '<button type="button" class="admin-mini-btn" id="jumpIngForm">去成份拆解表單</button>' +
           "</div>";
       }
@@ -1025,7 +1064,8 @@
     }
 
     if (faqId === "ingredients") {
-      html += staffIngredientAnswerHtml(p);
+      html += publicIngredientBreakdownHtml(p);
+      html += staffPairingsHtml(p);
     }
 
     html += '<div class="meta">請以包裝標籤／說明書為準；參考用途，非醫療建議。</div>';
