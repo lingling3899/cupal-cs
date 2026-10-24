@@ -386,16 +386,16 @@ window.CUPAL_PRODUCTS = [
       "德國專利生物活性骨膠原蛋白肽（約 10 克級／包，以包裝為準）"
     ],
     "claims": [
-      "有助促進軟骨組織再生、紓緩關節不適、提高活動靈活度（跟官網／標籤方向）",
-      "德國專利生物活性骨膠原蛋白肽"
+      "每包含 FORTIGEL® 生物活性骨膠原蛋白肽約 10 克；方向係軟骨重建同關節靈活性（跟公開產品說明）",
+      "有助促進軟骨組織再生、紓緩關節不適、提升活動靈活度（跟標籤；唔講醫好）"
     ],
-    "usage": "每日 1 包，溫水或牛奶沖飲；或遵醫生指示（以包裝為準）。",
+    "usage": "每日 1 次，每次 1 包；將粉末與溫水或牛奶混和後飲用，沖調後有沉澱物屬正常（以包裝為準）。",
     "cautions": "法定備註：本產品沒有根據《藥劑業及毒藥條例》或《中醫藥條例》註冊；任何聲稱亦沒有為進行該等註冊而接受評核；並不供作診斷、治療或預防任何疾病之用。懷孕／長期用藥／敏感：諮詢醫生。",
     "whereToBuy": "屈臣氏常見（品牌頁有售）；HKTVmall、各大藥房、古寶官網。請致電確認庫存。",
     "priceNote": "參考：屈臣氏曾見約 $423 一帶（2026-10 截圖；促銷因檔期而異）；以當日價簽為準。",
     "officialUrl": "https://www.cupal.com.hk/cupalhealth/fortigel",
     "disclaimer": "保健食品；未按藥劑業及毒藥條例或中醫藥條例註冊；不供診斷、治療或預防疾病。",
-    "staffNotes": "講 Fortigel 必須記得法定非註冊卸責。唔好話有西藥止痛成分。同三合一／UC II 分層推，唔互食。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：ZA172；標準價 $423。",
+    "staffNotes": "講 Fortigel 必須記得法定非註冊卸責。唔好話有西藥止痛成分。同三合一／UC II 分層推，唔互食。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：ZA172；標準價 $423。\n【職員｜來源／成份拆解】公開圖：屈臣氏 BP_818870（WTCHK-818870-front.jpg）；亦可對照 The Club ZA172、官網 cupalhealth/fortigel。\n成份：FORTIGEL® 生物活性骨膠原蛋白肽；每盒28小包×10克；德國。",
     "faqs": [
       {
         "id": "about",
@@ -413,7 +413,7 @@ window.CUPAL_PRODUCTS = [
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "每日 1 包，溫水或牛奶沖飲；或遵醫生指示。詳情以包裝為準。"
+        "answer": "每日 1 次，每次 1 包；或遵醫生指示。粉末與溫水或牛奶混和後飲用；沖調後有沉澱物屬正常。詳情以包裝為準。"
       },
       {
         "id": "caution",
@@ -434,7 +434,9 @@ window.CUPAL_PRODUCTS = [
     "standardPrice": 423,
     "filterGroup": "關節肌肉",
     "watsonsShelf": true,
-    "image": "assets/img/products/fortigel.jpg"
+    "image": "assets/img/products/fortigel.jpg",
+    "origin": "德國",
+    "storage": "放置於陰涼乾燥地方，避免陽光直接照射，勿讓兒童自取。"
   },
   {
     "id": "joint-msm",
@@ -445,44 +447,45 @@ window.CUPAL_PRODUCTS = [
     "emoji": "💊",
     "keyIngredients": [
       "軟骨素 375mg",
-      "骨膠原 150mg",
-      "MSM 150mg"
+      "有機硫 MSM 150mg",
+      "骨膠原 150mg"
     ],
     "claims": [
-      "有助緩解關節酸軟僵硬、增加軟骨保水性同潤滑（跟標籤方向）",
-      "軟骨素＋骨膠原＋MSM 膠囊路線"
+      "結合軟骨素、骨膠原同有機硫 MSM，方向係強化、潤滑、修補關節（跟公開產品說明）",
+      "有助緩解關節僵硬、提高靈活性；潤滑及重建軟骨方向（跟標籤／公開頁）",
+      "cGMP 規範生產；每樽 90 粒"
     ],
-    "usage": "每日 3 次，每次 1 粒，餐後（以包裝為準）。",
-    "cautions": "保健食品；唔講撃退關節痛／醫好關節炎。懷孕／長期用藥／敏感：諮詢醫生。未按中成藥／藥劑條例註冊者須跟包裝卸責。",
+    "usage": "每日 3 次，每次 1 粒，餐後服用（以包裝為準）。",
+    "cautions": "此產品是保健食品；12歲以下兒童、懷孕或哺乳中婦女及長期服用藥物人士服用前應諮詢醫生意見。唔講撃退關節痛／醫好關節炎。未按中成藥／藥劑條例註冊者須跟包裝卸責。",
     "whereToBuy": "屈臣氏（曾見缺貨）、HKTVmall、各大藥房、古寶官網。請致電確認——缺貨唔扮有貨。",
     "priceNote": "參考：屈臣氏曾見約 $260（2026-10；當時缺貨）；以當日價簽／庫存為準。",
     "officialUrl": "https://www.cupal.com.hk/cupalhealth/msm",
     "disclaimer": "保健食品；不供診斷、治療或預防疾病。用「紓緩關節不適／酸軟僵硬」，唔用撃退／醫好。",
-    "staffNotes": "2026-10 屈臣氏截圖曾缺貨——先確認有貨再推。同 Fortigel／UC II 分層。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：CPW020A／206783；標準價 $260（新裝 90粒）。",
+    "staffNotes": "2026-10 屈臣氏截圖曾缺貨——先確認有貨再推。同 Fortigel／UC II 分層。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：CPW020A／206783；標準價 $260（新裝 90粒）。\n【職員｜來源／成份拆解】公開圖：屈臣氏 PDP BP_221658（medias WTCHK-221658-front.jpg）；亦可對照 The Club cpw020b、官網 cupalhealth/msm。\n成份組合（屈臣氏公開頁）：軟骨素375mg、有機硫(MSM)150mg、骨膠原150mg、明膠(動物膠囊)、磷酸氫鈣(抗結劑)、麥芽糊精、硬脂酸鎂(抗結劑)；每粒重約865mg。\n用法／產地／儲存：每日3次×1粒餐後；美國；陰涼乾燥、勿讓兒童自取。\n官網特點有「撃退關節痛」字眼——對外禁止使用；用「緩解僵硬／潤滑軟骨」方向。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶三合一關節靈 MSM，膠囊。成份路線：軟骨素＋骨膠原＋MSM。可以講有助緩解關節酸軟僵硬、增加軟骨保水性同潤滑（跟標籤）。\n\n唔好講「撃退關節痛／醫好關節炎」。"
+        "answer": "古寶三合一關節靈 MSM，膠囊（常見 90 粒）。結合軟骨素、骨膠原同有機硫 MSM，方向係強化、潤滑、修補關節；有助緩解關節僵硬、提高靈活性（跟標籤／公開產品說明）。\n\n唔好講「撃退關節痛／醫好關節炎」。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "軟骨素 375 毫克、骨膠原 150 毫克、MSM 150 毫克（以包裝為準）。"
+        "answer": "軟骨素 375 毫克、有機硫（MSM）150 毫克、骨膠原 150 毫克；另有明膠（動物膠囊）、磷酸氫鈣、麥芽糊精、硬脂酸鎂等（以包裝為準）。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "每日 3 次，每次 1 粒，餐後。詳情以包裝標籤為準。"
+        "answer": "每日 3 次，每次 1 粒，餐後服用。詳情以包裝標籤為準。"
       },
       {
         "id": "caution",
         "icon": "⚠️",
         "label": "邊啲人要小心／唔適合",
-        "answer": "保健食品 ≠ 註冊藥物。唔供診斷、治療或預防疾病。\n懷孕、哺乳、長期服用藥物、敏感人士：服用前諮詢醫生。效果因人而異。"
+        "answer": "保健食品 ≠ 註冊藥物。唔供診斷、治療或預防疾病。\n12 歲以下、懷孕、哺乳、長期服用藥物、敏感人士：服用前諮詢醫生。效果因人而異。置於陰涼乾燥處，勿讓兒童自取。"
       },
       {
         "id": "where",
@@ -497,22 +500,24 @@ window.CUPAL_PRODUCTS = [
     "standardPrice": 260,
     "filterGroup": "關節肌肉",
     "watsonsShelf": true,
-    "image": "assets/img/products/joint-msm.jpg"
+    "image": "assets/img/products/joint-msm.jpg",
+    "origin": "美國",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取。"
   },
   {
     "id": "strength-muscle",
     "nameZh": "強腱肌活靈",
     "nameEn": "Strength Muscle",
     "category": "肌肉口服",
-    "form": "膠囊 60 粒裝常見",
+    "form": "膠囊 60 粒",
     "emoji": "💪",
     "keyIngredients": [
       "亮胺酸代謝產物（HMB）500mg",
       "支鏈胺基酸群 50mg"
     ],
     "claims": [
-      "關注肌肉耐力、減少肌肉流失、支撐肌腱骨骼組織（跟標籤）",
-      "適合關注肌肉質量、活動力嘅人士"
+      "強肌配方：關注肌肉耐力、減少肌肉流失、支撐肌腱骨骼組織（跟公開產品說明）",
+      "適合因年齡增長關注肌肉質量同活動力嘅人士（跟標籤方向）"
     ],
     "usage": "每日 3 次，每次 1–2 粒（以包裝為準）。",
     "cautions": "12 歲以下、懷孕或哺乳、長期服用藥物——服用前建議諮詢醫生。保健食品不供診斷、治療或預防疾病。",
@@ -520,7 +525,7 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "參考：屈臣氏曾見約 $299 一帶（2026-10；促銷因檔期而異）；以當日價簽為準。",
     "officialUrl": "https://www.cupal.com.hk/cupalhealth/hmb",
     "disclaimer": "保健食品；不供診斷、治療或預防疾病。",
-    "staffNotes": "可與外用按摩膏／貼布做「內外行動力」故事——非醫囑。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：ZA119；標準價 $299（HMB Complete）。",
+    "staffNotes": "可與外用按摩膏／貼布做「內外行動力」故事——非醫囑。\n【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\n寄賣：ZA119；標準價 $299（HMB Complete）。\n【職員｜來源／成份拆解】公開圖：屈臣氏 BP_203520（WTCHK-203520-front.jpg）。\n成份（屈臣氏）：亮胺酸代謝產物500mg、支鏈胺基酸群50mg、磷酸二鈣、硬脂酸鎂、二氧化硅；每粒約805mg；英國產。\n屈臣氏產品用法欄曾寫 N/A——服法以包裝為準（本站沿用每日3次×1–2粒）。",
     "faqs": [
       {
         "id": "about",
@@ -559,7 +564,9 @@ window.CUPAL_PRODUCTS = [
     "standardPrice": 299,
     "filterGroup": "關節肌肉",
     "watsonsShelf": true,
-    "image": "assets/img/products/strength-muscle.jpg"
+    "image": "assets/img/products/strength-muscle.jpg",
+    "origin": "英國",
+    "storage": "置於陰涼乾燥地方，勿讓兒童自取。"
   },
   {
     "id": "allergy-probiotic",
@@ -569,37 +576,40 @@ window.CUPAL_PRODUCTS = [
     "form": "沖劑／包裝以實物為準（常見 28 包）",
     "emoji": "🦠",
     "keyIngredients": [
-      "益生菌（以包裝菌株為準）"
+      "兩歧雙歧桿菌粉末",
+      "長雙歧桿菌粉末",
+      "嗜酸乳桿菌粉末",
+      "低聚糖／蘆薈粉末等（見標籤）"
     ],
     "claims": [
-      "益生菌日常補充（跟包裝語言）",
-      "屈臣氏常見流量款——促銷因檔期而異"
+      "韓國幼兒濕敏方向益生菌配方；日常腸道／體質保養概念（跟公開產品說明；唔講治療過敏疾病）",
+      "粉末幼細易溶；常見 28 包裝"
     ],
-    "usage": "服法以包裝標籤為準。",
+    "usage": "撕開後加入 10–20ml 室溫水或牛奶攪勻；3個月至36個月：每日 1 包；3歲或以上：每日 1–2 包（以包裝為準）。",
     "cautions": "保健食品；唔講治療過敏／濕疹／哮喘等疾病。敏感、懷孕、長期用藥：諮詢醫生。",
     "whereToBuy": "屈臣氏常見；HKTVmall、各大藥房。請致電確認。",
     "priceNote": "參考：屈臣氏曾見約 $299 一帶（2026-10；曾有買1送1等檔期）；以當日價簽為準。",
-    "officialUrl": "https://shop.theclub.com.hk/cupal-bifidus-baby-28-sachets-za094",
+    "officialUrl": "https://www.cupal.com.hk/cupalbifidus/baby",
     "disclaimer": "保健食品；不供診斷、治療或預防疾病。主視覺唔好令人以為古寶只賣益生菌。",
-    "staffNotes": "Traffic driver；關節／安宮／外用要獨立溝通。唔好用疾病治癒式聲稱。",
+    "staffNotes": "Traffic driver；關節／安宮／外用要獨立溝通。唔好用疾病治癒式聲稱。\n【職員｜來源／成份拆解】公開頁：The Club ZA094、官網 cupalbifidus/baby；屈臣氏品牌頁有售（BP_281790）。\n成份（公開）：兩歧／長雙歧桿菌、嗜酸乳桿菌粉末＋低聚糖／蘆薈等；產地韓國。\n官網／渠道有「治標治本／徹底整頓」等字眼——對外禁止；只用緩解不適方向同「唔講治療疾病」。\n公開圖：本站沿用 The Club 高清包裝圖（屈臣氏 CDN 圖亦可用 WTCHK-281790）。",
     "faqs": [
       {
         "id": "about",
         "icon": "ℹ️",
         "label": "呢款係咩／有咩特點",
-        "answer": "古寶濕敏淨益生菌，日常益生菌補充款（跟包裝）。屈臣氏等渠道較常見。\n\n唔好講可以醫過敏、濕疹或任何疾病。"
+        "answer": "古寶濕敏淨益生菌，沖劑（常見 28 包）。韓國幼兒濕敏方向益生菌配方；公開頁提到專利 BGN4 等菌株路線。可以講日常腸道／體質保養方向（跟標籤）。\n\n唔好講可以醫過敏、濕疹、哮喘或任何疾病；唔用「治標治本」。"
       },
       {
         "id": "ingredients",
         "icon": "🧪",
         "label": "主要成份",
-        "answer": "益生菌菌株同含量以實物包裝／說明書為準。"
+        "answer": "兩歧雙歧桿菌粉末、長雙歧桿菌粉末、嗜酸乳桿菌粉末，以及麥芽糊精、混合低聚糖、蘆薈粉末、低聚半乳糖等（以包裝為準）。"
       },
       {
         "id": "usage",
         "icon": "📋",
         "label": "點用／服法",
-        "answer": "服法以包裝標籤為準。"
+        "answer": "撕開包裝後，加入 10 至 20 毫升室溫水或牛奶，攪拌至完全溶解後飲用。\n• 3 個月至 36 個月幼兒：每日 1 次，每次 1 包\n• 3 歲或以上兒童：每日 1–2 次，每次 1 包\n請勿使用攝氏 40 度以上熱水或熱牛奶。詳情以包裝為準。"
       },
       {
         "id": "caution",
@@ -617,7 +627,9 @@ window.CUPAL_PRODUCTS = [
     "consignment": false,
     "filterGroup": "全部",
     "watsonsShelf": true,
-    "image": "assets/img/products/allergy-probiotic.jpg"
+    "image": "assets/img/products/allergy-probiotic.jpg",
+    "origin": "韓國",
+    "storage": "置於陰涼乾燥處，避免陽光直射。勿讓兒童自取。"
   },
   {
     "id": "angong",
@@ -640,7 +652,7 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "以當日價簽為準；〔建議〕唔好用「半價神藥」心智長推。",
     "officialUrl": "https://www.cupal.com.hk/cupalhealth/angong",
     "disclaimer": "註冊中成藥（HKC-18196），唔係普通保健食品。跟說明書同醫囑；前線唔自行開方。",
-    "staffNotes": "極克制。同 Fortigel／鈣片分區講，唔捆綁療效。禁止包醫／起死回生話術。深折屬例外。",
+    "staffNotes": "極克制。同 Fortigel／鈣片分區講，唔捆綁療效。禁止包醫／起死回生話術。深折屬例外。\n【職員｜來源／成份拆解】公開圖改用屈臣氏／PNS 同源 medias WTCHK-816782-front.jpg（2026-10-24）。成份／主治以註冊標籤同中成藥說明為準——前線唔自行擴充病名。",
     "faqs": [
       {
         "id": "about",
@@ -699,7 +711,7 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "參考：屈臣氏曾見約 $888／RRP 約 $1,688（2026-10；當時缺貨）；以當日價簽／庫存為準。",
     "officialUrl": "https://www.cupal.com.hk/nmn18000pqq1200ex",
     "disclaimer": "保健食品；簡短介紹。有貨先於投放。",
-    "staffNotes": "2026-10 截圖缺貨——先恢復庫存再談廣告。唔好發明臨床逆齡數字。",
+    "staffNotes": "2026-10 截圖缺貨——先恢復庫存再談廣告。唔好發明臨床逆齡數字。\n【職員｜來源／成份拆解】屈臣氏有售 BP_814265；本站圖沿用 The Club／公開高清包裝。成份以包裝 NMN＋PQQ 為準；唔發明臨床逆齡數字。",
     "faqs": [
       {
         "id": "about",
@@ -876,7 +888,7 @@ window.CUPAL_PRODUCTS = [
     "consignCode": "206782",
     "standardPrice": 360,
     "keyIngredients": [
-      "紅麴粉末"
+      "紅麴粉末（以包裝為準）"
     ],
     "claims": [
       "威發公開頁方向：日常心血管保養概念（跟公開頁；唔講醫好三高）"
@@ -886,7 +898,7 @@ window.CUPAL_PRODUCTS = [
     "officialUrl": "http://waifat.com.hk/product_details.php-21.html?category_id=29&item_id=32",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E9%80%9A%E8%84%88%E7%B4%85%E9%BA%B4",
     "ingredientSource": "waifat",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSKU CPW003／206782；$360。注意紅麴與他汀類藥物相互作用——前線只提醒問醫生，唔開方。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nSKU CPW003／206782；$360。注意紅麴與他汀類藥物相互作用——前線只提醒問醫生，唔開方。\n【職員】成份細節可對照官網／HKTVmall／The Club／REBOOT YOUR／威發公開產品頁或實物標籤核對；對外請用本站成份文案，唔好淨係叫客人「自己去睇」而本站留空。\n【職員｜來源／成份拆解】威發公開頁方向；注意紅麴與他汀類藥物相互作用——前線只提醒問醫生。",
     "faqs": [
       {
         "id": "about",
@@ -924,7 +936,8 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/red-yeast.jpg"
+    "image": "assets/img/products/red-yeast.jpg",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取。"
   },
   {
     "id": "propolis",
@@ -942,14 +955,15 @@ window.CUPAL_PRODUCTS = [
       "大豆油等（見標籤）"
     ],
     "claims": [
-      "渠道方向：日常免疫／保養（The Club）"
+      "蜂膠濃縮提取物日常免疫／保養方向（跟 The Club 公開頁；唔講治療感染）",
+      "注意大豆油等賦形劑——敏感人士先睇標籤"
     ],
     "usage": "每日 2 次，每次 1 至 2 粒（以包裝為準）。",
     "cautions": "含蜂膠及大豆；過敏者先問醫生。12 歲以下、懷孕、哺乳、長期用藥：諮詢醫生。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-propolis-100-s-cpw010",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E8%9C%82%E8%86%A0%E7%B4%A0",
     "ingredientSource": "theclub",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW010／203955；$295。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW010／203955；$295。\n【職員｜來源／成份拆解】公開頁：The Club 蜂膠產品；成份含蜂膠濃縮提取物、大豆油等——對客以標籤為準。",
     "faqs": [
       {
         "id": "about",
@@ -987,7 +1001,8 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/propolis.jpg"
+    "image": "assets/img/products/propolis.jpg",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取。"
   },
   {
     "id": "liver-care",
@@ -1519,8 +1534,8 @@ window.CUPAL_PRODUCTS = [
       "傳統草本沖劑（開奶茶方向）"
     ],
     "claims": [
-      "傳統開奶茶方向沖劑；完整藥材表以包裝為準",
-      "唔作治療疾病聲稱"
+      "傳統開奶茶方向草本沖劑；完整藥材表以包裝為準",
+      "唔作治療疾病聲稱；公開 PDP 未見完整藥材表時只跟標籤講"
     ],
     "usage": "沖服法以包裝標籤為準。",
     "cautions": "嬰幼兒／哺乳相關產品——跟標籤；有需要先問醫生／藥劑師。唔自行當藥。",
@@ -1645,14 +1660,15 @@ window.CUPAL_PRODUCTS = [
       "大豆卵磷脂 1200mg"
     ],
     "claims": [
-      "渠道方向：日常保養（The Club）"
+      "大豆卵磷脂日常保養方向（跟公開產品頁；唔講治療疾病）",
+      "常見大劑量卵磷脂膠囊路線"
     ],
     "usage": "每日 2 次，每次 1 至 2 粒（以包裝為準）。",
     "cautions": "含大豆。12 歲以下、懷孕、長期用藥：諮詢醫生。",
     "officialUrl": "https://shop.theclub.com.hk/cupal-soy-lecithin-100-s-cr-cpw007",
     "hktvSearchUrl": "https://www.hktvmall.com/hktv/zh/main/search?q=%E5%8F%A4%E5%AF%B6%E5%8D%B5%E7%A3%B7%E8%84%82",
     "ingredientSource": "theclub",
-    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW007／205417；$180。",
+    "staffNotes": "【寄賣規則】逢星期三及五 11:30am 前打單；3+1／5+2 以標準價計算；贈品價不高於購買品。\nCPW007／205417；$180。\n【職員｜來源／成份拆解】公開成份頁：The Club 產品頁（大豆卵磷脂 1200mg 方向）；請對照實物標籤核對劑量。",
     "faqs": [
       {
         "id": "about",
@@ -1690,7 +1706,8 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/lecithin.jpg"
+    "image": "assets/img/products/lecithin.jpg",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取。"
   },
   {
     "id": "fish-oil",
@@ -1777,8 +1794,8 @@ window.CUPAL_PRODUCTS = [
       "寄賣保健膠囊（威格爾）"
     ],
     "claims": [
-      "寄賣保健；完整成份以包裝標籤為準",
-      "唔作治療疾病聲稱"
+      "寄賣保健膠囊（威格爾）；完整成份同服法以包裝標籤為準",
+      "唔作治療疾病聲稱；缺成份公開頁時唔好硬編"
     ],
     "usage": "服法以包裝標籤為準。",
     "cautions": "唔講壯陽治療疾病。懷孕／用藥：諮詢醫生。",
@@ -1823,7 +1840,8 @@ window.CUPAL_PRODUCTS = [
     "priceNote": "職員參考標準價見登入後備註；公開唔當現售網價宣傳。以門市／落貨價為準。",
     "whereToBuy": "屬非上架／寄賣／自行落貨——屈臣氏等架上未必有；可經職員落貨／專賣／HKTVmall／The Club／古寶官網（以實際渠道為準）。請致電或查當日庫存；唔寫假舖數。",
     "watsonsShelf": false,
-    "image": "assets/img/products/vigor.jpg"
+    "image": "assets/img/products/vigor.jpg",
+    "storage": "置於陰涼乾燥處，勿讓兒童自取（跟一般保健儲存；以包裝為準）。"
   },
   {
     "id": "reboot-lung-sleep",

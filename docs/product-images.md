@@ -9,10 +9,10 @@ Brand-only / homepage-only links (`https://www.cupal.com.hk/`, The Club `/brand/
 | id | source |
 |----|--------|
 | prostic-l | cupalhealth/plaster_l |
-| fortigel | cupalhealth/fortigel |
-| joint-msm | cupalhealth/msm |
-| strength-muscle | cupalhealth/hmb |
-| angong | cupalhealth/angong |
+| fortigel | Watsons HK PDP BP_818870 (WTCHK-818870-front.jpg; 2026-10-24) |
+| joint-msm | Watsons HK PDP BP_221658 (WTCHK-221658-front.jpg; 2026-10-24) |
+| strength-muscle | Watsons HK PDP BP_203520 (WTCHK-203520-front.jpg; 2026-10-24) |
+| angong | Watsons HK / PNS medias WTCHK-816782-front.jpg (2026-10-24) |
 | cordyceps-king | The Club product |
 | ganoderma-king | The Club product |
 | propolis | The Club product |
@@ -66,3 +66,7 @@ Sales Kit monitor photos (2026-10-22): cropped clear single-product pack shots f
 Public-page fill (2026-10-22): +12 from The Club / waifat / gba2go / shinghingfood product DETAIL pages only.
 
 真威龍 six SKUs (weifat-qianli / ezhu / qufeng / potong / safflower / huoluo) replaced 2026-10-22 from sales-kit-src/weifat-lineup.jpg (Sales Kit monitor photo). Prior mismatched packs discarded; crops mapped by Chinese name on pack only.
+
+## Watsons public pack shots (2026-10-24)
+
+Replaced badge/wrong crops with Watsons `medias.watsons.com.hk/publishing/WTCHK-*-front.jpg` for **joint-msm**, **fortigel**, **strength-muscle**, **angong**. Prior joint-msm was only an MSM 「有機硫」badge from cupalhealth/msm gallery — not a pack shot. allergy-probiotic / nmn kept existing The Club higher-res pack shots.
