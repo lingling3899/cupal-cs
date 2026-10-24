@@ -33,6 +33,32 @@
   function cms() { return window.CupalCms || null; }
   function isStaff() { return !!(auth() && auth().isLoggedIn()); }
 
+
+  /** Source-channel citations in parentheses — hide from guests, keep for staff. */
+  var SOURCE_CITE_RE = /The\s*Club|HKTVmall|HKTV\s*mall|官網|威發|gba2go|REBOOT\s*YOUR|\bREBOOT\b|Waifat|公開頁|\bClub\b/i;
+
+  function stripSourceCitations(text) {
+    var s = String(text == null ? "" : text);
+    var prev;
+    do {
+      prev = s;
+      s = s.replace(/[（(]([^（）()]{0,100}?)[）)]/g, function (full, inner) {
+        return SOURCE_CITE_RE.test(inner) ? "" : full;
+      });
+    } while (s !== prev);
+    s = s.replace(/[ \t]+([。．.！？!?,，、；;：:])/g, "$1");
+    s = s.replace(/[ \t]{2,}/g, " ");
+    s = s.replace(/^[ \t]+|[ \t]+$/gm, "");
+    return s;
+  }
+
+  /** Guest-facing text: strip source citations unless staff is logged in. */
+  function forGuest(text) {
+    var s = String(text == null ? "" : text);
+    return isStaff() ? s : stripSourceCitations(s);
+  }
+
+
   function escapeHtml(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;")
@@ -105,18 +131,18 @@
             '<article class="sip-ing-card">' +
             '<div class="sip-ing-top">' +
             '<span class="sip-ing-name">' +
-            escapeHtml(ing.name) +
+            escapeHtml(forGuest(ing.name)) +
             "</span>" +
-            (role ? '<span class="' + roleCls + '">' + escapeHtml(role) + "</span>" : "") +
+            (role ? '<span class="' + roleCls + '">' + escapeHtml(forGuest(role)) + "</span>" : "") +
             "</div>" +
             (ing.detail
-              ? '<p class="sip-ing-detail">' + escapeHtml(ing.detail) + "</p>"
+              ? '<p class="sip-ing-detail">' + escapeHtml(forGuest(ing.detail)) + "</p>"
               : "");
           if (ing.benefit) {
-            html += '<p class="sip-ing-benefit">好處：' + escapeHtml(ing.benefit) + "</p>";
+            html += '<p class="sip-ing-benefit">好處：' + escapeHtml(forGuest(ing.benefit)) + "</p>";
           }
           if (ing.note) {
-            html += '<p class="sip-ing-note">注意：' + escapeHtml(ing.note) + "</p>";
+            html += '<p class="sip-ing-note">注意：' + escapeHtml(forGuest(ing.note)) + "</p>";
           }
           if (editable && ing.id) {
             html +=
@@ -138,7 +164,7 @@
     if (!bens.length) return "";
     return (
       '<ul class="sip-benefits">' +
-      bens.map(function (b) { return "<li>" + escapeHtml(b) + "</li>"; }).join("") +
+      bens.map(function (b) { return "<li>" + escapeHtml(forGuest(b)) + "</li>"; }).join("") +
       "</ul>"
     );
   }
@@ -182,7 +208,7 @@
               '<ul class="sip-key-ings">' +
               p.keyIngredients
                 .map(function (k) {
-                  return "<li>" + escapeHtml(k) + "</li>";
+                  return "<li>" + escapeHtml(forGuest(k)) + "</li>";
                 })
                 .join("") +
               "</ul>";
@@ -510,12 +536,12 @@
       thumb +
       '<div class="product-card-body">' +
       '<p class="pc-title">' + escapeHtml(p.nameZh) + consignBadge + "</p>" +
-      '<p class="pc-meta">' + escapeHtml(p.category || "") + "　｜　" + escapeHtml(p.form || "") + "</p>" +
+      '<p class="pc-meta">' + escapeHtml(forGuest(p.category || "")) + "　｜　" + escapeHtml(forGuest(p.form || "")) + "</p>" +
       (p.keyIngredients && p.keyIngredients.length
-        ? '<p class="pc-meta">成份重點：' + escapeHtml(p.keyIngredients.join("、")) + "</p>"
+        ? '<p class="pc-meta">成份重點：' + escapeHtml(forGuest(p.keyIngredients.join("、"))) + "</p>"
         : "") +
       (p.disclaimer
-        ? '<p class="pc-meta" style="margin-top:6px">' + escapeHtml(p.disclaimer) + "</p>"
+        ? '<p class="pc-meta" style="margin-top:6px">' + escapeHtml(forGuest(p.disclaimer)) + "</p>"
         : "") +
       (links ? '<p class="pc-meta" style="margin-top:6px">' + links + "</p>" : "") +
       "</div></div>";
@@ -721,9 +747,9 @@
 
     var ingredientsParts = [];
     if (p.keyIngredients && p.keyIngredients.length) {
-      ingredientsParts.push(p.keyIngredients.join("、"));
+      ingredientsParts.push(forGuest(p.keyIngredients.join("、")));
     }
-    var ingFaq = faqAnswerText(p, "ingredients");
+    var ingFaq = forGuest(faqAnswerText(p, "ingredients"));
     if (ingFaq) ingredientsParts.push(ingFaq);
     var ingredientsHtml = ingredientsParts.length
       ? nl2br(uniqNonEmpty(ingredientsParts).join("\n\n"))
@@ -749,37 +775,37 @@
         "<ul class=\"fact-list\">" +
         claims
           .map(function (c) {
-            return "<li>" + escapeHtml(c) + "</li>";
+            return "<li>" + escapeHtml(forGuest(c)) + "</li>";
           })
           .join("") +
         "</ul>";
     } else {
-      var about = faqAnswerText(p, "about");
+      var about = forGuest(faqAnswerText(p, "about"));
       efficacyHtml = about
         ? nl2br(about)
         : "請以包裝標籤／說明書為準。";
     }
 
-    var usageText = String(p.usage || "").trim() || faqAnswerText(p, "usage");
+    var usageText = forGuest(String(p.usage || "").trim() || faqAnswerText(p, "usage"));
     var usageHtml = usageText
       ? nl2br(usageText)
       : "請以包裝標籤／說明書為準。";
 
-    var storageText = extractStorage(p);
+    var storageText = forGuest(extractStorage(p));
     var storageHtml = storageText
       ? nl2br(storageText)
       : "請以包裝標籤／說明書為準。";
 
-    var originText = extractOrigin(p);
+    var originText = forGuest(extractOrigin(p));
     var originHtml = originText
       ? escapeHtml(originText)
       : "請以包裝標籤為準。";
 
     var cautionParts = [];
-    if (p.cautions) cautionParts.push(String(p.cautions).trim());
-    var cautionFaq = faqAnswerText(p, "caution");
+    if (p.cautions) cautionParts.push(forGuest(String(p.cautions).trim()));
+    var cautionFaq = forGuest(faqAnswerText(p, "caution"));
     if (cautionFaq) cautionParts.push(cautionFaq);
-    if (p.disclaimer) cautionParts.push(String(p.disclaimer).trim());
+    if (p.disclaimer) cautionParts.push(forGuest(String(p.disclaimer).trim()));
     var cautionHtml = cautionParts.length
       ? nl2br(uniqNonEmpty(cautionParts).join("\n\n"))
       : "請以包裝標籤／說明書為準；孕婦、兒童、長期用藥或敏感人士使用前宜諮詢醫生／藥劑師。";
@@ -986,7 +1012,7 @@
         (p ? "【" + escapeHtml(p.nameZh) + "】" : "") +
         escapeHtml(item.label) +
         "<br><br>" +
-        nl2br(item.answer) +
+        nl2br(forGuest(item.answer)) +
         (isStaff() ? '<div class="meta">職員新增答案（本機儲存）</div>' : "") +
         '<div class="meta fact-back-row"><button type="button" class="chip" id="answerBackOverview">返回產品說明</button></div>';
       box.className = "answer";
@@ -1021,7 +1047,7 @@
       "】" +
       escapeHtml(f.label) +
       "<br><br>" +
-      nl2br(f.answer);
+      nl2br(forGuest(f.answer));
 
     if (faqId === "where") {
       html +=
@@ -1039,7 +1065,7 @@
           : "") +
         "</div>";
     } else if (p.priceNote && (faqId === "about" || faqId === "where")) {
-      html += '<div class="meta">' + escapeHtml(p.priceNote) + "</div>";
+      html += '<div class="meta">' + escapeHtml(forGuest(p.priceNote)) + "</div>";
     }
 
     if (p.officialUrl && faqId !== "where") {
