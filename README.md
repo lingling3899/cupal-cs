@@ -65,7 +65,9 @@ python3 -m http.server 8765
 - 只列有存貨／就嚟賣晒嘅舖；**唔顯示件數／quantity**
 - **唔好**用「總舖 − N」推「沒有此產品」；未列出 ≠ 沒貨——請致電確認
 - 更新：將 scrape 寫入 `data/raw-watsons-stock-YYYYMMDD.json`，再跑 `node scripts/merge-watsons-stock.js`
-- 預期產品鍵（有獨立 PDP）：`fortigel`、`strength-muscle`、`allergy-probiotic`、`angong`、`joint-msm`、`nmn`（`prostic-l`／`ucii`／`pro-calcium` 暫無，除非 raw 有）
+- 今日快照（2026-10-29；有貨舖數，唔含件數）：
+  - `fortigel` 72｜`strength-muscle` 101｜`allergy-probiotic` 86｜`angong` 151｜`joint-msm` 69｜`nmn` 112
+- 預期產品鍵（有獨立 PDP）：上列 6 款；`prostic-l`／`ucii`／`pro-calcium` 暫無獨立 PDP 快照
 
 ## 合規重點
 
@@ -82,7 +84,7 @@ python3 -m http.server 8765
 Repo：`lingling3899/cupal-cs`  
 預期網址：`https://lingling3899.github.io/cupal-cs/`
 
-部署：`main` 分支根目錄作 Pages source。Cache bust：`?v=20261029a`
+部署：`main` 分支根目錄作 Pages source。Cache bust：`?v=20261029b`
 
 ## 已知缺口
 
@@ -92,7 +94,7 @@ Repo：`lingling3899/cupal-cs`
 - Mannings 電話簿暫緩
 - 未做「知識」分頁（可後加）
 - 屈臣氏電話未必齊全；請用官方搵店補
-- 庫存快照仍待 `raw-watsons-stock-20261029.json`（UI／空殼已上；有 raw 後 merge 再 deploy）
+- 庫存快照已載入 2026-10-29 六款（見上）；`prostic-l`／`ucii`／`pro-calcium` 仍無獨立 PDP 快照
 
 ---
 

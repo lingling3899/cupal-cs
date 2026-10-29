@@ -1,0 +1,11 @@
+Watsons HK 查看門市庫存  as of 2026-10-29
+Source: watsons.com.hk 查看門市庫存
+Coverage: checker lists about 177 stores, not the full phone book of 288.
+Only in-stock / low-stock stores listed. No quantities.
+
+allergy-probiotic	BP_281790	86
+angong	BP_816782	151
+fortigel	BP_818870	72
+joint-msm	BP_221658	69
+nmn	BP_814265	112
+strength-muscle	BP_203520	101
