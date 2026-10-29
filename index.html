@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="古寶 Cupal 客服速查：產品目錄、成份功效問答、邊度買、屈臣氏門店電話簿。庫存請致電確認；參考用途非醫療建議。" />
   <title>古寶 Cupal · 客服速查</title>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261022v" />
+  <link rel="stylesheet" href="assets/css/app.css?v=20261029a" />
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261022v" width="200" height="120" alt="Cupal 古寶" />
+        <img class="brand-logo" src="assets/img/cupal-logo.png?v=20261029a" width="200" height="120" alt="Cupal 古寶" />
         <div class="brand-text">
           <h1>古寶 · 客服速查</h1>
           <p>產品問答　｜　門店　｜　說明</p>
@@ -153,7 +153,7 @@
 
       <section class="panel">
         <h3>門店電話簿 · 屈臣氏</h3>
-        <p class="stores-intro-note">揀<strong>寄賣貨</strong>時，實體店只顯示有推廣員嘅 9 間屈臣氏；屈臣氏貨則可睇全部電話簿。名單唔等於即時有貨或推廣員一定在場。</p>
+        <p class="stores-intro-note">揀產品後若有屈臣氏<strong>有貨快照</strong>，預設顯示有貨舖名單（可切「電話簿全部」）。揀<strong>寄賣貨</strong>時，電話簿模式只顯示有推廣員嘅 9 間屈臣氏。快照／電話簿都<strong>唔等於</strong>即時有貨或推廣員一定在場——請致電確認。</p>
         <label class="field" for="storeProductSelect">要查邊款？（方便對照邊度買）</label>
         <select id="storeProductSelect" aria-label="門店頁選擇產品"></select>
         <div id="storeProductMeta" class="product-card compact" aria-live="polite"></div>
@@ -166,6 +166,10 @@
           <div class="region-chips" id="promoterChips" role="group" aria-label="推廣員篩選">
             <button type="button" class="region-chip active" data-promoter="" aria-pressed="true">全部屈臣氏</button>
             <button type="button" class="region-chip promoter-chip" data-promoter="1" aria-pressed="false">有寄賣推廣員</button>
+          </div>
+          <div class="region-chips hidden" id="stockModeChips" role="group" aria-label="名單模式" hidden>
+            <button type="button" class="region-chip active" data-stock-mode="snapshot" aria-pressed="true">只顯示有貨快照</button>
+            <button type="button" class="region-chip" data-stock-mode="directory" aria-pressed="false">電話簿全部</button>
           </div>
           <p class="field region-label">分區（香港／九龍／新界）</p>
           <div class="region-chips" id="regionChips">
@@ -206,6 +210,7 @@
           <li>肌肉按摩膏含<strong>樟腦</strong>——蠶豆症（G6PD）不宜；6 歲或以下不宜。</li>
           <li>液體鈣含<strong>甲殼類</strong>——敏感者先問醫生。</li>
           <li>門店電話簿<strong>唔代表</strong>該產品一定有貨——請致電確認。</li>
+          <li>屈臣氏<strong>有貨快照</strong>來自 watsons.com.hk「查看門市庫存」（覆蓋約 177 間，唔係電話簿全部 288 間）；只列有存貨／就嚟賣晒嘅舖，<strong>唔顯示件數</strong>；非即時庫存。未列出嘅舖<strong>唔代表</strong>「沒有此產品」——唔好用總舖−N 推算；請致電確認。</li>
           <li>「有寄賣推廣員」店係用戶提供名單；<strong>唔等於</strong>即時有貨或推廣員一定在場——請致電確認。</li>
           <li>價格如有列出，只屬參考；以門市／網店當日價簽為準。UC II 等〔待核價〕唔報假價。</li>
           <li>寄賣／非上架貨：成份跟<strong>實物標籤</strong>同已核對嘅公開產品資料；完整標籤以包裝為準。</li>
@@ -219,7 +224,8 @@
           前線物料包、SKU 計劃、寄賣落貨表、安宮前線卡；公開官網
           <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">cupal.com.hk</a>、
           <a href="https://www.hktvmall.com/" target="_blank" rel="noopener">HKTVmall</a>、
-          The Club、威發、REBOOT YOUR 公開頁。
+          The Club、威發、REBOOT YOUR 公開頁；
+          屈臣氏門市庫存快照：watsons.com.hk「查看門市庫存」（靜態快照，非 live）。
           最終以當日實物標籤／說明書為準。
         </p>
       </section>
@@ -296,10 +302,11 @@
     </footer>
   </main>
 
-  <script src="data/products.js?v=20261022v"></script>
-  <script src="data/stores.js?v=20261022v"></script>
-  <script src="assets/js/admin-auth.js?v=20261022v"></script>
-  <script src="assets/js/cms.js?v=20261022v"></script>
-  <script src="assets/js/app.js?v=20261022v"></script>
+  <script src="data/products.js?v=20261029a"></script>
+  <script src="data/stores.js?v=20261029a"></script>
+  <script src="data/stock-snapshot.js?v=20261029a"></script>
+  <script src="assets/js/admin-auth.js?v=20261029a"></script>
+  <script src="assets/js/cms.js?v=20261029a"></script>
+  <script src="assets/js/app.js?v=20261029a"></script>
 </body>
 </html>

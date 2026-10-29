@@ -30,6 +30,8 @@ python3 -m http.server 8765
 |------|------|
 | `data/products.js` | 產品＋FAQ（含寄賣貨；claim-safe） |
 | `data/stores.js` | 屈臣氏電話簿（非庫存；含寄賣推廣員店標誌） |
+| `data/stock-snapshot.js` | 屈臣氏門市有貨快照（`window.CUPAL_STOCK`；非即時；唔存件數） |
+| `scripts/merge-watsons-stock.js` | 將 `raw-watsons-stock-*.json` merge 入快照（fuzzy match 電話簿補 tel） |
 | `docs/consign-promoter-stores.jpg` | 用戶提供：有寄賣推廣員嘅屈臣氏名單 |
 | `docs/consignment-notes.md` | 寄賣落貨規則摘要 |
 | `assets/js/admin-auth.js` | 登入 |
@@ -54,6 +56,17 @@ python3 -m http.server 8765
 門店頁可篩「有寄賣推廣員」（9 間：CNT／TPH／SPT／LFS／KPO3／MPL／NYL／DPL／DH2）。
 卡片顯示營業時間、店碼／店號同「寄賣推廣員」徽章。揀寄賣貨時會提示可篩呢啲店。
 
+
+## 庫存快照（屈臣氏）
+
+揀產品後若該款有可用快照（`watsonsAsOf`／`asOf` + `storeCount` + `stores[]`），門店頁預設顯示**有貨快照**（可切「電話簿全部」）。產品目錄／客人卡會顯示「屈臣氏有貨約 N 間（快照日期；非全線／非即時）」。
+
+- 來源：watsons.com.hk「查看門市庫存」靜態 scrape（約覆蓋 177 間，**唔係**電話簿全部 288 間）
+- 只列有存貨／就嚟賣晒嘅舖；**唔顯示件數／quantity**
+- **唔好**用「總舖 − N」推「沒有此產品」；未列出 ≠ 沒貨——請致電確認
+- 更新：將 scrape 寫入 `data/raw-watsons-stock-YYYYMMDD.json`，再跑 `node scripts/merge-watsons-stock.js`
+- 預期產品鍵（有獨立 PDP）：`fortigel`、`strength-muscle`、`allergy-probiotic`、`angong`、`joint-msm`、`nmn`（`prostic-l`／`ucii`／`pro-calcium` 暫無，除非 raw 有）
+
 ## 合規重點
 
 - 保健品 ≠ 註冊藥物；安宮（HKC-18196）係註冊中成藥，話術極克制
@@ -69,7 +82,7 @@ python3 -m http.server 8765
 Repo：`lingling3899/cupal-cs`  
 預期網址：`https://lingling3899.github.io/cupal-cs/`
 
-部署：`main` 分支根目錄作 Pages source。Cache bust：`?v=20261022b`
+部署：`main` 分支根目錄作 Pages source。Cache bust：`?v=20261029a`
 
 ## 已知缺口
 
@@ -79,6 +92,7 @@ Repo：`lingling3899/cupal-cs`
 - Mannings 電話簿暫緩
 - 未做「知識」分頁（可後加）
 - 屈臣氏電話未必齊全；請用官方搵店補
+- 庫存快照仍待 `raw-watsons-stock-20261029.json`（UI／空殼已上；有 raw 後 merge 再 deploy）
 
 ---
 

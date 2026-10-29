@@ -15,7 +15,8 @@
     storeRegion: "",
     storeDistrict: "",
     storeQuery: "",
-    storePromoterOnly: false
+    storePromoterOnly: false,
+    stockListMode: "snapshot" // "snapshot" | "directory"
   };
 
   var REGION_LABEL = { "": "全部", hk: "香港", kln: "九龍", nt: "新界" };
@@ -32,6 +33,163 @@
   function auth() { return window.CupalAdminAuth || null; }
   function cms() { return window.CupalCms || null; }
   function isStaff() { return !!(auth() && auth().isLoggedIn()); }
+
+  function stockRoot() {
+    return window.CUPAL_STOCK || {};
+  }
+
+  function fmtAsOf(asOf) {
+    return String(asOf || "").trim();
+  }
+
+  function channelSnapshotAsOf() {
+    var root = stockRoot();
+    return root.watsonsAsOf || root.asOf || "";
+  }
+
+  function getSnapshotChannelEntry(productId) {
+    if (!productId) return null;
+    var map = stockRoot().products || {};
+    var prod = map[productId];
+    if (!prod) return null;
+    return prod.watsons || null;
+  }
+
+  function hasUsableSnapshot(entry) {
+    if (!entry) return false;
+    if (!channelSnapshotAsOf()) return false;
+    if (typeof entry.storeCount !== "number") return false;
+    if (!Array.isArray(entry.stores)) return false;
+    return true;
+  }
+
+  function currentSnapshotEntry() {
+    var p = selectedStoreProduct();
+    if (!p) return null;
+    return getSnapshotChannelEntry(p.id);
+  }
+
+  function usingSnapshotList() {
+    var entry = currentSnapshotEntry();
+    return state.stockListMode === "snapshot" && hasUsableSnapshot(entry);
+  }
+
+  function activeStoreList() {
+    if (usingSnapshotList()) {
+      var entry = currentSnapshotEntry();
+      return (entry && entry.stores) || [];
+    }
+    return watsons;
+  }
+
+  function stripBrandPrefix(name) {
+    return String(name || "")
+      .replace(/^屈臣氏\s*[·•．.]\s*/u, "")
+      .replace(/\s+/g, "")
+      .trim();
+  }
+
+  function findPhoneBookMatch(snapStore) {
+    var book = watsons;
+    var sn = stripBrandPrefix(snapStore && snapStore.name);
+    var sa = String((snapStore && snapStore.address) || "").replace(/\s+/g, "");
+    var i, b, bn, ba;
+    for (i = 0; i < book.length; i++) {
+      b = book[i];
+      bn = stripBrandPrefix(b.name);
+      if (sn && bn && (bn === sn || bn.indexOf(sn) !== -1 || sn.indexOf(bn) !== -1)) return b;
+    }
+    if (sa.length >= 8) {
+      for (i = 0; i < book.length; i++) {
+        b = book[i];
+        ba = String(b.address || "").replace(/\s+/g, "");
+        if (ba && (ba.indexOf(sa.slice(0, 12)) !== -1 || sa.indexOf(ba.slice(0, 12)) !== -1)) return b;
+      }
+    }
+    return null;
+  }
+
+  function resolveStoreTel(s) {
+    if (s && s.tel) return s.tel;
+    var m = findPhoneBookMatch(s);
+    return (m && m.tel) || "";
+  }
+
+  function syncStockModeChips() {
+    var wrap = $("#stockModeChips");
+    if (!wrap) return;
+    var entry = currentSnapshotEntry();
+    var usable = hasUsableSnapshot(entry);
+    wrap.classList.toggle("hidden", !usable);
+    if (usable) wrap.removeAttribute("hidden");
+    else wrap.setAttribute("hidden", "");
+    if (!usable) return;
+    $$("#stockModeChips .region-chip").forEach(function (x) {
+      var mode = x.getAttribute("data-stock-mode") || "snapshot";
+      var on = mode === state.stockListMode;
+      x.classList.toggle("active", on);
+      x.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  function preferSnapshotIfAvailable() {
+    var entry = currentSnapshotEntry();
+    if (hasUsableSnapshot(entry)) {
+      state.stockListMode = "snapshot";
+    } else {
+      state.stockListMode = "directory";
+    }
+  }
+
+  function productWatsonsStockMeta(p) {
+    if (!p) return null;
+    var entry = getSnapshotChannelEntry(p.id);
+    if (hasUsableSnapshot(entry)) {
+      return {
+        count: entry.storeCount,
+        asOf: channelSnapshotAsOf()
+      };
+    }
+    if (typeof p.watsonsInStockStores === "number" && p.watsonsInStockStores) {
+      return {
+        count: p.watsonsInStockStores,
+        asOf: p.watsonsInStockAsOf || ""
+      };
+    }
+    return null;
+  }
+
+  function watsonsStockGuestLine(p) {
+    var meta = productWatsonsStockMeta(p);
+    if (!meta) return "";
+    return (
+      "屈臣氏有貨約 " +
+      meta.count +
+      " 間（" +
+      (meta.asOf ? meta.asOf + " 快照；" : "") +
+      "非全線／非即時；覆蓋約177間，非電話簿全部）"
+    );
+  }
+
+  function retailerStockGuestHtml(p) {
+    var w = watsonsStockGuestLine(p);
+    if (!w) return "";
+    return (
+      '<p class="pc-meta watsons-stock-line" style="margin-top:6px"><strong>' +
+      escapeHtml(w) +
+      "</strong></p>"
+    );
+  }
+
+  function retailerStockCatalogHtml(p) {
+    var meta = productWatsonsStockMeta(p);
+    if (!meta) return "";
+    return (
+      '<span class="pcat-stock pcat-stock-watsons">' +
+      escapeHtml("屈臣氏有貨約 " + meta.count + " 間") +
+      "</span>"
+    );
+  }
 
 
   /** Source-channel citations in parentheses — hide from guests, keep for staff. */
@@ -543,6 +701,7 @@
       (p.disclaimer
         ? '<p class="pc-meta" style="margin-top:6px">' + escapeHtml(forGuest(p.disclaimer)) + "</p>"
         : "") +
+      retailerStockGuestHtml(p) +
       (links ? '<p class="pc-meta" style="margin-top:6px">' + links + "</p>" : "") +
       "</div></div>";
 
@@ -604,6 +763,7 @@
           '<div class="product-card-body">' +
           '<p class="pc-title">' + escapeHtml(p.nameZh) + "</p>" +
           '<p class="pc-meta">' + escapeHtml(p.whereToBuy || "") + "</p>" +
+          retailerStockGuestHtml(p) +
           "</div></div>";
       }
     }
@@ -656,6 +816,7 @@
         thumb +
         '<span class="pcat-name">' + escapeHtml(p.nameZh) + "</span>" +
         channelBadgeHtml(p, true) +
+        retailerStockCatalogHtml(p) +
         "</button>"
       );
     }).join("");
@@ -892,12 +1053,14 @@
     if (ps) ps.value = state.productId;
     var sps = $("#storeProductSelect");
     if (sps) sps.value = state.productId;
+    preferSnapshotIfAvailable();
     renderProductMeta();
     renderFaqGrid();
     showProductOverview();
     if (typeof maybeHintPromoterForProduct === "function") {
       try { maybeHintPromoterForProduct(); } catch (e) { /* ignore */ }
     }
+    if (state.view === "stores") renderStores();
   }
 
   function faqKeyFor(p, faqId) {
@@ -1198,6 +1361,7 @@
     var qa = $("#productSelect");
     if (sp && qa && qa.value && !sp.value) sp.value = qa.value;
     if (sp && sp.value) state.productId = sp.value;
+    preferSnapshotIfAvailable();
     applyConsignStoreLock();
     renderProductMeta();
     maybeHintPromoterForProduct();
@@ -1215,9 +1379,11 @@
   }
 
   function filteredStores() {
-    var consignLock = isConsignStoreProduct(selectedStoreProduct());
-    var promoterOnly = state.storePromoterOnly || consignLock;
-    var list = watsons.filter(function (s) {
+    var base = activeStoreList();
+    var snapOn = usingSnapshotList();
+    var consignLock = !snapOn && isConsignStoreProduct(selectedStoreProduct());
+    var promoterOnly = !snapOn && (state.storePromoterOnly || consignLock);
+    var list = base.filter(function (s) {
       if (promoterOnly && !s.consignPromoter) return false;
       if (state.storeRegion && regionOfStore(s) !== state.storeRegion) return false;
       if (state.storeDistrict && String(s.district || "") !== state.storeDistrict) return false;
@@ -1234,7 +1400,9 @@
           " " +
           (s.watsonsCode || "") +
           " " +
-          (s.watsonsStoreNo || "")
+          (s.watsonsStoreNo || "") +
+          " " +
+          (s.stockStatus || "")
         ).toLowerCase();
         if (blob.indexOf(q) === -1) return false;
       }
@@ -1258,29 +1426,44 @@
 
   function renderStores() {
     applyConsignStoreLock();
+    syncStockModeChips();
+
+    var snapOn = usingSnapshotList();
+    var snapEntry = currentSnapshotEntry();
+    var asOf = fmtAsOf(channelSnapshotAsOf());
     var note = $("#directoryNote");
     if (note) {
       var meta = storeData.consignPromoters || {};
-      var promoterN = watsons.filter(function (s) { return s.consignPromoter; }).length;
       var uniqCodes = {};
       watsons.forEach(function (s) {
         if (s.consignPromoter && s.watsonsCode) uniqCodes[s.watsonsCode] = true;
       });
       var uniqN = Object.keys(uniqCodes).length;
-      var base =
-        (storeData.salesPointsNote ||
-          "電話簿非該產品一定有貨——請致電確認。") +
-        " 共 " +
-        watsons.length +
-        " 間屈臣氏電話紀錄。";
-      if (isConsignStoreProduct(selectedStoreProduct())) {
+      if (snapOn && snapEntry) {
+        var n = typeof snapEntry.storeCount === "number" ? snapEntry.storeCount : (snapEntry.stores || []).length;
+        note.innerHTML =
+          "<strong>顯示中：</strong>屈臣氏快照有貨約 " +
+          n +
+          " 間（截至 " +
+          escapeHtml(asOf || "—") +
+          "；請致電確認）。名單只含庫存查詢標示有存貨／就嚟賣晒嘅舖；<strong>非</strong>即時庫存；<strong>唔顯示件數</strong>。" +
+          " 屈臣氏庫存查詢只覆蓋部分舖（約177間），未列出嘅舖唔代表「沒有此產品」。";
+        note.className = "directory-note ok-note";
+      } else if (isConsignStoreProduct(selectedStoreProduct())) {
         note.textContent =
           "寄賣貨實體店只顯示有推廣員嘅屈臣氏（共 " +
           uniqN +
           " 間）" +
           (meta.asOf ? "；名單截至 " + meta.asOf : "") +
           "。唔等於即時有貨或推廣員一定在場——請致電確認。";
+        note.className = "directory-note";
       } else {
+        var base =
+          (storeData.salesPointsNote ||
+            "電話簿非該產品一定有貨——請致電確認。") +
+          " 共 " +
+          watsons.length +
+          " 間屈臣氏電話紀錄。";
         if (uniqN) {
           base +=
             " 其中 " +
@@ -1289,15 +1472,22 @@
             (meta.asOf ? "（名單截至 " + meta.asOf + "）" : "") +
             "——排更／在場請致電確認。";
         }
+        if (hasUsableSnapshot(currentSnapshotEntry()) && state.stockListMode === "directory") {
+          base += "（而家睇電話簿全部；可撳「只顯示有貨快照」返去快照名單。）";
+        }
         note.textContent = base;
+        note.className = "directory-note";
       }
     }
 
     var consignLock = isConsignStoreProduct(selectedStoreProduct());
     var promoterOnly = state.storePromoterOnly || consignLock;
-    var regionSource = promoterOnly
-      ? watsons.filter(function (s) { return s.consignPromoter; })
-      : watsons;
+    if (snapOn) promoterOnly = false;
+    var regionSource = snapOn
+      ? activeStoreList()
+      : (promoterOnly
+          ? watsons.filter(function (s) { return s.consignPromoter; })
+          : watsons);
     var regionList = state.storeRegion
       ? regionSource.filter(function (s) { return regionOfStore(s) === state.storeRegion; })
       : regionSource;
@@ -1329,26 +1519,37 @@
     var list = filteredStores();
     var count = $("#storeCount");
     if (count) {
-      count.textContent =
-        "顯示 " +
-        list.length +
-        " 間" +
-        (state.storePromoterOnly ? "（有寄賣推廣員）" : "") +
-        (state.storeRegion ? "（" + (REGION_LABEL[state.storeRegion] || "") + "）" : "") +
-        "｜電話簿 ≠ 庫存";
+      var bits;
+      if (snapOn) {
+        bits = [
+          "快照有貨約 " + list.length + " 間（截至 " + (asOf || "—") + "；請致電確認）"
+        ];
+      } else {
+        bits = ["電話簿：屈臣氏約 " + list.length + " 間"];
+        if (state.storePromoterOnly || consignLock) bits.push("有寄賣推廣員");
+        bits.push("電話簿間數 ≠ 存貨／庫存");
+      }
+      if (state.storeRegion) bits.push(REGION_LABEL[state.storeRegion] || state.storeRegion);
+      count.textContent = bits.join("｜");
     }
 
     var box = $("#storeList");
     if (!box) return;
     if (!list.length) {
-      box.innerHTML = '<p class="count">呢個篩選暫時冇分店。可試「全部屈臣氏」或清搜尋。</p>';
+      box.innerHTML = snapOn
+        ? '<p class="count">呢個篩選暫時冇快照有貨舖。可試轉分區、清搜尋，或撳「電話簿全部」。</p>'
+        : '<p class="count">呢個篩選暫時冇分店。可試「全部屈臣氏」或清搜尋。</p>';
       return;
     }
     box.innerHTML = list
       .map(function (s) {
-        var tel = telHref(s.tel);
+        var telRaw = snapOn ? resolveStoreTel(s) : s.tel;
+        var tel = telHref(telRaw);
         var badge = s.consignPromoter
           ? '<span class="badge-promoter">寄賣推廣員</span>'
+          : "";
+        var stockBadge = snapOn && s.stockStatus
+          ? '<span class="badge-stock">' + escapeHtml(s.stockStatus) + "</span>"
           : "";
         var metaBits = [];
         if (s.hours) metaBits.push("營業 " + s.hours);
@@ -1357,13 +1558,24 @@
         var metaLine = metaBits.length
           ? "<p class=\"store-meta\">" + escapeHtml(metaBits.join("　｜　")) + "</p>"
           : "";
+        var stockNote = snapOn
+          ? '<p class="store-stock-note">' +
+            escapeHtml(
+              s.stockStatus
+                ? "快照：" + s.stockStatus + " — 請致電確認（非即時庫存；唔顯示件數）"
+                : "快照標示可能有貨 — 請致電確認（非即時庫存）"
+            ) +
+            "</p>"
+          : "";
         return (
           '<article class="store-card' +
           (s.consignPromoter ? " has-promoter" : "") +
+          (snapOn ? " stock-hit" : "") +
           '">' +
           "<h4>" +
           escapeHtml(s.name) +
           badge +
+          stockBadge +
           "</h4>" +
           "<p>" +
           escapeHtml(s.district || "") +
@@ -1374,9 +1586,10 @@
           escapeHtml(s.address || "") +
           "</p>" +
           metaLine +
+          stockNote +
           '<div class="store-actions">' +
           (tel
-            ? '<a href="' + tel + '">📞 ' + escapeHtml(formatTelDisplay(s.tel)) + "</a>"
+            ? '<a href="' + tel + '">📞 ' + escapeHtml(formatTelDisplay(telRaw)) + "</a>"
             : "") +
           '<a href="' +
           escapeHtml(mapsUrl(s)) +
@@ -1456,8 +1669,22 @@
         state.productId = sps.value;
         var qa = $("#productSelect");
         if (qa) qa.value = sps.value;
+        preferSnapshotIfAvailable();
         renderProductMeta();
         maybeHintPromoterForProduct();
+        renderStores();
+      });
+    }
+
+    var stockChips = $("#stockModeChips");
+    if (stockChips && !stockChips._bound) {
+      stockChips._bound = true;
+      stockChips.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-stock-mode]");
+        if (!btn) return;
+        state.stockListMode = btn.getAttribute("data-stock-mode") || "snapshot";
+        state.storeDistrict = "";
+        renderStores();
       });
     }
 
